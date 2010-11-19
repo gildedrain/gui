@@ -1,5 +1,0 @@
-/*  body#index is the vanilla template file 
-    it needs top padding to push everything down below the logo badge 
-    because it doesn't have a globalnav to push things down */
-#index {padding-top:140px;}
-#index #menutitle {margin-left:5px; color:#70b1e4; letter-spacing:-1px; margin:0 0 25px 5px; font-size:3em; text-shadow:none;}
