@@ -1,0 +1,159 @@
+/* USE THIS CLASS FOR ANYTHING YOU ONLY WANT TO APPEAR ON PRINTED DOCUMENTS, IT WILL BE HIDDEN FOR media="screen" */
+.forprint {display:none !important;}
+
+/* LOGO BADGE -------------------------------------------------------------------------*/
+#logo 				                      {float:left; 
+                      				    	position:absolute; 
+                      				    	top:0px;
+                          					margin-left:0px;
+                          					padding:15px 0 15px 0; 
+                          					z-index:9999999999; 
+                          					text-align:center; 
+                          					border:1px solid #003151; border-width:0 3px 2px 3px; 
+                          					border-radius:0 0 7px 7px; 
+                          					-webkit-border-radius:0 0 7px 7px;
+                          					-moz-border-radius:0 0 7px 7px;
+                          					background:#003151; 
+                          					background:#003151 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.2)), to(rgba(255,255,255,0)));
+                          					background:#003151 -moz-linear-gradient(top, rgba(255,255,255,.2), rgba(255,255,255,0));
+                          					box-shadow:0px 1px 2px #aaa;
+                          					-webkit-box-shadow:0px 1px 2px #aaa;
+                          					-moz-box-shadow:0px 1px 2px #aaa;
+                          					}
+#logo .logo                         {display:block; width:119px; height:85px; margin-left:14px; background:transparent url(../images/header/occlogo.gif) no-repeat top left !important; text-indent:-9999em;}
+#logo:hover 	                      {background:#005372;}
+
+/* FIXED POSITION HEADER AREA -------------------------------------------------------------------------*/
+#banner_container	                  {position:fixed; top:0; left:0;  width:100%; z-index:999999;}
+#emergency			                    {width:100%; background:#EE0000;}
+#emergency p, #announcement p       {padding:1em 0 1em 220px; margin:0 auto; width:740px; color: #fff; text-shadow:#000 0 1px 0; -webkit-text-shadow:#000 0 1px 0; -moz-text-shadow:#000 0 1px 0;}
+#emergency p                        {background:url(../images/alerts/warning.png) no-repeat 170px center;}
+#announcement 			                {width:100%; color:#FFF;background-color:#70b1e4; background-color:#1799fe; background-color:rgba(23,153,254,1); behavior:url(PIE.htc);}
+#announcement p                     {background:url(../images/alerts/info.png) no-repeat 170px center;}
+#banner_spacer p                    {padding:1.25em 0 1.25em 0; margin:0;}                                
+#siteheader 	                      {width:100%; position:relative; top:0; height:40px; background:#000; background:rgba(0,0,0,.9); border:1px solid #666; border-width:1px 0 1px 0;}
+#skipnav                            {position:absolute; top:0; left:0; margin-left:-9999em; color:#fff; text-decoration:none; font-size:.8em; color:#666;}
+
+/* MEGA MENU PANEL -------------------------------------------------------------------------*/
+#panel 			                        {position:absolute;
+                            				top:0px;
+                            				width:310px;
+                            				float:leftu;
+                            				margin-left:165px;
+                            				padding:0;
+                            				overflow:hidden;
+                            				border-radius:0 0 7px 7px;
+                            				-webkit-box-shadow:0px 1px 2px #000;
+                            				-moz-box-shadow:0 1px 2px #000;
+                            				background-color:#003151; 
+                                    background:#003151 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.2)), to(rgba(255,255,255,0)));
+                          					background:#003151 -moz-linear-gradient(top, rgba(255,255,255,.2), rgba(255,255,255,0));
+                            				border:1px solid #444;
+                            				border-top-width:0;
+                            				transition:background-color .2s ease-in-out;
+                            				-webkit-transition:background-color .2s ease-in-out;
+                            				-moz-transition:background-color .2s ease-in-out;
+                            				}
+/* toggle button look & feel */
+.toggle				                      {display:block; 
+                      				    	float:left; 
+                          					height:34px; 
+                          					width:100%; 
+                          					padding:13px 3% 0 3%;
+                          					color:#FFF; 
+                          					font-size:70%; 
+                          					}
+.toggle span                        {float:right;
+                          					height:25px;
+                          					width:80px;
+                          					padding:2px 0 4px 24px; 
+                          					margin-top:-2px;
+                          					background-image:url(../images/header/paneltoggle.png);
+                          					background-repeat:no-repeat;
+                          					background-position:0 0px;
+                          					}
+.toggle.close span	                {background-position:5px -50px;}
+      					
+/* BASIC functionality -- these classes are used when javascript is disabled -- HTML+CSS and JS disabled */
+/* .basic engages basic-level interaction.  JQuery removes .basic before applying it's own layer of interaction */      					
+#panel.basic:hover                  {height:auto;}
+#panel.basic                        {height:34px;}
+#panel.basic #toggle_open, 
+#panel.basic:hover #toggle_open     {display:block;} /* IE required this added specificity because IE is stupid */
+#panel.basic:hover #toggle_close    {display:none;} /* only say "open panel" all the time for the dumb browsers */
+
+/* FANCY functionality -- these classes are only in use when Javascript is enabled -- HTML+CSS+Javascript */
+#panel.closed:hover 		            {background-color:#0069ad; padding-bottom:10px;} /* jiggle the menu so people know it's something they can interact with */
+#panel.closed #toggle_open,
+#panel.closed:hover #toggle_open    {display:block;} /* IE required this added specificity because IE is stupid */
+#panel.closed #toggle_close         {display:none;}  
+#panel.closed #subpanel             {display:none;}
+
+#panel.opened #toggle_open,
+#panel.opened:hover #toggle_open    {display:none;} /* IE required this added specificity because IE is stupid */
+#panel.opened:hover #toggle_close   {display:block;}
+#panel.opened:hover #subpanel       {display:block;}
+
+/* menu look & feel */
+#panel ul 			                    {float:left; padding:0; margin:0;}
+#panel li                           {float:left; display:block; margin:0; width:310px; border-top:1px solid #32698d;}
+#panel a 			                      {display:block; height:2em; width:100%; color:#FFF; text-decoration:none;}
+#panel ul a:hover	                  {background-color:#000;}
+/* universal quicklinks */
+#megamenu_home, #megamenu_news, #megamenu_calendar, #megamenu_directory, #megamenu_maps, #megamenu_contact	                  
+                                    {float:; 
+                  				          display:block; 
+                          				  margin:0; 
+                          				  width:310px; 
+                          				  padding:0 10px 0 40px; 
+                          					line-height:2em; 
+                          					background-repeat:no-repeat;
+                                    background-image:url(../images/header/megamenu.png);
+                          					}
+#megamenu_home 		                  {background-position:10px 0;}
+#megamenu_news 		                  {background-position:10px -32px;}
+#megamenu_calendar 	                {background-position:10px -64px;}
+#megamenu_directory                 {background-position:10px -96px;}
+#megamenu_maps 		                  {background-position:10px -128px;}
+#megamenu_contact 	                {background-position:10px -160px;}
+/* local site quicklinks */
+#subpanel p                         {float:left; background:#333; background:rgba(25, 25, 25, .35); margin:0px; font-style:italic; color:#FFF; border-top:1px solid #1799fe; width:100%; padding:5px;}
+#subpanel .local                    {background:#333; background:rgba(25, 25, 25, .35);}
+
+/* HEADER SEARCHBOX -------------------------------------------------------------------------*/
+#siteheader form 		                {float:right; padding:3px 0 0 0;}
+#siteheader input 		              {float:left;
+                          					height:19px;
+                          					width:225px;
+                          					margin:5px 5px 7px 0;
+                          					padding:2px 0 0 10px;
+                          					-webkit-border-radius:5px;
+                          					-moz-border-radius:5px;
+                          					border-radius:5px;
+                          					font-size:.8em;
+                          					color:#333;
+                          					border:1px solid #aaa;
+                          					border-bottom:1px solid #666;
+                          					background:#FFF -webkit-gradient(linear, left top, left bottom, from(rgba(0,49,81,.1)), to(rgba(255,255,255,0)));
+                          					background:#FFF -moz-linear-gradient(top, rgba(0,49,81,.1), rgba(255,255,255,0));
+                          					}
+#siteheader .searchbutton           {height:23px;
+                          					width:45px;
+                          					text-indent:-4000em;
+                          					border-width:0;
+                          					background:transparent url(../images/header/searchbutton.jpg) no-repeat 0 0;
+                          					}
+#siteheader .searchbutton:hover     {background-position:0 -23px;}
+#siteheader input[type=submit]      {display:inline; clear:none;}
+
+embed, object {z-index:0 !important}
+
+/* UNIVERSAL FOOTER -------------------------------------------------------------------------*/
+#footer                             {border-top:1px solid #393939; color:#ccc; height:95px; padding-top:20px; padding-bottom:10px; font-size:.9em; background:#393939; background:#393939 -moz-linear-gradient(top, rgba(0,0,0,.45), rgba(0,0,0,0)); background:#393939 -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.45)), to(rgba(0,0,0,0)));}
+#footer a.logo                      {width:118px; height:72px; float:left; margin-top:5px; text-indent:-9999em; background:transparent url(../images/footer/occlogo_footer.gif) no-repeat top left !important;}
+#footer a                           {color:#ccc; text-decoration:underline;}
+#footer a:hover                     {color:#FFF;}
+#footer p                           {margin-bottom:.25em; margin-top:.5em;}
+#footer ul                          {list-style:none; padding:2em 0 0 20px; height:50px;}
+#footer li                          {display:inline-block; margin-right:20px;}
+#footer .col3 ul                    {border-left:1px solid #666;}

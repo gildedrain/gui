@@ -1,0 +1,56 @@
+/* Default font settings. The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+html {font-size:100.01%;}
+body {font-size: 100%; color: #222; background: #fff; font-family: "Gill Sans", Verdana, Arial, Helvetica, sans-serif;}
+
+/* Headings -------------------------------------------------------------- */
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+h1 {font-size: 3em; line-height: 1; margin-bottom: 0.5em;}        /* 16pt*3.0em = 49  px */
+h2 {font-size: 2em; margin-bottom: 0.75em;}                       /* 16pt*2.0em = 32  px */
+h3 {font-size: 1.5em; line-height: 1; margin-bottom: 1em;}        /* 16pt*1.5em = 24  px */
+h4 {font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em;}  /* 16pt*1.2em = 19.2px */
+h5 {font-size: 1em; font-weight: bold; margin-bottom: 1.5em;}     /* 16pt*1.0em = 16  px */
+h6 {font-size: .8em; font-weight: bold;}                          /* 16pt*0.8em = 12.8px */
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {margin: 0;}
+
+/* Text elements -------------------------------------------------------------- */
+p           {margin: 0 0 1.5em 0; line-height:1.3em;}
+a:focus,
+a:hover     {text-decoration:underline;}
+a           {color:blue; text-decoration:none;}
+blockquote  {margin: 1.5em; color: #666; font-style: italic;}
+strong      {font-weight: bold;}
+em,dfn      {font-style: italic;}
+dfn         {font-weight: bold;}
+sup, sub    {line-height: 0; font-size:x-small;}
+sup     		{vertical-align:top; display:inline-block; margin-top:.5em;} 
+sub	    		{vertical-align:bottom;}
+abbr,
+acronym     {border-bottom: 1px dotted #666; cursor:help}
+address     {margin: 0 0 0 0em; font-style: italic; display:inline;}
+del         {color:#666;}
+pre         {margin: 0; white-space: pre;}
+pre,code    {background:#000; color:#86b5e3; padding:1em; border:1px solid #ccc; display:block; font-size:.8em;}
+pre,code,tt {font-family:'andale mono', 'lucida console', Courier, monospace;}
+
+/* Lists -------------------------------------------------------------- */
+li ul,
+li ol       {margin: 0;}
+ul, ol      {margin: 0 1.5em 1.5em 0; padding-left: 3.333em;}
+ul          {list-style-type: disc;}
+ol          {list-style-type: decimal;}
+dl          {margin: 0 0 1.5em 0;}
+dl dt       {font-weight: bold; font-style:italic; margin-top:1.3em;}
+dd          {margin-top:.25em; line-height:1.3em;}
+
+/* Tables -------------------------------------------------------------- */
+table       {margin:0 0 .5em 0; background:#FFF; color:#333; border:1px solid #666; border-collapse:collapse;} 
+th          {background:#003151; background:rgba(0,0,0,.85); color:#FFF; text-align:left;}
+th,td,caption {padding: 4px 5px 4px 5px; border:1px solid #666; border-width:0 1px 1px 0;}
+tfoot       {font-style: italic;}
+caption     {background: #ffffe1; color:#333; border:1px solid #666; border-width:1px 1px 0 1px;}
+
+/* Misc classes -------------------------------------------------------------- */
+small       {font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em;}
+big         {font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em;}
+hr          {float:left; display:block; clear:both; border-top:1px solid #000; margin:.5em 0 .5em 0; width:100%; padding:0;}

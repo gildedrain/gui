@@ -1,0 +1,21 @@
+/* Ektron needs span id="cntDynamic" wrapped around every ID, and this disobeys #section>*, so I have to add this rule as a bandaid */
+#cntDynamic>*  {margin-left:5px; margin-right:5px;} /* offsets everything to line up with the grid */
+/*  Hide Ektron's Ajax loading gif */
+.EktronAjaxLoading              {display:none;}
+/* Ektron Menu classes */
+/* ektron has 2 types of links in ektron SMART MENUS: 1) ekmenu_submenu_btnlink 2) ekmenu_link */
+/* ekmenu_submenu_btnlink is the tier 1 entry that expands to show tier 2 list of links */
+/* ekmenu_link is a tier 1 or tier 2 entry that will never contain a subtier of links */
+.menu .ekmenu_submenu_items_hidden {display: none;} /* hide tiers that aren't opened yet */
+/* ektron also triggers the current state of a link by modifying a <span> nested inside the <a>.  I hate this and will build it differently with FLEX MENU */
+.menu a span {display:block; width:290px; padding:.25em 10px .25em 10px; color:#222; text-decoration:none; margin:-5px 0 -5px -10px;}
+/* ALL TIER 1 LINKS SHOULD LOOK LIKE SO */
+.menu .ekmenu_submenu_btnlink:hover, 
+.menu .ekmenu_link:hover,
+.menu .ekmenu_link_selected, 
+.menu .ekmenu_link_selected:hover,
+.menu .ekmenu_button_selected {color:#FFF !important; background-color:#1799fe !important;}
+/* ALL TIER 2 LINKS SHOULD LOOK LIKE SO */
+.menu ul ul .ekmenu_link_selected,
+.menu ul ul .ekmenu_link:hover,
+.menu ul ul .ekmenu_link_selected:hover {background-color:#888 !important; background-color:rgba(0,0,0,.5) !important; color:#FFF;}
