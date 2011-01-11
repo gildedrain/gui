@@ -107,9 +107,24 @@ tr:nth-child(odd) {
 background-color: #FFF;
 background-color: rgba(255,255,255,.5);
 }
+/* HACK! IE doesn't know RGBA */
+.ie7 tr:nth-child(odd) {
+background: transparent;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000)";/* IE8 */
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);/* IE6 & 7 */
+zoom:1;
+}
+/* for all versions of IE,JQuery sets .zebrarows to odd rows,and we'll just make it 100% opaque white */
+.ie .zebrarows {
+background: #FFF;
+}
 /*turn off zebra rows*/
 .nozebrarows tr:nth-child(odd) {
 background-color: transparent !important;
+}
+/*HACK!*/
+.ie .nozebrarows .zebrarows {
+background: transparent;
 }
 /*zebra columns*/
 .zebracolumns td:nth-of-type(odd),
@@ -149,7 +164,7 @@ border-width: 0;
 .border-white td,.border-white th {
 border-color: #fff;
 }
-/* ZURB SUPER AWESOME BUTTON */
+/* ZURB SUPER AWESOME BUTTON */ /*BUG! i need to recode this to not use the element,so the class can be independent */
 a.button {
 background-image: none;
 background-color: #222;
@@ -169,6 +184,14 @@ border-bottom: 1px solid rgba(0,0,0,0.25);
 position: relative;
 cursor: pointer;
 font-size: 1.5em;
+}
+/*HACK!*/
+.ie7 a.button {
+display: block !important;
+padding-top: .5em !important;
+padding-bottom: .5em !important;
+margin-bottom: .25em !important;
+margin-top: .25em !important;
 }
 .col1 .button {
 width: 110px;
@@ -321,6 +344,7 @@ border-radius: 2px 2px;
 box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
 -webkit-box-shadow: 2px 2px rgba(0,0,0,0.1);
 -moz-box-shadow: 2px 2px rgba(0,0,0,0.1);
+color: #222;
 }
 .tooltip:hover img {
 border: 0;
@@ -336,23 +360,27 @@ padding: 0.2em 0 0.6em 0;
 }
 .tooltip:hover .classic {
 padding: 0.8em 1em;
+color: #222;
 }
 .tooltip:hover .custom {
 padding: 0.5em 0.8em 0.8em 2em;
+color: #222;
 }
 .tooltip:hover .info {
 border: 1px solid #fda;
 background: #fffaaa url(../images/alerts/info.png) no-repeat 5px 5px;
+color: #222;
 padding: 15px 15px 15px 50px;
 }
 .tooltip:hover .help {
 border: 1px solid #2BB0D7;
 background: #c2e2fc url(../images/alerts/help.png) no-repeat 5px 5px;
+color: #222;
 padding: 15px 15px 15px 50px;
 }
 .tooltip:hover .warning {
 border: 1px solid #f30;
-color: #000;
+color: #222;
 background: #f93 url(../images/alerts/warning.png) no-repeat 5px 5px;
 padding: 15px 15px 15px 50px;
 }
@@ -373,7 +401,7 @@ text-decoration: none;
 padding: 20px 10px 10px 10px;
 line-height: 1.5em;
 }
-#aside .ad {
+#aside .ad,aside .ad {
 max-width: 310px !important;
 }
 .ad.img {
@@ -383,6 +411,11 @@ font-size: 1em;
 .ad.img span {
 display: block;
 padding: 0 10px 0 10px;
+}
+/*HACK!*/
+.ie7 .ad.img span {
+display: block;
+padding: 0 10px 10px 10px;
 }
 .ad strong {
 font-weight: normal;
@@ -621,7 +654,7 @@ border-radius: 20px;
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 }
-/* TYPEFACES */
+/* TYPEFACES */ /*BUG! this section is incomplete,needs integration with font-service */
 .italic {
 font-style: italic;
 }
@@ -651,7 +684,7 @@ font-family: tatu,punkassbitch,sans-serif;
 .handwriting {
 font-family: "Handwriting - Dakota","HandPrinting",sans-serif;
 }
-/* CLEARFIX */
+/* CLEARFIX */ /*BUG! not sure this ever worked,or at least not in IE7,and I don't think it's used anywhere */
 /* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as p.dots */
 .clearfix:after {
 content: ".";
@@ -670,7 +703,7 @@ display: block;
 * html .clearfix {
 height: 1%;
 }
-/* MODAL WINDOW */
+/* MODAL WINDOW */ /*BUG! might want to switch to using Fix's modal window code instead */
 /* Z-index of #mask must lower than #modal .window */
 #mask {
 position: absolute;

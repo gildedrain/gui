@@ -155,3 +155,21 @@ list-style: none;
 margin: 0;
 padding: 0;
 }
+
+
+/*HACKS!*/
+.ie legend {
+background: #000;
+color: #FFF;
+}
+.ie fieldset fieldset {
+background: #FFF;
+}
+.ie fieldset fieldset legend {
+background: transparent;
+color: #333;
+}
+.ie textarea {
+font-family: "gill sans", verdana, sans-serif;
+font-size: 75%;
+}

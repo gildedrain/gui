@@ -97,7 +97,7 @@ clear: left;
 .last {
 clear: right;
 }
-/* not sure we even need .last anymore */
+/* BUG! not sure we even need .last anymore */
 .nest.first {
 margin-left: 0;
 clear: left;
@@ -146,6 +146,10 @@ color: #aaa;
 margin: 0;
 padding: 0;
 }
+/*HACK! adding a top border to menu li's seems to force IE7 into the box model */
+.ie7 .menu li {
+border-top: 1px solid #cbe9ff;
+}
 /* default color scheme */
 .menu {
 color: #222;
@@ -161,6 +165,10 @@ background-color: #1799fe !important;
 }
 .menu ul ul a {
 background-color: rgba(0,0,0,.1) !important;
+}
+/* HACK! IE7 and IE8 mess up the menu styles, mostly b/c they don't understand rgba */
+.ie .menu ul ul a {
+background-color: #ccc !important;
 }
 .menu ul ul a:hover, .menu ul ul .current {
 background-color: rgba(0,0,0,.5) !important;
