@@ -1,19 +1,56 @@
-#logo {border:1px solid #666; border-width:0 1px 1px 1px;}
-#panel		{background:#003151;}
-#panel:hover {height:auto;}
-#panel .toggle span {*margin-top:-12px;} /* IE7, but not IE8 */
-#panel:hover a.toggle:first-child {display:none;} 
-#siteheader .searchbutton {padding-left:45px; width:45px;}
-#siteheader form {margin-bottom:5px;}
+/* IE7andup.css */
+#logo {
+border: 1px solid #666;
+border-width: 0 1px 1px 1px;
+}
+#panel {
+background: #003151;
+}
+#panel:hover {
+height: auto;
+}
+#panel .toggle span {*margin-top:-12px;
+}
+/* IE7, but not IE8 */
+#panel:hover a.toggle:first-child {
+display: none;
+}
+#siteheader .searchbutton {
+padding-left: 45px;
+width: 45px;
+}
+#siteheader form {
+margin-bottom: 5px;
+}
 /* IE doesn't know RGBA nor nth-child */
 /* JQuery sets .zebra to odd rows, and we'll just make it 100% opaque white */
-.zebrarows {background:#FFF;}
-.nozebrarows .zebrarows {background:transparent;}
-legend                    {background:#000; color:#FFF;}
-fieldset fieldset         {background:#FFF;}
-fieldset fieldset legend  {background:transparent; color:#333;}
-textarea {font-family:"gill sans", verdana, sans-serif; font-size:75%;}
+.zebrarows {
+background: #FFF;
+}
+.nozebrarows .zebrarows {
+background: transparent;
+}
+legend {
+background: #000;
+color: #FFF;
+}
+fieldset fieldset {
+background: #FFF;
+}
+fieldset fieldset legend {
+background: transparent;
+color: #333;
+}
+textarea {
+font-family: "gill sans", verdana, sans-serif;
+font-size: 75%;
+}
 /* IE7 and IE8 mess up the menu styles, mostly b/c they don't understand rgba */
-.menu ul ul a  {background-color:#ccc !important;}
+.menu ul ul a {
+background-color: #ccc !important;
+}
 /* ALL TIER 2 LINKS SHOULD LOOK LIKE SO */
-.menu ul ul .ekmenu_link_selected, .menu ul ul .ekmenu_link:hover, .menu ul ul .ekmenu_link_selected:hover {background-color:#888 !important; color:#FFF;}
+.menu ul ul .ekflexmenu_link_selected, .menu ul ul .ekflexmenu_link:hover, .menu ul ul .ekflexmenu_link_selected:hover {
+background-color: #888 !important;
+color: #FFF;
+}

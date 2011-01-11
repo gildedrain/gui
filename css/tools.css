@@ -1,199 +1,723 @@
-/*   REUSABLE CONTENT BLOCK TOOLS -------------------------------------------------------------------------- 
--------------------------------------------------------------------------------------------------------- */
-/*  ALIGNMENTS & POSITIONS -------------------------------------------------------------------------- */
-  .left                           {float: left; margin: 10px 10px 5px 0;}
-  .right                          {float: right; margin: 10px 0 5px 10px;}
-  .textleft                       {text-align:left;}
-  .textright                      {text-align:right;}
-  .textcenter                     {text-align:center;}
-  .top                            {margin-top:0; padding-top:0;}
-  .bottom                         {margin-bottom:0; padding-bottom:0;}
-  .pad                            {padding:10px;}
-  .box                            {margin:10px 5px 10px 5px;}
-  .hangright                      {margin-right:-1em;}
-  .hangleft                       {margin-left:-1em;}
-  
-/*  DISPLAY -------------------------------------------------------------------------- */
-  .hide                           {display:none !important;}
-  .inline                         {display:inline;} 
-  .block                          {display:block;}
-  .noborder                       {border:none !important;}
-  
-/*  LISTS -------------------------------------------------------------------------------------------- */
-  ul.inline                       {padding:0; margin:0;}
-  .inline li                      {display:inline; float:left; margin:1em 5px 1em 5px;}
-  .content li                     {line-height:1.75em;}
-  .disc                           {list-style-type:disc;}
-  .circle                         {list-style-type:circle;}
-  .square                         {list-style-type:square;}
-  .decimal                        {list-style-type:decimal;}
-  .decimalzero                    {list-style-type:decimal-leading-zero;}
-  .upper-roman                    {list-style-type:upper-roman;}
-  .lower-roman                    {list-style-type:lower-roman;}
-  .upper-alpha                    {list-style-type:upper-alpha;}
-  .lower-alpha                    {list-style-type:lower-alpha;}
-  .style_none                     {list-style-type:none; padding:0;}
-  .dividers dt, .dividers li      {border-top:1px solid #ccc; padding-top:.5em;}
-  .dividers p                     {margin-bottom:.25em;}
-
-/* TABLES --------------------------------------------------------------------------------------------- */
-  /*zebra rows is on by default*/
-  tr:nth-child(odd)                   {background-color:#FFF; background-color:rgba(255,255,255,.5);} 
-  /*turn off zebra rows*/
-  .nozebrarows tr:nth-child(odd)      {background-color:transparent !important;}
-  /*zebra columns*/
-  .zebracolumns td:nth-of-type(odd), 
-  .zebracolumns tr:nth-of-type(odd)   {background:rgba(255,255,255,.5);}
-  .zebracolumns th:nth-of-type(odd)   {background:rgba(0,0,0,.65);}
-  /*zebra headers, looks terrible, not sure when I'd use it*/
-  .zebraheaders th:nth-of-type(odd)   {background:rgba(0,0,0,.6);}
-  .zebraheaders th:nth-of-type(even)  {background:rgba(0,0,0,.85);}
-  /*these classes set the borders on a table*/
-  .rows td, .rows th                  {border:1px solid #666; border-width:0 0 1px 0;}
-  .rows                               {border-width:1px 1px 0 1px;}
-  .columns td, .columns th            {border:1px solid #666; border-width:0 1px 0 0;}
-  .columns                            {border-width:1px 0 1px 1px;}
-  .nogrid td, .nogrid th, .nogrid     {border-width:0;} /*tables have a grid turned on by default */
-  /*sometimes you might want to swap the border color*/
-  .border-white td, .border-white th  {border-color:#fff;}
-
-/* ZURB SUPER AWESOME BUTTON -------------------------------------------------------------------------- */
-  a.button					      {background-image:none; background-color:#222; background-repeat:repeat-x; background:#222 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.25)), to(rgba(255,255,255,0))); background:#222 -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0)); display:inline-block; padding:5px 10px 6px 10px !important; color: #fff; text-decoration: none; -moz-border-radius: 5px; -webkit-border-radius: 5px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); text-shadow: 0 -1px 1px rgba(0,0,0,0.25); border-bottom:1px solid rgba(0,0,0,0.25); position:relative; cursor:pointer; font-size:1.5em;}
-  .col1 .button                   {width: 110px;}
-  .col1dot5 .button               {width: 190px;}
-  .col2 .button                   {width: 270px;}
-  .col3 .button                   {width: 430px;}
-  .col4 .button                   {width: 590px;}
-  .col5 .button                   {width: 750px;}
-  .col6 .button                   {width: 920px;}
-  .button                         {line-height: 1; text-align:center; text-shadow: 0 -1px 1px rgba(0,0,0,0.25);}
-  .button:hover                   {background-color:#000; color:#fff; text-decoration:none;}
-  .button:active                  {top: 1px;}
-  .small.button                   {width:auto; font-size:1em;}
-  .medium.button                  {width:auto; font-size:1.5em;}
-  .large.button                   {font-size: 2.5em; padding: 8px 14px 9px 14px !important;}
-  .tall.button                    {padding-top:15px !important; padding-bottom:15px !important;}
-
-/* BUTTON ELEMENT Created by Kevin Hale [particletree.com] ------------------------------------------- */
-  button                          {display:block; float:left; margin: 0.7em 0.5em 0.7em 0; padding:5px 10px 5px 7px; border:1px solid #dedede; border-top:1px solid #eee; border-left:1px solid #eee; background-color:#f5f5f5; font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif; font-size:100%; line-height:130%; text-decoration:none; font-weight:bold; color:#565656; cursor:pointer;}
-  button                          {width:auto; overflow:visible; padding:4px 10px 3px 7px;   /* IE6 */}
-  button[type]                    {padding:4px 10px 4px 7px; /* Firefox */ line-height:17px; /* Safari */}
-  *:first-child+html button[type] {padding:4px 10px 3px 7px;   /* IE7 */ }
-  button img                      {margin:0 3px -3px 0 !important; padding:0; border:none; width:16px; height:16px; float:none;}
-  button:hover                    {background-color:#dff4ff; border:1px solid #c2e1ef; color:#336699;}
-  body .positive                  {color:#529214;}
-  button.positive:hover           {background-color:#E6EFC2; border:1px solid #C6D880; color:#529214;}
-  body .negative                  {color:#d12f19;}
-  button.negative:hover           {background-color:#fbe3e4; border:1px solid #fbc2c4; color:#d12f19;}
-
-/* TOOLTIPS  ---------------------------------------------------------------------------------------------- */
-  .tooltip                        {border-bottom:1px dotted #000000; outline:none; cursor:default; text-decoration:none !important; position:relative; z-index:0;}
-  .tooltip.icon                   {display:inline-block; height:16px; width:16px; background:transparent url(../images/16px_icons.png) no-repeat 0 -1656px; text-decoration:none; border-width:0;}
-  .tooltip span                   {display:none;} /*hide tooltip when not hovered on*/
-  .tooltip:hover                  {position:relative; z-index:25;}
-  .tooltip:hover span             {display:block; position:absolute; left:0px; top:1.5em; z-index:999; text-decoration:none; margin-left:0; width:310px; padding:.5em; background:#fffaaa; border: 1px solid #fda; border-radius:2px 2px; -moz-border-radius:2px; -webkit-border-radius:2px; box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1); -webkit-box-shadow:2px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow:2px 2px rgba(0, 0, 0, 0.1);}
-  .tooltip:hover img              {border:0; margin:-10px 0 0 -55px; float:left; position:absolute;}
-  .tooltip:hover em               {font-size:1.2em; font-weight:bold; display:block; padding:0.2em 0 0.6em 0;}
-  .tooltip:hover .classic         {padding:0.8em 1em;}
-  .tooltip:hover .custom          {padding:0.5em 0.8em 0.8em 2em;}
-  .tooltip:hover .info            {border: 1px solid #fda; background:#fffaaa url(../images/alerts/info.png) no-repeat 5px 5px; padding:15px 15px 15px 50px;}
-  .tooltip:hover .help            {border: 1px solid #2BB0D7; background:#c2e2fc url(../images/alerts/help.png) no-repeat 5px 5px; padding:15px 15px 15px 50px;}
-  .tooltip:hover .warning         {border: 1px solid #f30; color:#000; background:#f93 url(../images/alerts/warning.png) no-repeat 5px 5px; padding:15px 15px 15px 50px;}
-  .tooltip:hover .critical        {border: 3px double #fff; color:#fff; background:#f00 url(../images/alerts/critical.png) no-repeat 5px 5px; padding:15px 15px 15px 50px;}
-
-/*  OBJECTS ---------------------------------------------------------------------------------------- */
-  /* ad */
-  .ad                             {display:block; margin:0 0 10px 0; font-size:1.15em; font-weight:normal; text-decoration:none; padding:20px 10px 10px 10px; line-height:1.5em;}
-  #aside .ad                      {max-width:310px !important;}
-  .ad.img                         {padding:0 0 20px 0; font-size:1em;}
-  .ad.img span                    {display:block; padding:0 10px 0 10px;}
-  .ad strong                      {font-weight:normal; font-size:1.5em;}
-  .ad:hover                       {background:#000 !important; color:#FFF !important; text-decoration:none;}
-
-  /* pullquote */
-  .pulledquote                    {display:block; float:left; width:150px; padding:.5em; margin: 10px 10px 5px 0; line-height:1.6em; font-size: 1.5em; font-style:italic;}
-
-  /* quote */
-  .quote                          {display:block; min-height:328px; padding:.5em .5em 1.25em .5em; margin: -2px 0 5px 0; line-height:1.3em; font-size: 1.15em; font-style:italic;}
-  .quote img                      {margin-left:-.5em; margin-top:-.5em; margin-bottom:.5em; float:left; clear:right;}
-  .quote cite                     {font-size:.65em; display:block; clear:left; line-height:1.25em; padding:1em 0 1em 0;}
-
-  /* dropcap, smallcaps first line */  
-  .dropcap:first-child:first-letter {float:left;	line-height:30px;	padding: 5px 5px 5px 0; margin:.07em 0 -.2em -.1em; color:#333;	font-weight: bold;	font-size:2.8em; font-family:garamond, "minion pro", times, "times new roman", serif;}
-	.smallcapline:first-child:first-line{font-variant: small-caps;}
-
-	/* footnotes */
-	.footnotes                      {border-top:1px solid #aaa; padding-top:1em;}
-	.footnotes h4                   {font-size:1.25em;}
-	.footnotes ol                   {list-style:decimal; padding-left:1.5em;}
-	.footnotes li                   {line-height:1.3em; margin-bottom:.5em;}
-
-  /* polaroid */
-  .polaroid                       {width:150px; padding: 10px 10px 50px 10px; margin:5px; border: 1px solid #BFBFBF; background-color: #FFF; -webkit-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4); -moz-box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4); box-shadow: 2px 2px 3px rgba(135, 139, 144, 0.4);}
-  .polaroid.left.rotate-10        {margin-right:30px; margin-bottom:10px;}
-  .polaroid.left.rotate-25        {margin-right:50px; margin-bottom:20px;}
-  .polaroid.left.rotate-45        {margin-right:60px; margin-bottom:20px;}
-  .polaroid.left.rotate10         {margin-right:30px; margin-bottom:10px;}
-  .polaroid.left.rotate25         {margin-right:50px; margin-bottom:20px;}
-  .polaroid.left.rotate45         {margin-right:60px; margin-bottom:20px;}
-  .polaroid.right.rotate-10       {margin-left:30px; margin-bottom:10px;}
-  .polaroid.right.rotate-25       {margin-left:50px; margin-bottom:20px;}
-  .polaroid.right.rotate-45       {margin-left:60px; margin-bottom:20px;}
-  .polaroid.right.rotate10        {margin-left:30px; margin-bottom:10px;}
-  .polaroid.right.rotate25        {margin-left:50px; margin-bottom:20px;}
-  .polaroid.right.rotate45        {margin-left:60px; margin-bottom:20px;}
-
-  /* figure */
-  .figure                         {border-top:1px solid #eee; text-align:center; box-shadow:0 1px 2px #aaa; -webkit-box-shadow:0 1px 2px #aaa; -moz-box-shadow:0 1px 2px #aaa;}
-  .figure .caption                {display:block; clear:both; margin-top:-2px; padding:.5em 10px .5em 10px; background:#fff7e1; border-top:1px solid #aaa; font-style:italic; text-align:left; color:#333;}
-  .figure .caption strong         {font-style:normal; font-size:small;}
-  .figure .caption strong:after   {content:" - "; font-weight:normal;}
-  
-/*  TRANSPARENCY -------------------------------------------------------------------------- */
-  .alpha100                       {opacity:1; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);}
-  .alpha90                        {opacity:.9; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);}
-  .alpha70                        {opacity:.7; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);}
-  .alpha50                        {opacity:.5; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);}
-  .alpha30                        {opacity:.3; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);}
-  .alpha10                        {opacity:.1; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10);}
-
-/*  TRANSFORMATIONS -------------------------------------------------------------------------- */
-  .rotate10                       {-webkit-transform:rotate(10deg); -moz-transform:rotate(10deg); rotation:10deg;}
-  .rotate25                       {-webkit-transform:rotate(25deg); -moz-transform:rotate(25deg); rotation:25deg;}
-  .rotate45                       {-webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); rotation:45deg;}
-  .rotate-10                      {-webkit-transform:rotate(-10deg); -moz-transform:rotate(-10deg); rotation:-10deg;}
-  .rotate-25                      {-webkit-transform:rotate(-25deg); -moz-transform:rotate(-25deg); rotation:-25deg;}
-  .rotate-45                      {-webkit-transform:rotate(-45deg); -moz-transform:rotate(-45deg); rotation:-45deg;}
-               
-/*  BORDER RADIUS ------------------------------------------------------------------------------- */               
-  .radius-small                   {border-radius:2px; -webkit-border-radius:2px; -moz-border-radius:2px;}
-  .radius-medium                  {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
-  .radius-large                   {border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px;}
-  .radius-extralarge              {border-radius:20px; -webkit-border-radius:20px; -moz-border-radius:20px;}
-
-/*  TYPEFACES ----------------------------------------------------------------------------------*/
-  .italic                         {font-style:italic;}
-  .sans-serif                     {font-family:"Century Gothic", "Myriad Pro", myriad, "Gill Sans", verdana, sans-serif;}
-  .serif                          {font-family:"Minion Pro", "Times New Roman", times, serif;}
-  .impact                         {font-family:impact, verdana, sans-serif; letter-spacing:1px;}
-  .elegant                        {font-family:"Book Antiqua", Garamond, serif;}
-  .script                         {font-family:"Brush Script Std", sans-serif;}
-  .typewriter                     {font-family:"Courier New", Courier, Times, serif; letter-spacing:-1px;}
-  .grunge                         {font-family:tatu, punkassbitch, sans-serif;}
-  .handwriting                    {font-family:"Handwriting - Dakota", "HandPrinting", sans-serif;}  
-  
-/*  CLEARFIX --------------------------------------------------------------------------------------------*/  
-/* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children, same effect as p.dots */
-  .clearfix:after                 {content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0;}
-  .clearfix                       {display:inline-block;}
-  html[xmlns] .clearfix           {display:block;}
-  * html .clearfix                {height:1%;}  
-  
-/* MODAL WINDOW -----------------------------------------------------------------------------------------*/  
+/* TOOLS.CSS ---------------------------------------------------------------*/
+/* ALIGNMENTS & POSITIONS */
+.left {
+float: left;
+margin: 10px 10px 5px 0;
+}
+.right {
+float: right;
+margin: 10px 0 5px 10px;
+}
+.textleft {
+text-align: left;
+}
+.textright {
+text-align: right;
+}
+.textcenter {
+text-align: center;
+}
+.top {
+margin-top: 0;
+padding-top: 0;
+}
+.bottom {
+margin-bottom: 0;
+padding-bottom: 0;
+}
+.pad {
+padding: 10px;
+}
+.box {
+margin: 10px 5px 10px 5px;
+}
+.hangright {
+margin-right: -1em;
+}
+.hangleft {
+margin-left: -1em;
+}
+/* DISPLAY */
+.hide {
+display: none !important;
+}
+.inline {
+display: inline;
+}
+.block {
+display: block;
+}
+.noborder {
+border: none !important;
+}
+/* LISTS */
+ul.inline {
+padding: 0;
+margin: 0;
+}
+.inline li {
+display: inline;
+float: left;
+margin: 1em 5px 1em 5px;
+}
+.content li {
+line-height: 1.75em;
+}
+.disc {
+list-style-type: disc;
+}
+.circle {
+list-style-type: circle;
+}
+.square {
+list-style-type: square;
+}
+.decimal {
+list-style-type: decimal;
+}
+.decimalzero {
+list-style-type: decimal-leading-zero;
+}
+.upper-roman {
+list-style-type: upper-roman;
+}
+.lower-roman {
+list-style-type: lower-roman;
+}
+.upper-alpha {
+list-style-type: upper-alpha;
+}
+.lower-alpha {
+list-style-type: lower-alpha;
+}
+.style_none {
+list-style-type: none;
+padding: 0;
+}
+.dividers dt,.dividers li {
+border-top: 1px solid #ccc;
+padding-top: .5em;
+}
+.dividers p {
+margin-bottom: .25em;
+}
+/* TABLES */
+/*zebra rows is on by default*/
+tr:nth-child(odd) {
+background-color: #FFF;
+background-color: rgba(255,255,255,.5);
+}
+/*turn off zebra rows*/
+.nozebrarows tr:nth-child(odd) {
+background-color: transparent !important;
+}
+/*zebra columns*/
+.zebracolumns td:nth-of-type(odd),
+.zebracolumns tr:nth-of-type(odd) {
+background: rgba(255,255,255,.5);
+}
+.zebracolumns th:nth-of-type(odd) {
+background: rgba(0,0,0,.65);
+}
+/*zebra headers,looks terrible,not sure when I'd use it*/
+.zebraheaders th:nth-of-type(odd) {
+background: rgba(0,0,0,.6);
+}
+.zebraheaders th:nth-of-type(even) {
+background: rgba(0,0,0,.85);
+}
+/*these classes set the borders on a table*/
+.rows td,.rows th {
+border: 1px solid #666;
+border-width: 0 0 1px 0;
+}
+.rows {
+border-width: 1px 1px 0 1px;
+}
+.columns td,.columns th {
+border: 1px solid #666;
+border-width: 0 1px 0 0;
+}
+.columns {
+border-width: 1px 0 1px 1px;
+}
+.nogrid td,.nogrid th,.nogrid {
+border-width: 0;
+}
+/*tables have a grid turned on by default */
+/*sometimes you might want to swap the border color*/
+.border-white td,.border-white th {
+border-color: #fff;
+}
+/* ZURB SUPER AWESOME BUTTON */
+a.button {
+background-image: none;
+background-color: #222;
+background-repeat: repeat-x;
+background: #222 -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.25)),to(rgba(255,255,255,0)));
+background: #222 -moz-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));
+display: inline-block;
+padding: 5px 10px 6px 10px !important;
+color: #fff;
+text-decoration: none;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+border-bottom: 1px solid rgba(0,0,0,0.25);
+position: relative;
+cursor: pointer;
+font-size: 1.5em;
+}
+.col1 .button {
+width: 110px;
+}
+.col1dot5 .button {
+width: 190px;
+}
+.col2 .button {
+width: 270px;
+}
+.col3 .button {
+width: 430px;
+}
+.col4 .button {
+width: 590px;
+}
+.col5 .button {
+width: 750px;
+}
+.col6 .button {
+width: 920px;
+}
+.button {
+line-height: 1;
+text-align: center;
+text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+}
+.button:hover {
+background-color: #000;
+color: #fff;
+text-decoration: none;
+}
+.button:active {
+top: 1px;
+}
+.small.button {
+width: auto;
+font-size: 1em;
+}
+.medium.button {
+width: auto;
+font-size: 1.5em;
+}
+.large.button {
+font-size: 2.5em;
+padding: 8px 14px 9px 14px !important;
+}
+.tall.button {
+padding-top: 15px !important;
+padding-bottom: 15px !important;
+}
+/* BUTTON ELEMENT Created by Kevin Hale [particletree.com] */
+button {
+display: block;
+float: left;
+margin: 0.7em 0.5em 0.7em 0;
+padding: 5px 10px 5px 7px;
+border: 1px solid #dedede;
+border-top: 1px solid #eee;
+border-left: 1px solid #eee;
+background-color: #f5f5f5;
+font-family: "Lucida Grande",Tahoma,Arial,Verdana,sans-serif;
+font-size: 100%;
+line-height: 130%;
+text-decoration: none;
+font-weight: bold;
+color: #565656;
+cursor: pointer;
+}
+button {
+width: auto;
+overflow: visible;
+padding: 4px 10px 3px 7px;/* IE6 */
+}
+button[type] {
+padding: 4px 10px 4px 7px;/* Firefox */ line-height:17px;/* Safari */
+}
+*:first-child+html button[type] {
+padding: 4px 10px 3px 7px;/* IE7 */
+}
+button img {
+margin: 0 3px -3px 0 !important;
+padding: 0;
+border: none;
+width: 16px;
+height: 16px;
+float: none;
+}
+button:hover {
+background-color: #dff4ff;
+border: 1px solid #c2e1ef;
+color: #336699;
+}
+body .positive {
+color: #529214;
+}
+button.positive:hover {
+background-color: #E6EFC2;
+border: 1px solid #C6D880;
+color: #529214;
+}
+body .negative {
+color: #d12f19;
+}
+button.negative:hover {
+background-color: #fbe3e4;
+border: 1px solid #fbc2c4;
+color: #d12f19;
+}
+/* TOOLTIPS */
+.tooltip {
+border-bottom: 1px dotted #000000;
+outline: none;
+cursor: default;
+text-decoration: none !important;
+position: relative;
+z-index: 0;
+}
+.tooltip.icon {
+display: inline-block;
+height: 16px;
+width: 16px;
+background: transparent url(../images/16px_icons.png) no-repeat 0 -1656px;
+text-decoration: none;
+border-width: 0;
+}
+.tooltip span {
+display: none;
+}
+/*hide tooltip when not hovered on*/
+.tooltip:hover {
+position: relative;
+z-index: 25;
+}
+.tooltip:hover span {
+display: block;
+position: absolute;
+left: 0px;
+top: 1.5em;
+z-index: 999;
+text-decoration: none;
+margin-left: 0;
+width: 310px;
+padding: .5em;
+background: #fffaaa;
+border: 1px solid #fda;
+border-radius: 2px 2px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+-webkit-box-shadow: 2px 2px rgba(0,0,0,0.1);
+-moz-box-shadow: 2px 2px rgba(0,0,0,0.1);
+}
+.tooltip:hover img {
+border: 0;
+margin: -10px 0 0 -55px;
+float: left;
+position: absolute;
+}
+.tooltip:hover em {
+font-size: 1.2em;
+font-weight: bold;
+display: block;
+padding: 0.2em 0 0.6em 0;
+}
+.tooltip:hover .classic {
+padding: 0.8em 1em;
+}
+.tooltip:hover .custom {
+padding: 0.5em 0.8em 0.8em 2em;
+}
+.tooltip:hover .info {
+border: 1px solid #fda;
+background: #fffaaa url(../images/alerts/info.png) no-repeat 5px 5px;
+padding: 15px 15px 15px 50px;
+}
+.tooltip:hover .help {
+border: 1px solid #2BB0D7;
+background: #c2e2fc url(../images/alerts/help.png) no-repeat 5px 5px;
+padding: 15px 15px 15px 50px;
+}
+.tooltip:hover .warning {
+border: 1px solid #f30;
+color: #000;
+background: #f93 url(../images/alerts/warning.png) no-repeat 5px 5px;
+padding: 15px 15px 15px 50px;
+}
+.tooltip:hover .critical {
+border: 3px double #fff;
+color: #fff;
+background: #f00 url(../images/alerts/critical.png) no-repeat 5px 5px;
+padding: 15px 15px 15px 50px;
+}
+/* OBJECTS */
+/* ad */
+.ad {
+display: block;
+margin: 0 0 10px 0;
+font-size: 1.15em;
+font-weight: normal;
+text-decoration: none;
+padding: 20px 10px 10px 10px;
+line-height: 1.5em;
+}
+#aside .ad {
+max-width: 310px !important;
+}
+.ad.img {
+padding: 0 0 20px 0;
+font-size: 1em;
+}
+.ad.img span {
+display: block;
+padding: 0 10px 0 10px;
+}
+.ad strong {
+font-weight: normal;
+font-size: 1.5em;
+}
+.ad:hover {
+background: #000 !important;
+color: #FFF !important;
+text-decoration: none;
+}
+/* pullquote */
+.pulledquote {
+display: block;
+float: left;
+width: 150px;
+padding: .5em;
+margin: 10px 10px 5px 0;
+line-height: 1.6em;
+font-size: 1.5em;
+font-style: italic;
+}
+/* quote */
+.quote {
+display: block;
+min-height: 328px;
+padding: .5em .5em 1.25em .5em;
+margin: -2px 0 5px 0;
+line-height: 1.3em;
+font-size: 1.15em;
+font-style: italic;
+}
+.quote img {
+margin-left: -.5em;
+margin-top: -.5em;
+margin-bottom: .5em;
+float: left;
+clear: right;
+}
+.quote cite {
+font-size: .65em;
+display: block;
+clear: left;
+line-height: 1.25em;
+padding: 1em 0 1em 0;
+}
+/* dropcap,smallcaps first line */ 
+.dropcap:first-child:first-letter {
+float: left;
+line-height: 30px;
+padding: 5px 5px 5px 0;
+margin: .07em 0 -.2em -.1em;
+color: #333;
+font-weight: bold;
+font-size: 2.8em;
+font-family: garamond,"minion pro",times,"times new roman",serif;
+}
+.smallcapline:first-child:first-line {
+font-variant: small-caps;
+}
+/* footnotes */
+.footnotes {
+border-top: 1px solid #aaa;
+padding-top: 1em;
+}
+.footnotes h4 {
+font-size: 1.25em;
+}
+.footnotes ol {
+list-style: decimal;
+padding-left: 1.5em;
+}
+.footnotes li {
+line-height: 1.3em;
+margin-bottom: .5em;
+}
+/* polaroid */
+.polaroid {
+width: 150px;
+padding: 10px 10px 50px 10px;
+margin: 5px;
+border: 1px solid #BFBFBF;
+background-color: #FFF;
+-webkit-box-shadow: 2px 2px 3px rgba(135,139,144,0.4);
+-moz-box-shadow: 2px 2px 3px rgba(135,139,144,0.4);
+box-shadow: 2px 2px 3px rgba(135,139,144,0.4);
+}
+.polaroid.left.rotate-10 {
+margin-right: 30px;
+margin-bottom: 10px;
+}
+.polaroid.left.rotate-25 {
+margin-right: 50px;
+margin-bottom: 20px;
+}
+.polaroid.left.rotate-45 {
+margin-right: 60px;
+margin-bottom: 20px;
+}
+.polaroid.left.rotate10 {
+margin-right: 30px;
+margin-bottom: 10px;
+}
+.polaroid.left.rotate25 {
+margin-right: 50px;
+margin-bottom: 20px;
+}
+.polaroid.left.rotate45 {
+margin-right: 60px;
+margin-bottom: 20px;
+}
+.polaroid.right.rotate-10 {
+margin-left: 30px;
+margin-bottom: 10px;
+}
+.polaroid.right.rotate-25 {
+margin-left: 50px;
+margin-bottom: 20px;
+}
+.polaroid.right.rotate-45 {
+margin-left: 60px;
+margin-bottom: 20px;
+}
+.polaroid.right.rotate10 {
+margin-left: 30px;
+margin-bottom: 10px;
+}
+.polaroid.right.rotate25 {
+margin-left: 50px;
+margin-bottom: 20px;
+}
+.polaroid.right.rotate45 {
+margin-left: 60px;
+margin-bottom: 20px;
+}
+/* figure */
+.figure {
+border-top: 1px solid #eee;
+text-align: center;
+box-shadow: 0 1px 2px #aaa;
+-webkit-box-shadow: 0 1px 2px #aaa;
+-moz-box-shadow: 0 1px 2px #aaa;
+}
+.figure .caption {
+display: block;
+clear: both;
+margin-top: -2px;
+padding: .5em 10px .5em 10px;
+background: #fff7e1;
+border-top: 1px solid #aaa;
+font-style: italic;
+text-align: left;
+color: #333;
+}
+.figure .caption strong {
+font-style: normal;
+font-size: small;
+}
+.figure .caption strong:after {
+content: " - ";
+font-weight: normal;
+}
+/* TRANSPARENCY */
+.alpha100 {
+opacity: 1;
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+.alpha90 {
+opacity: .9;
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+}
+.alpha70 {
+opacity: .7;
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+.alpha50 {
+opacity: .5;
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+.alpha30 {
+opacity: .3;
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+}
+.alpha10 {
+opacity: .1;
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);
+}
+/* TRANSFORMATIONS */
+.rotate10 {
+-webkit-transform: rotate(10deg);
+-moz-transform: rotate(10deg);
+rotation: 10deg;
+}
+.rotate25 {
+-webkit-transform: rotate(25deg);
+-moz-transform: rotate(25deg);
+rotation: 25deg;
+}
+.rotate45 {
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+rotation: 45deg;
+}
+.rotate-10 {
+-webkit-transform: rotate(-10deg);
+-moz-transform: rotate(-10deg);
+rotation: -10deg;
+}
+.rotate-25 {
+-webkit-transform: rotate(-25deg);
+-moz-transform: rotate(-25deg);
+rotation: -25deg;
+}
+.rotate-45 {
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+rotation: -45deg;
+}
+/* BORDER RADIUS */
+.radius-small {
+border-radius: 2px;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+}
+.radius-medium {
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+}
+.radius-large {
+border-radius: 10px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+}
+.radius-extralarge {
+border-radius: 20px;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+}
+/* TYPEFACES */
+.italic {
+font-style: italic;
+}
+.sans-serif {
+font-family: "Century Gothic","Myriad Pro",myriad,"Gill Sans",verdana,sans-serif;
+}
+.serif {
+font-family: "Minion Pro","Times New Roman",times,serif;
+}
+.impact {
+font-family: impact,verdana,sans-serif;
+letter-spacing: 1px;
+}
+.elegant {
+font-family: "Book Antiqua",Garamond,serif;
+}
+.script {
+font-family: "Brush Script Std",sans-serif;
+}
+.typewriter {
+font-family: "Courier New",Courier,Times,serif;
+letter-spacing: -1px;
+}
+.grunge {
+font-family: tatu,punkassbitch,sans-serif;
+}
+.handwriting {
+font-family: "Handwriting - Dakota","HandPrinting",sans-serif;
+}
+/* CLEARFIX */
+/* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as p.dots */
+.clearfix:after {
+content: ".";
+display: block;
+clear: both;
+visibility: hidden;
+line-height: 0;
+height: 0;
+}
+.clearfix {
+display: inline-block;
+}
+html[xmlns] .clearfix {
+display: block;
+}
+* html .clearfix {
+height: 1%;
+}
+/* MODAL WINDOW */
 /* Z-index of #mask must lower than #modal .window */
-  #mask {position:absolute;	z-index:999999990; background-color:#000;	display:none;}
-  #modal .window {position:fixed;	width:425px; height:360px; display:none; z-index:999999991;	padding:50px 25px 25px 25px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; box-shadow:0 0 25px #FFF; -moz-box-shadow:0 0 25px #FFF; -webkit-box-shadow:0 0 25px #FFF;}
+#mask {
+position: absolute;
+z-index: 999999990;
+background-color: #000;
+display: none;
+}
+#modal .window {
+position: fixed;
+width: 425px;
+height: 360px;
+display: none;
+z-index: 999999991;
+padding: 50px 25px 25px 25px;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-shadow: 0 0 25px #FFF;
+-moz-box-shadow: 0 0 25px #FFF;
+-webkit-box-shadow: 0 0 25px #FFF;
+}
 /* Customize the modal window here */
-  #modal-iframe {width:425px; height:350px;	border:0;	z-index:999999995; position:relative;	top:-25px;}
-  #modal #dialog {width:425px; height:350px; background-color:#fff;}
-  #dialog .close {cursor:pointer; position:absolute; top:-15px; left:-15px; z-index:999999997; margin-bottom:20px; background:transparent url(../images/alerts/critical.png) no-repeat top left; display:block; height:35px; width:250px; color:#fff; padding-left:40px; font-size:.8em;}
+#modal-iframe {
+width: 425px;
+height: 350px;
+border: 0;
+z-index: 999999995;
+position: relative;
+top: -25px;
+}
+#modal #dialog {
+width: 425px;
+height: 350px;
+background-color: #fff;
+}
+#dialog .close {
+cursor: pointer;
+position: absolute;
+top: -15px;
+left: -15px;
+z-index: 999999997;
+margin-bottom: 20px;
+background: transparent url(../images/alerts/critical.png) no-repeat top left;
+display: block;
+height: 35px;
+width: 250px;
+color: #fff;
+padding-left: 40px;
+font-size: .8em;
+}
