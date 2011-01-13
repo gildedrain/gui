@@ -165,18 +165,19 @@ border-width: 0;
 border-color: #fff;
 }
 /* ZURB SUPER AWESOME BUTTON */ /*BUG! i need to recode this to not use the element,so the class can be independent */
-a.button {
-background-image: none;
+.button {
 background-color: #222;
 background-repeat: repeat-x;
-background: #222 -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.25)),to(rgba(255,255,255,0)));
-background: #222 -moz-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));
+background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.25)),to(rgba(255,255,255,0)));
+background-image: -moz-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));
 display: inline-block;
 padding: 5px 10px 6px 10px !important;
 color: #fff;
 text-decoration: none;
+border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
+box-shadow: 0 1px 3px rgba(0,0,0,.5);
 -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
@@ -684,8 +685,8 @@ font-family: tatu,punkassbitch,sans-serif;
 .handwriting {
 font-family: "Handwriting - Dakota","HandPrinting",sans-serif;
 }
-/* CLEARFIX */ /*BUG! not sure this ever worked,or at least not in IE7,and I don't think it's used anywhere */
-/* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as p.dots */
+/* CLEARFIX */
+/* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as placing p.dots last in the container */
 .clearfix:after {
 content: ".";
 display: block;

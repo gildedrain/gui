@@ -24,7 +24,8 @@ parseUri.options = {
 	}
 };
 
-/* CSS Browser Selector v0.3.5 (Feb 05, 2010)
+/* VERY IMPORTANT!!, Several CSS Hacks rely on this script!
+CSS Browser Selector v0.3.5 (Feb 05, 2010)
 Rafael Lima (http://rafael.adm.br)
 http://rafael.adm.br/css_browser_selector
 License: http://creativecommons.org/licenses/by/2.5/
