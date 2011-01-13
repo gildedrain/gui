@@ -11,28 +11,12 @@ background: transparent none !important;
 padding: 0;
 margin: 0;
 }
-/* Use this class if a link gets an icon when it shouldn't. */
-/* ALL OF THIS LINK ICON CODE IS VERY BUGGY AND PRONE TO INHERITANCE ISSUES */
-a[href^="http:"] {
-background-image: url(../images/16px_icons.png);
-background-repeat: no-repeat;
-background-position: 100% -50px;
-padding: 2px 18px 2px 0;
-margin: 0 3px 0 0;
-}
-/* #1 - order is important */
-a[href*=".sunyocc"] {
-background-image: none;
-background-color: transparent;
-padding: 0;
-margin: 0;
-}
-/* #2 - order is important */
-.external_link, a[target="_top"], a[target="_blank"], a[href^="mailto:"], .file_pdf, a[href$=".pdf"], .file_doc, a[href$=".doc"], .file_xls, a[href$=".xls"], .file_rss, a[href$=".rss"], a[href$='.atom'], .file_aim, a[href^="aim:"], a[href ^="msnim:"], a[href ^="xmpp:"], a[href *="icq.com"], a[href *="edit.yahoo.com/config/send_webmesg?"], a[href$='.txt'], a[href$='.rtf'], a[href$='.opml'], a[href$='.phps'], a[href$='.torrent'], a[href$='.vcard'], a[href$='.exe'], a[href$='.pps'], a[href$='.xpi'], a[href$='.fla'], a[href$='.swf'], a[href$='.zip'], a[href$='.rar'], a[href$='.gzip'], a[href$='.bzip'], a[href$='.ace'],  a[href$='.ical'], a[href$='.css'], a[href$='.ttf'], a[href *="flickr.com/photos/"], a[href *="zooomr.com"], a[href *="imageshack.us"], a[href *="bubbleshare.com"], a[href *="sevenload.com/bilder/"],  a[href$='.jpg'], a[href$='.gif'], a[href$='.png'], a[href$='.bmp'], a[href$='.jpeg'], a[href$='.svg'], a[href$='.eps'],  a[href *="youtube.com/watch?"], a[href *="sevenload.com/videos/"], a[href *="metacafe.com/watch/"],  a[href$='.mov'], a[href$='.wmv'], a[href$='.mp4'], a[href$='.avi'], a[href$='.mpg'],  a[href$='.mp3'], a[href$='.wav'], a[href$='.ogg'], a[href$='.wma'], a[href$='.m4a'],  a[href ^="callto:"], a[href ^="skype:"], a[href ^="gg:"], a[href$='.dmg'], a[href$='.app'], a[href*="file_pdf"], a[href*="file_doc"], a[href*="file_xls"], a[href*="file_rss"], a[href*="file_aim"] {
+.external_link,a[target="_blank"],a[href^="mailto:"],.file_pdf,.file_doc,.file_txt,.file_event,.file_vcard,.file_xls,.file_rss,.file_aim,.file_image,.file_video,.file_audio,.file_voice,.file_rss,.file_im {
 background-image: url(../images/16px_icons.png);
 background-repeat: no-repeat;
 background-position: 0 0;
 }
+/* IE browser bug required this addition */
 .external_link {
 background-image: url(../images/16px_icons.png) !important;
 background-repeat: no-repeat !important;
@@ -40,23 +24,6 @@ background-position: 100% -50px !important;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-/* #3 - order is important */
-a[target="_top"] {
-background-position: 100% -50px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-/* #3 - order is important */
-.menu a[target="_top"] {
-padding: .25em 10px .25em 10px !important;
-margin: 0 !important;
-}
-/* icons that appear in the menu need a different padding */
-.menu ul ul a[target="_top"] {
-padding: .25em 10px .25em 20px !important;
-margin: 0 !important;
-}
-/* icons that appear in the menu need a different padding */
 a[target="_blank"] {
 background-position: 100% 0;
 padding: 2px 18px 2px 0;
@@ -67,125 +34,68 @@ background-position: 100% -450px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-.file_pdf, a[href$=".pdf"], a[href*="file_pdf"] {
+.file_pdf {
 background-position: 100% -950px;
 padding: 2px 18px 2px 0;
 margin: 0 3px 0 0 !important;
 }
-.file_doc, a[href$=".doc"], a[href*="file_doc"] {
+.file_doc {
 background-position: 100% -400px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-.file_xls, a[href$=".xls"], a[href*="file_xls"] {
-background-position: 100% -1600px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-.file_rss, a[href$=".rss"], a[href$='.atom'], a[href*="file_rss"] {
-background-position: right -1250px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-.file_aim, a[href^="aim:"], a[href ^="msnim:"], a[href ^="xmpp:"], a[href *="icq.com"], a[href *="edit.yahoo.com/config/send_webmesg?"], a[href*="file_aim"] {
-background-position: 100% -650px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-a[href$='.txt'], a[href$='.rtf'] {
+.file_txt {
 background-position: 100% -1450px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href$='.opml'] {
-background-position: 100% -900px;
+.file_xls {
+background-position: 100% -1600px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href$='.phps'] {
-background-position: 100% -1100px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-a[href$='.torrent'] {
-background-position: 100% -1400px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-a[href$='.vcard'] {
+.file_vcard {
 background-position: 100% -1500px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href$='.exe'] {
-background-position: 100% -500px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-a[href$='.pps'] {
-background-position: 100% -1200px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-a[href$='.xpi'] {
-background-position: 100% -1150px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-a[href$='.fla'], a[href$='.swf'] {
-background-position: 100% -550px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-a[href$='.zip'], a[href$='.rar'], a[href$='.gzip'], a[href$='.bzip'], a[href$='.ace'] {
-background-position: 100% -100px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
-a[href$='.ical'] {
+.file_event {
 background-position: 100% -150px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href$='.css'] {
-background-position: 100% -300px;
+.file_rss {
+background-position: right -1250px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href$='.ttf'] {
-background-position: 100% -600px;
+.file_im {
+background-position: 100% -650px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href *="flickr.com/photos/"], a[href *="zooomr.com"], a[href *="imageshack.us"], a[href *="bubbleshare.com"], a[href *="sevenload.com/bilder/"],
-a[href$='.jpg'], a[href$='.gif'], a[href$='.png'], a[href$='.bmp'], a[href$='.jpeg'], a[href$='.svg'], a[href$='.eps'] {
+.file_image {
 background-position: 100% -1000px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href *="youtube.com/watch?"], a[href *="sevenload.com/videos/"], a[href *="metacafe.com/watch/"],
-a[href$='.mov'], a[href$='.wmv'], a[href$='.mp4'], a[href$='.avi'], a[href$='.mpg'] {
+.file_video {
 background-position: 100% -800px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href$='.mp3'], a[href$='.wav'], a[href$='.ogg'], a[href$='.wma'], a[href$='.m4a'] {
+.file_audio {
 background-position: 100% -850px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href ^="callto:"], a[href ^="skype:"], a[href ^="gg:"] {
+.file_voice {
 background-position: 100% -1050px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-a[href$='.dmg'], a[href$='.app'] {
-background-positon: 100% -350px;
-padding: 2px 18px 2px 0 !important;
-margin: 0 3px 0 0 !important;
-}
 /*HACK! this rule removes links.css icons for IE7 because it can't handle it. */
-.ie7 .col1 a, .ie7 .col1dot5 a, .ie7 .col2 a, .ie7 .col3 a, .ie7 .col4 a, .ie7 .col5 a, .ie7 .col6 a {
+.ie7 .col1 a,.ie7 .col1dot5 a,.ie7 .col2 a,.ie7 .col3 a,.ie7 .col4 a,.ie7 .col5 a,.ie7 .col6 a {
 background-image: none !important;
 background-repeat: no-repeat;
 background-position: 0 0;
