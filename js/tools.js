@@ -100,53 +100,60 @@ $(document).ready(function() {
 
 // Make zebra stripes for IE browsers, .zebra is an IE-only CSS Rule
   $("tr:nth-child(odd)").addClass('zebrarows');      
-      
-// Modal Window //    
-    $('#dialog').hide;
-    //select all the a tag with name equal to modal
-    $('a[name=modal]').click(function(e) {
-      $('#dialog').show;
-    	//Cancel the link behavior
-    	e.preventDefault();
-    	var divid = "#dialog";
-    	var lnk = $(this).attr('href');
-    	var title = $(this).attr('title');
-    	var qkey = parseUri(lnk).queryKey;
-    	var ekid = $(qkey).attr("id");
-    //	var h3id = "#dialog-h3";
-    	var ssid = "#dialog-content";
-    	var loadss = '<iframe id="modal-iframe" name="modal-iframe" frameborder="0" scrolling="no" src="/box.aspx?id=' + ekid + '" />';
-    //	$(h3id).html(title);
-    	$(ssid).html(loadss);
-    	//Get the screen height and width
-    	var maskHeight = $(document).height();
-    	var maskWidth = $(window).width();
-    	//Set height and width to mask to fill up the whole screen
-    	$('#mask').css({'width':maskWidth,'height':maskHeight});
-    	//transition effect		
-    	$('#mask').fadeTo("slow",0.8);	
-    	//Get the window height and width
-    	var winH = $(window).height();
-    	var winW = $(window).width();
-    	//Set the popup window to center
-    	$(divid).css('top',  winH/2-$(divid).height()/2);
-    	$(divid).css('left', winW/2-$(divid).width()/2);
-    	//transition effect
-    	$(divid).fadeIn(100);
-    });
-    //if close button is clicked
-    $('.window .close').click(function (e) {
-    	//Cancel the link behavior
-    	e.preventDefault();
-    	$("#dialog-content").html("")
-    	$('#mask, .window').hide();
-    });		
-    //if mask is clicked
-    $('#mask').click(function () {
-    	$(this).hide();
-    	$("#dialog-content").html("")
-    	$('.window').hide();
-    });
 
 //END DOCUMENT.READY
 });
+
+
+// MODAL WINDOW FUNCTION -- requires: <a class="dialog">link</a>
+(function($) {
+  $('a.dialog').live('click', function() {
+    $(this).loadDialog();
+    return false;
+  });
+
+  // Add the loadDialog() function to any jQuery element. This adds all of the
+  // dialog-related HTML to the DOM, binds the close events, and adds the iframe.
+  // See my comments below for an alternative to the iframe technique.
+  $.fn.loadDialog = function() {
+    $('body').append('<div id="modal" style="display:none;">'+
+      '<div class="window" id="dialog">'+
+      '<a class="close" title="Close Window">Click to close</a>'+
+      '<span class="null" id="dialog-content">'+
+      '<iframe id="modal-iframe" frameborder="0" scrolling="no" '+
+      'src="'+this.attr('href').replace(/[^\/]+\.aspx/, 'box.aspx') + '" />'+
+      '</span></div><div id="mask" />'+
+    '</div>');
+
+    $('#modal').show();
+    $('#mask').css({
+      'height': $(window).height(),
+      'width':  $(window).width()
+      }).fadeTo('slow',0.8);
+
+    $('#dialog').css({
+      'top': $(window).height()/2 - $('#dialog').height()/2,
+      'left': $(window).width()/2 - $('#dialog').width()/2
+    }).fadeIn(100);
+
+    // Instead of leaving the dialog HTML in the DOM after the dialog is closed,
+    // I decided to just remove the entire <div id="modal" /> entirely. This
+    // removes everything inside also, and leaves the page exactly the way it
+    // was before the dialog was opened.
+    $('#dialog .close').add('#mask').click(function() {
+      $('#modal').remove();
+      return this;
+    });
+
+    // I'm still not sure if I think the iframe is really necessary, but there might
+    // be some funky ektron stuff that I'm not fully understanding.  I would probably
+    // do something like this instead:
+    // $('#dialog-content').load(url for box.aspx), function() {
+    //   ...
+    //   show the modal and size it appropriately
+    //   fade in animations
+    // });
+    // The advantage here is that you can wait for the box.aspx content before starting
+    // the fade-in animations, ensuring that the modal is not displayed empty.
+  }
+})(jQuery);
