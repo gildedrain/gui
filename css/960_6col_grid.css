@@ -3,11 +3,11 @@
 body {
 xbackground: url(../images/grid/grid.jpg) repeat-y top center !important;
 }
-section, #section, .content {
+section,#section,.content {
 xbackground: transparent !important;
 }
 /* GRID DIMENSIONS - column widths = 150px with 10px gutters */
-.col1,.col1dot5, .col2,.col3,.col4,.col5,.col6 {
+.col1,.col1dot5,.col2,.col3,.col4,.col5,.col6 {
 float: left;
 margin-right: 5px;
 margin-left: 5px;
@@ -59,36 +59,35 @@ margin-left: 725px !important;
 margin-left: 805px !important;
 }
 /* PAGE LAYOUT
-- automatically reacts to ASIDE float position, no changes needed here
+- automatically reacts to ASIDE float position,no changes needed here
 - .hasmenu is added dynamically if the "menu" URL parameter exists
 - section area width = (col4) + 10 */
-#section.hasmenu, section.hasmenu {
+#section.hasmenu,section.hasmenu,.section.hasmenu {
 float: right;
 width: 640px;
 }
-#section>*, section>* {
+#section>*,section>*,.section>* {
 margin-left: 5px;
 margin-right: 5px;
 }
 /* offsets everything to line up with the grid */
-#aside, aside {
+#aside,aside,.aside {
 float: left;
 margin-left: 5px;
 margin-right: 5px;
 }
-#aside>*, aside>* {
+#aside>*,aside>*,.aside>* {
 max-width: 310px;
 }
 /* CONTAINER CLASS
-- centered, with overall site width = (usable space) + (padding) */
+- centered,with overall site width = (usable space) + (padding) */
 .container {
 width: 960px;
 padding: 0 5px 0 5px;
 margin: 0 auto;
 }
 /* CLEARING HELPERS
-Depending on the situation, you may need to apply some combination of:
-- .first to the first block and/or .last to the last block.
+Depending on the situation,you may need to apply some combination of:- .first to the first block and/or .last to the last block.
 - .first.nest to the first NESTED-block and .last.nest to the last NESTED-block.
 - .dots is a solid break to make all the dumb browsers do wrap where they're supposed to. */
 .first {
@@ -159,18 +158,42 @@ background-color: #cbe9ff;
 color: #222;
 background-color: #cbe9ff !important;
 }
-.menu a:hover, .menu .current {
+.menu a:hover,.menu .current {
 color: #FFF !important;
 background-color: #1799fe !important;
 }
 .menu ul ul a {
 background-color: rgba(0,0,0,.1) !important;
 }
-/* HACK! IE7 and IE8 mess up the menu styles, mostly b/c they don't understand rgba */
+/* HACK! IE7 and IE8 mess up the menu styles,mostly b/c they don't understand rgba */
 .ie .menu ul ul a {
 background-color: #ccc !important;
 }
-.menu ul ul a:hover, .menu ul ul .current {
+.menu ul ul a:hover,.menu ul ul .current {
 background-color: rgba(0,0,0,.5) !important;
 color: #FFF;
 }
+
+
+/*
+
+@media all and (max-width:1024px),(max-width:800px),(max-width:640px){.container{width:95%;margin:0;}
+#section,#section.hasmenu{float:none;margin:0;width:100%;padding:0;}
+#aside{position:absolute;top:-300px;left:0;}
+#aside:hover{top:0;}
+body{padding-top:100px;}
+}
+@media all and (max-width:1024px){.col1{width:20%;}
+.col1dot5{width:32%;}
+.col2{width:45%;}
+.col3{width:74%;}
+.col4{width:95%;}
+.col5{width:95%;}
+.col6{width:95%;}
+}
+@media all and (max-width:640px){.col1,.col1dot5,.col2,.col3,.col4,.col5,.col6{width:100%;float:none;clear:both;margin:0;padding:0;}
+.left,.right{float:none;}
+.polaroid{display:none;}
+}
+.menu ul ul {display: none;}
+*/
