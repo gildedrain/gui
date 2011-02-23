@@ -11,7 +11,7 @@ background: transparent none !important;
 padding: 0;
 margin: 0;
 }
-.external_link,a[target="_blank"],a[href^="mailto:"],.file_pdf,.file_doc,.file_txt,.file_event,.file_vcard,.file_xls,.file_rss,.file_aim,.file_image,.file_video,.file_audio,.file_voice,.file_rss,.file_im {
+.external_link,a[href^="mailto:"],.file_pdf,.file_doc,.file_txt,.file_event,.file_vcard,.file_xls,.file_rss,.file_aim,.file_image,.file_video,.file_audio,.file_voice,.file_rss,.file_im {
 background-image: url(../images/16px_icons.png);
 background-repeat: no-repeat;
 background-position: 0 0;
@@ -23,11 +23,6 @@ background-repeat: no-repeat !important;
 background-position: 100% -50px !important;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
-}
-a[target="_blank"] {
-background-position: 100% 0;
-padding: 2px 18px 2px 0;
-margin: 0 3px 0 0;
 }
 a[href^="mailto:"] {
 background-position: 100% -450px;
