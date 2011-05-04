@@ -104,6 +104,7 @@ $(document).ready(function() {
 //END DOCUMENT.READY
 });
 
+/* REMOVED FOR NOW BECAUSE OF SOME CONFLICT WITH EKTRON'S JS SCRIPTS
 
 // MODAL WINDOW FUNCTION -- requires: <a class="dialog">link</a>
 (function($) {
@@ -112,7 +113,6 @@ $(document).ready(function() {
     return false;
   });
 
-/* REMOVED FOR NOW BECAUSE OF SOME CONFLICT WITH EKTRON'S JS SCRIPTS
   // Add the loadDialog() function to any jQuery element. This adds all of the
   // dialog-related HTML to the DOM, binds the close events, and adds the iframe.
   // See my comments below for an alternative to the iframe technique.
