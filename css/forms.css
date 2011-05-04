@@ -70,22 +70,6 @@ margin: 0 0 .5em 0;
 padding: 5px;
 font-size: .75em;
 }
-
-search
-tel
-url
-email
-datetime
-date
-month
-week
-time
-datetime-local
-number
-range
-color
-
-
 input[type=radio], input[type=checkbox] {
 display: inline-block;
 width: auto;
