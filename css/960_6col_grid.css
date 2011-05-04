@@ -3,7 +3,7 @@
 body {
 xbackground: url(../images/grid/grid.jpg) repeat-y top center !important;
 }
-section,#section,.content {
+section,#section,.section,.content {
 xbackground: transparent !important;
 }
 /* GRID DIMENSIONS - column widths = 150px with 10px gutters */

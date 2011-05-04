@@ -7,7 +7,7 @@ display: none !important;
 }
 @media print {
 /* HIDE STUFF */
-#logo,#globalnav,#siteheader,#emergency,#announcement,#banner_spacer,.menu,.footer,#footer.container,footer.container,.anchor,a[href^="#"],.ad,.quote,.quote img,#footer br,footer br{
+#logo,#globalnav,#siteheader,#emergency,#announcement,#banner_spacer,.menu,.footer,#footer.container,footer.container,.anchor,a[href^="#"],.ad,.quote,.quote img,.footer br,#footer br,footer br{
 display: none !important;
 }
 /* GLOBAL RESET */
@@ -23,7 +23,7 @@ margin: 0;
 padding: 0;
 }
 /* PAGE LAYOUT */
-#section, section {
+#section, section, .section {
 width: 100%;
 margin: 0;
 padding: 0;
@@ -31,32 +31,32 @@ float: none !important;
 background: none !important;
 clear: both;
 }
-#section.hasmenu, section.hasmenu {
+#section.hasmenu, section.hasmenu, .section.hasmenu{
 float: none !important;
 width: 100%;
 background: none !important;
 }
-#footer, footer {
+#footer, footer, .footer {
 border-top: 1px solid #ccc !important;
 padding-top: 1em !important;
 }
-#aside, aside {
+#aside, aside, .aside {
 width: 100% !important;
 }
-#aside>*, aside>* {
+#aside>*, aside>*, .aside>* {
 max-width: 100% !important;
 }
-#footer, footer {
+#footer, footer, .footer {
 clear: both;
 display: block;
 width: 100%;
 border-top: 1px solid #000 !important;
 padding-top: .5em;
 }
-#footer .col3, footer .col3 {
+#footer .col3, footer .col3, .footer col3 {
 width: 100% !important;
 }
-#footer br.forprint, footer br.forprint {
+#footer br.forprint, footer br.forprint, .footer br.forprint {
 display: block !important;
 }
 #printheader {

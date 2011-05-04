@@ -62,7 +62,7 @@ width: 110px;
 margin: 0 10px 0 0;
 }
 /* inputs, selects, textareas, radios, checkboxes, submits */
-input[type="text"], input[type="password"], select, textarea {
+input[type="text"], input[type="email"], input[type="search"], input[type="tel"], input[type="url"], input[type="password"], select, textarea {
 display: inline-block;
 width: auto;
 border: 1px solid #aaa;
@@ -70,6 +70,22 @@ margin: 0 0 .5em 0;
 padding: 5px;
 font-size: .75em;
 }
+
+search
+tel
+url
+email
+datetime
+date
+month
+week
+time
+datetime-local
+number
+range
+color
+
+
 input[type=radio], input[type=checkbox] {
 display: inline-block;
 width: auto;
