@@ -487,3 +487,45 @@ a.bg-dark-brown:hover,
 .bg-dark-brown.button:hover {
 background-color: #805D2F;
 }
+.bg-double-rainbow-all-the-way, .bg-double-rainbow-all-the-way.button {
+  background-image: -moz-linear-gradient( left top, right bottom, 
+    from(red),
+    color-stop(16%, orange),
+    color-stop(32%, yellow),
+    color-stop(48%, green),
+    color-stop(60%, blue),
+    color-stop(76%, indigo),
+    to(violet)
+  );
+
+  background-image: -webkit-gradient(linear,  left top,  left bottom,
+    color-stop(0.00, red),
+    color-stop(16%, orange),
+    color-stop(32%, yellow),
+    color-stop(48%, green),
+    color-stop(60%, blue),
+    color-stop(76%, indigo),
+    color-stop(1.00, violet)
+  );
+}
+a.bg-double-rainbow-all-the-way:hover, .bg-double-rainbow-all-the-way.button:hover {
+  background-image: -moz-linear-gradient( left top, right bottom,
+    from(violet),
+    color-stop(76%, indigo),
+    color-stop(60%, blue),
+    color-stop(48%, green),
+    color-stop(32%, yellow),
+    color-stop(16%, orange),
+    to(red)
+  );
+
+  background-image: -webkit-gradient(linear,  left top,  right top,
+    color-stop(0.00%, violet),
+    color-stop(16%, indigo),
+    color-stop(32%, blue),
+    color-stop(48%, green),
+    color-stop(60%, yellow),
+    color-stop(76%, orange),
+    color-stop(1.00, red)
+  );
+}
