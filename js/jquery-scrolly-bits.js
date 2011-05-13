@@ -20,7 +20,8 @@ jQuery.fn.exists = function() {
  }
 
  jQuery.fn.isOmniPresentAllSeeingNav = function() {
-   flatNav = this.first().clone().appendTo('body').addClass('flat').hide()
+//   flatNav = this.first().clone().appendTo('body').addClass('flat').hide()
+  flatNav = this.first().clone().appendTo('body').addClass('flat').hide()
  }
 
  jQuery.fn.setCurrentSection = function() {
