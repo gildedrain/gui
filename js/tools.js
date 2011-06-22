@@ -158,4 +158,96 @@ $(document).ready(function() {
     // the fade-in animations, ensuring that the modal is not displayed empty.
   }
 })(jQuery); 
+<<<<<<< Updated upstream
 */
+=======
+*/
+
+
+
+// "Verty" a vertical scrolling anchor list animation effect
+// Written by nathan@fixler.org
+jQuery.fn.exists = function() {
+   return (this.length > 0)
+ }
+
+ jQuery.fn.doAwesomeScrollingThing = function() {
+   return this.each(function() {
+     $(this).click(function(event) {
+       hash = this.href.split('#')[1]
+       target = $('#' + hash)
+
+       if (target.exists()) {
+         var target_top = target.offset().top
+         $('html, body').animate({ scrollTop: target_top }, 500, function() {
+           document.location.hash = hash
+         })
+         event.preventDefault()
+       }
+     })
+   })
+ }
+
+ jQuery.fn.isOmniPresentAllSeeingNav = function() {
+  flatNav = this.first().clone().appendTo('body').addClass('flat').hide()
+ }
+
+ jQuery.fn.setCurrentSection = function() {
+   if (this.is(':visible')) {
+     this.find('a').each(function() {
+       target = $('#' + this.href.split('#')[1])
+       if ((target.offset().top + target.height()) > ($(window).scrollTop() + 50)) {
+         $('.nav.flat a').removeClass('current')
+         $(this).addClass('current')
+         return false
+       }
+     })
+   }
+ }
+
+ $(window).scroll(function() {
+   menu = $('.nav.flat')
+   var nav = $('.intro');
+   if ($(window).scrollTop() > (nav.scrollTop() + nav.height()) && (!menu.is(':visible'))) {
+     menu.fadeIn()
+   }
+   else if ($(window).scrollTop() < (nav.scrollTop() + nav.height()) && (menu.is(':visible'))) {
+     menu.fadeOut()
+   }
+   menu.setCurrentSection()
+ })
+
+ $(document).ready(function() {
+   $('body').css('margin-bottom', $(window).height())
+   $('.nav').isOmniPresentAllSeeingNav()
+   $('.scroll').doAwesomeScrollingThing()
+ })
+
+// "Horzy" a horizontal sliding door animation effect
+// Written by nathan@fixler.org
+var getPosition = function(list, item) {
+  for (var i=0; i < list.length; i++) {
+    if (list[i] == item) {
+      return i;
+    }
+  }
+}
+$(function() {
+  $('.slidernav a').live('click', function(e) {
+    var clickedLink = this;
+    var listPosition = getPosition($(clickedLink).closest('.slidernav').find('a'), clickedLink);
+    var currentSlide = $('#' + clickedLink.href.split('#')[1])
+    var slideHeight = currentSlide.height();
+    currentSlide.closest('.slides').animate({
+      'margin-left': '-'+(listPosition*950)+'px',
+      'height': slideHeight
+    });
+    $('.slidernav .current').removeClass('current');
+    $(clickedLink).addClass('current');
+    e.preventDefault();
+  })
+  $('.slides').height(function() {
+    return $(this).find('.slide').first().height();
+  })
+})
+>>>>>>> Stashed changes
