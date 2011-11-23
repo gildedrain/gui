@@ -158,9 +158,6 @@ $(document).ready(function() {
     // the fade-in animations, ensuring that the modal is not displayed empty.
   }
 })(jQuery); 
-<<<<<<< Updated upstream
-*/
-=======
 */
 
 
@@ -250,4 +247,3 @@ $(function() {
     return $(this).find('.slide').first().height();
   })
 })
->>>>>>> Stashed changes
