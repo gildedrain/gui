@@ -1,27 +1,27 @@
 // parseUri 1.2.2 // (c) Steven Levithan <stevenlevithan.com> // MIT License
 function parseUri (str) {
-	var	o   = parseUri.options,
-		m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
-		uri = {},
-		i   = 14;
-	while (i--) uri[o.key[i]] = m[i] || "";
-	uri[o.q.name] = {};
-	uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
-		if ($1) uri[o.q.name][$1] = $2;
-	});
-	return uri;
+  var o   = parseUri.options,
+    m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
+    uri = {},
+    i   = 14;
+  while (i--) uri[o.key[i]] = m[i] || "";
+  uri[o.q.name] = {};
+  uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
+    if ($1) uri[o.q.name][$1] = $2;
+  });
+  return uri;
 };
 parseUri.options = {
-	strictMode: false,
-	key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
-	q:   {
-		name:   "queryKey",
-		parser: /(?:^|&)([^&=]*)=?([^&]*)/g
-	},
-	parser: {
-		strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
-		loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
-	}
+  strictMode: false,
+  key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+  q:   {
+    name:   "queryKey",
+    parser: /(?:^|&)([^&=]*)=?([^&]*)/g
+  },
+  parser: {
+    strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
+    loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
+  }
 };
 
 /* VERY IMPORTANT!!, Several CSS Hacks rely on this script!
@@ -30,7 +30,7 @@ Rafael Lima (http://rafael.adm.br)
 http://rafael.adm.br/css_browser_selector
 License: http://creativecommons.org/licenses/by/2.5/
 Contributors: http://rafael.adm.br/css_browser_selector#contributors */
-function css_browser_selector(u){var ua = u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1;},g='gecko',w='webkit',s='safari',o='opera',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?'mobile':is('iphone')?'iphone':is('ipod')?'ipod':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win':is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; css_browser_selector(navigator.userAgent);      
+function css_browser_selector(u){var ua = u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1;},g='gecko',w='webkit',s='safari',o='opera',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?'mobile':is('iphone')?'iphone':is('ipod')?'ipod':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win':is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; css_browser_selector(navigator.userAgent);
 
 // --------------------------------------------------------------------------------------//
 // BEGIN JQUERY TOOLS -------------------------------------------------------------------//
@@ -52,7 +52,7 @@ $(document).ready(function() {
         );
     });
 
-// Equal Height Columns for all instances of div.card  
+// Equal Height Columns for all instances of div.card
     $(function(){
       var H = 0;
       $("div.card").each(function(){
@@ -62,7 +62,7 @@ $(document).ready(function() {
       $("div.card").height(H);
     });
 
-// Set the visible value of a text input to whatever the label contains.  on focus, remove the value.  on blur, restore it.   
+// Set the visible value of a text input to whatever the label contains.  on focus, remove the value.  on blur, restore it.
     $('.labels-inside input[type="text"]').add('.labels-inside textarea').add('.labels-inside input[type="password"]').each(function() {
         var label = $(this).prev('label[for="'+$(this)[0].id+'"]').hide().html();
         $(this).focus(function() {
@@ -80,7 +80,7 @@ $(document).ready(function() {
         $(this).blur();
       });
 
-// Set the visible value of a text input to whatever the input's title attribute contains.  on focus, remove the value.  on blur, restore it.   
+// Set the visible value of a text input to whatever the input's title attribute contains.  on focus, remove the value.  on blur, restore it.
     $('.titles-inside input[type="text"]').add('.titles-inside textarea').each(function() {
         var title = $(this)[0].title;
         $(this).focus(function() {
@@ -99,12 +99,11 @@ $(document).ready(function() {
       });
 
 // Make zebra stripes for IE browsers, .zebra is an IE-only CSS Rule
-  $("tr:nth-child(odd)").addClass('zebrarows');      
+  $("tr:nth-child(odd)").addClass('zebrarows');
 
 //END DOCUMENT.READY
 });
 
-/* REMOVED FOR NOW BECAUSE OF SOME CONFLICT WITH EKTRON'S JS SCRIPTS
 
 // MODAL WINDOW FUNCTION -- requires: <a class="dialog">link</a>
 (function($) {
@@ -157,67 +156,94 @@ $(document).ready(function() {
     // The advantage here is that you can wait for the box.aspx content before starting
     // the fade-in animations, ensuring that the modal is not displayed empty.
   }
-})(jQuery); 
-*/
+})(jQuery);
+
 
 
 
 // "Verty" a vertical scrolling anchor list animation effect
 // Written by nathan@fixler.org
-jQuery.fn.exists = function() {
-   return (this.length > 0)
- }
+(function( $ ) {
+  $.fn.scrollyBits = function() {
+    var target, target_top, hash;
 
- jQuery.fn.doAwesomeScrollingThing = function() {
-   return this.each(function() {
-     $(this).click(function(event) {
-       hash = this.href.split('#')[1]
-       target = $('#' + hash)
+    return $(this).click(function(event) {
+      hash = getLinkTarget(this);
+      target = $('#' + hash);
 
-       if (target.exists()) {
-         var target_top = target.offset().top
-         $('html, body').animate({ scrollTop: target_top }, 500, function() {
-           document.location.hash = hash
-         })
-         event.preventDefault()
-       }
-     })
-   })
- }
+      if (target.exists()) {
+        target_top = target.offset().top;
 
- jQuery.fn.isOmniPresentAllSeeingNav = function() {
-  flatNav = this.first().clone().appendTo('body').addClass('flat').hide()
- }
+        $('html, body').animate({ scrollTop: target_top }, 500, function() {
+          document.location.hash = hash;
+        });
+        event.preventDefault();
+      }
+    });
+  }
 
- jQuery.fn.setCurrentSection = function() {
-   if (this.is(':visible')) {
-     this.find('a').each(function() {
-       target = $('#' + this.href.split('#')[1])
-       if ((target.offset().top + target.height()) > ($(window).scrollTop() + 50)) {
-         $('.nav.flat a').removeClass('current')
-         $(this).addClass('current')
-         return false
-       }
-     })
-   }
- }
+  $.fn.copyNav = function(options) {
+    var didScroll, settings, flatMenu;
 
- $(window).scroll(function() {
-   menu = $('.nav.flat')
-   var nav = $('.intro');
-   if ($(window).scrollTop() > (nav.scrollTop() + nav.height()) && (!menu.is(':visible'))) {
-     menu.fadeIn()
-   }
-   else if ($(window).scrollTop() < (nav.scrollTop() + nav.height()) && (menu.is(':visible'))) {
-     menu.fadeOut()
-   }
-   menu.setCurrentSection()
- })
+    settings = $.extend({
+      'navClass': 'flat'
+    }, options);
+
+    flatMenu = this.first()
+      .clone()
+      .appendTo('body')
+      .addClass(settings['navClass'])
+      .hide();
+
+    $(window).scroll(function() {
+      didScroll = true;
+    });
+
+    setInterval(function() {
+      if ( didScroll ) {
+        didScroll = false;
+        windowPosition = $(window).scrollTop();
+        menuVisible = flatMenu.is(':visible');
+
+        if (windowPosition > 500 && !menuVisible) {
+          flatMenu.fadeIn();
+        }
+        else if (windowPosition < 500 && menuVisible) {
+          flatMenu.fadeOut();
+        }
+        flatMenu.setCurrentSection();
+      }
+    }, 250);
+  }
+
+  $.fn.setCurrentSection = function() {
+    var target;
+
+    if (this.is(':visible')) {
+      this.find('a').each(function() {
+        target = $('#' + getLinkTarget(this));
+
+        if ((target.offset().top + target.height()) > ($(window).scrollTop() + 50)) {
+          $('.nav.flat a').removeClass('current');
+          $(this).addClass('current');
+          return false;
+        }
+      });
+    }
+  }
+
+  $.fn.exists = function() {
+    return (this.length > 0);
+  }
+
+  var getLinkTarget = function(link) {
+    return link.href.split('#')[1];
+  }
+})( jQuery );
 
  $(document).ready(function() {
-   $('body').css('margin-bottom', $(window).height())
-   $('.nav').isOmniPresentAllSeeingNav()
-   $('.scroll').doAwesomeScrollingThing()
+   $('.nav').copyNav()
+   $('.scroll').scrollyBits()
  })
 
 // "Horzy" a horizontal sliding door animation effect
