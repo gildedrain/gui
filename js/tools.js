@@ -256,13 +256,15 @@ var getPosition = function(list, item) {
   }
 }
 $(function() {
+  var slideWidth = $('.slide').width();
+
   $('.slidernav a').live('click', function(e) {
     var clickedLink = this;
     var listPosition = getPosition($(clickedLink).closest('.slidernav').find('a'), clickedLink);
     var currentSlide = $('#' + clickedLink.href.split('#')[1])
     var slideHeight = currentSlide.height();
     currentSlide.closest('.slides').animate({
-      'margin-left': '-'+(listPosition*950)+'px',
+      'margin-left': '-'+(listPosition*slideWidth)+'px',
       'height': slideHeight
     });
     $('.slidernav .current').removeClass('current');
