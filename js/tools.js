@@ -258,7 +258,6 @@ var getPosition = function(list, item) {
 }
 $(function() {
   var slideWidth = $('.slide').width();
-
   $('.slidernav a').live('click', function(e) {
     var clickedLink = this;
     var listPosition = getPosition($(clickedLink).closest('.slidernav').find('a'), clickedLink);
