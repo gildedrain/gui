@@ -105,6 +105,7 @@ $(document).ready(function() {
 });
 
 
+
 // MODAL WINDOW FUNCTION -- requires: <a class="dialog">link</a>
 (function($) {
   $('a.dialog').live('click', function() {
