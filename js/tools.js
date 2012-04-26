@@ -165,18 +165,20 @@ $(document).ready(function() {
 // "Verty" a vertical scrolling anchor list animation effect
 // Written by nathan@fixler.org
 (function( $ ) {
+
   $.fn.scrollyBits = function() {
-    var target, target_top, hash;
+    var target, target_top, hash, scrolling_offset;
 
     return $(this).click(function(event) {
       hash = getLinkTarget(this);
       target = $('#' + hash);
+      scrolling_offset = $('#siteheader').height() + $('.nav.flat').height();
 
       if (target.exists()) {
-        target_top = target.offset().top;
+        target_top = target.offset().top - scrolling_offset;
 
         $('html, body').animate({ scrollTop: target_top }, 500, function() {
-          document.location.hash = hash;
+          document.location.hash = '_' + hash;
         });
         event.preventDefault();
       }
@@ -184,7 +186,8 @@ $(document).ready(function() {
   }
 
   $.fn.copyNav = function(options) {
-    var didScroll, settings, flatMenu;
+    var didScroll, settings, flatMenu, intro_height;
+    intro_height = $('.intro').height();
 
     settings = $.extend({
       'navClass': 'flat'
@@ -206,10 +209,10 @@ $(document).ready(function() {
         windowPosition = $(window).scrollTop();
         menuVisible = flatMenu.is(':visible');
 
-        if (windowPosition > 500 && !menuVisible) {
+        if (windowPosition > intro_height && !menuVisible) {
           flatMenu.fadeIn();
         }
-        else if (windowPosition < 500 && menuVisible) {
+        else if (windowPosition < intro_height && menuVisible) {
           flatMenu.fadeOut();
         }
         flatMenu.setCurrentSection();
@@ -218,13 +221,14 @@ $(document).ready(function() {
   }
 
   $.fn.setCurrentSection = function() {
-    var target;
+    var target, scrolling_offset;
+    scrolling_offset = $('#siteheader').height() + $('.nav.flat').height();
 
     if (this.is(':visible')) {
       this.find('a').each(function() {
         target = $('#' + getLinkTarget(this));
 
-        if ((target.offset().top + target.height()) > ($(window).scrollTop() + 50)) {
+        if ((target.offset().top + target.height()) > ($(window).scrollTop() + scrolling_offset)) {
           $('.nav.flat a').removeClass('current');
           $(this).addClass('current');
           return false;

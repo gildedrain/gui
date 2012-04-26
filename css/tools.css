@@ -469,7 +469,7 @@ clear: left;
 line-height: 1.25em;
 padding: 1em 0 1em 0;
 }
-/* dropcap,smallcaps first line */ 
+/* dropcap,smallcaps first line */
 .dropcap:first-child:first-letter {
 float: left;
 line-height: 30px;
