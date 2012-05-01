@@ -163,22 +163,28 @@ $(document).ready(function() {
 
 
 // "Verty" a vertical scrolling anchor list animation effect
-// Written by nathan@fixler.org
+// Originally written by nathan@fixler.org, Adapted by steve@petrock.org
 (function( $ ) {
 
   $.fn.scrollyBits = function() {
-    var target, target_top, hash, scrolling_offset;
+    var target, target_top, hash, scrolling_offset, bottom_padding;
+
+// need to add bottom-padding so you can actually scroll all the way to the last .section
+    bottom_padding = $(window).height() - $('.section').filter(':last').height();
+    if (bottom_padding > 0) {
+      $('body').css('padding-bottom', bottom_padding);
+    }
 
     return $(this).click(function(event) {
       hash = getLinkTarget(this);
       target = $('#' + hash);
-      scrolling_offset = $('#siteheader').height() + $('.nav.flat').height();
+      scrolling_offset = $('#siteheader').height() + $('.nav.flat').height(); // if you have these, their heights are subtracted from the scrolling distance.  If you don't have these, scrolling_offset = 0.
 
       if (target.exists()) {
         target_top = target.offset().top - scrolling_offset;
 
         $('html, body').animate({ scrollTop: target_top }, 500, function() {
-          document.location.hash = '_' + hash;
+          document.location.hash = '_' + hash; // prefixing the hash prevents Firefox and IE from scrolling to the actual hash, thereby obeying the calculated target_top
         });
         event.preventDefault();
       }
