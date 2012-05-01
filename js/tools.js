@@ -169,10 +169,9 @@ $(document).ready(function() {
   $.fn.scrollyBits = function() {
     var target, target_top, hash, scrolling_offset, bottom_padding;
 
-// need to add bottom-padding so you can actually scroll all the way to the last .section
     bottom_padding = $(window).height() - $('.section').filter(':last').height();
     if (bottom_padding > 0) {
-      $('body').css('padding-bottom', bottom_padding);
+      $('body').css('padding-bottom', bottom_padding); // need to add bottom-padding so you can actually scroll all the way to the last .section
     }
 
     return $(this).click(function(event) {
