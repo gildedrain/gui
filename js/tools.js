@@ -252,8 +252,10 @@ $(document).ready(function() {
 })( jQuery );
 
  $(document).ready(function() {
-   $('.nav').copyNav()
-   $('.scroll').scrollyBits()
+   if ( $(".scroll").length > 0 ) { // only activate these functions if .scroll exists on the page
+     $('.nav').copyNav()
+     $('.scroll').scrollyBits()
+    }
  })
 
 // "Horzy" a horizontal sliding door animation effect
