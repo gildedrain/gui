@@ -144,7 +144,6 @@ $(document).ready(function() {
   }
 })(jQuery);
 
-
 // "Verty" a vertical scrolling anchor list animation effect
 // Originally written by nathan@fixler.org, Adapted by steve@petrock.org
 (function( $ ) {

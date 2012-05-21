@@ -717,15 +717,14 @@ height: 1%;
 position: absolute;
 z-index: 999999990;
 background-color: #000;
-display: none;
+display:none;
 }
+
 #modal .window {
-position: fixed;
-width: 425px;
-height: 360px;
-display: none;
+width: auto;
+height: auto;
 z-index: 999999991;
-padding: 50px 25px 25px 25px;
+padding: 1em;
 border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
@@ -733,20 +732,14 @@ box-shadow: 0 0 25px #FFF;
 -moz-box-shadow: 0 0 25px #FFF;
 -webkit-box-shadow: 0 0 25px #FFF;
 }
-/* Customize the modal window here */
-#modal-iframe {
-width: 425px;
-height: 350px;
-border: 0;
-z-index: 999999995;
-position: relative;
-top: -25px;
-}
+
 #modal #dialog {
-width: 425px;
-height: 350px;
-background-color: #fff;
+position: fixed;
+width:auto; min-width:300px;
+height:auto; min-height:300px;
+background-color: #FFF;
 }
+
 #dialog .close {
 cursor: pointer;
 position: absolute;
@@ -757,7 +750,7 @@ margin-bottom: 20px;
 background: transparent url(../images/alerts/critical.png) no-repeat top left;
 display: block;
 height: 35px;
-width: 250px;
+width: auto;
 color: #fff;
 padding-left: 40px;
 font-size: .8em;

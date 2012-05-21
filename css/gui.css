@@ -1,6 +1,7 @@
-/* RESET.CSS */ 
+/* RESET.CSS */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;border:none;outline:0;outline:none;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
-/* remember to define focus styles! :focus{outline:0;}*/
+/* remember to define focus styles! :focus{outline:0;}
+*/
 body{line-height:1;color:black;background:white;}
 ol,ul{list-style:none;}
 table{border-collapse:separate;border-spacing:0;}
@@ -76,7 +77,7 @@ label{margin:10px 0 3px 0;vertical-align:top;display:block;line-height:1.2em;}
 .labels-left label{text-align:left;display:inline-block;width:110px;margin:0 10px 0 0;}
 .labels-right label{text-align:right;display:inline-block;width:110px;margin:0 10px 0 0;}
 /* inputs,selects,textareas,radios,checkboxes,submits */
-input[type="text"], input[type="email"], input[type="search"], input[type="tel"], input[type="url"], input[type="password"], select, textarea{display:inline-block;width:auto;border:1px solid #aaa;margin:0 0 .5em 0;padding:5px;font-size:.75em;}
+input[type="text"],input[type="email"],input[type="search"],input[type="tel"],input[type="url"],input[type="password"],select,textarea{display:inline-block;width:auto;border:1px solid #aaa;margin:0 0 .5em 0;padding:5px;font-size:.75em;}
 input[type=radio],input[type=checkbox]{display:inline-block;width:auto;margin:0px 5px 0px 0;}
 input[type="radio"]+label,input[type="checkbox"]+label{display:inline-block;width:auto;margin:0 25px 0 0;}
 select{width:auto;padding:0;}
@@ -313,7 +314,7 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .quote{display:block;min-height:328px;padding:.5em .5em 1.25em .5em;margin:-2px 0 5px 0;line-height:1.3em;font-size:1.15em;font-style:italic;}
 .quote img{margin-left:-.5em;margin-top:-.5em;margin-bottom:.5em;float:left;clear:right;}
 .quote cite{font-size:.65em;display:block;clear:left;line-height:1.25em;padding:1em 0 1em 0;}
-/* dropcap,smallcaps first line */ 
+/* dropcap,smallcaps first line */
 .dropcap:first-child:first-letter{float:left;line-height:30px;padding:5px 5px 5px 0;margin:.07em 0 -.2em -.1em;color:#333;font-weight:bold;font-size:2.8em;font-family:garamond,"minion pro",times,"times new roman",serif;}
 .smallcapline:first-child:first-line{font-variant:small-caps;}
 /* footnotes */
@@ -378,11 +379,9 @@ html[xmlns] .clearfix{display:block;}
 /* MODAL WINDOW */ /*BUG! might want to switch to using Fix's modal window code instead */
 /* Z-index of #mask must lower than #modal .window */
 #mask{position:absolute;z-index:999999990;background-color:#000;display:none;}
-#modal .window{position:fixed;width:425px;height:360px;display:none;z-index:999999991;padding:50px 25px 25px 25px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow:0 0 25px #FFF;-moz-box-shadow:0 0 25px #FFF;-webkit-box-shadow:0 0 25px #FFF;}
-/* Customize the modal window here */
-#modal-iframe{width:425px;height:350px;border:0;z-index:999999995;position:relative;top:-25px;}
-#modal #dialog{width:425px;height:350px;background-color:#fff;}
-#dialog .close{cursor:pointer;position:absolute;top:-15px;left:-15px;z-index:999999997;margin-bottom:20px;background:transparent url(../images/alerts/critical.png) no-repeat top left;display:block;height:35px;width:250px;color:#fff;padding-left:40px;font-size:.8em;}
+#modal .window{width:auto;height:auto;z-index:999999991;padding:1em;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow:0 0 25px #FFF;-moz-box-shadow:0 0 25px #FFF;-webkit-box-shadow:0 0 25px #FFF;}
+#modal #dialog{position:fixed;width:auto;min-width:300px;height:auto;min-height:300px;background-color:#FFF;}
+#dialog .close{cursor:pointer;position:absolute;top:-15px;left:-15px;z-index:999999997;margin-bottom:20px;background:transparent url(../images/alerts/critical.png) no-repeat top left;display:block;height:35px;width:auto;color:#fff;padding-left:40px;font-size:.8em;}
 /* COLORS.CSS */
 .quiet{color:#666;}
 .loud{color:#000;}
@@ -539,7 +538,7 @@ a.bg-medium-brown:hover,.bg-medium-brown.button:hover{background-color:#6D4919;}
 .bg-dark-brown,.bg-dark-brown.button{background-color:#563c1a;}
 a.bg-dark-brown:hover,
 .bg-dark-brown.button:hover{background-color:#805D2F;}
-/*PRINT.CSS*/ 
+/*PRINT.CSS*/
 @media screen{.forprint{display:none !important;}
 /* USE THIS CLASS FOR ANYTHING YOU ONLY WANT TO APPEAR ON PRINTED DOCUMENTS,IT WILL BE HIDDEN FOR media="screen" */}
 @media print{/* HIDE STUFF */
