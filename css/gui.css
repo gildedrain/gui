@@ -376,12 +376,10 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .clearfix{display:inline-block;}
 html[xmlns] .clearfix{display:block;}
 * html .clearfix{height:1%;}
-/* MODAL WINDOW */ /*BUG! might want to switch to using Fix's modal window code instead */
-/* Z-index of #mask must lower than #modal .window */
-#mask{position:absolute;z-index:999999990;background-color:#000;display:none;}
-#modal .window{width:auto;height:auto;z-index:999999991;padding:1em;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow:0 0 25px #FFF;-moz-box-shadow:0 0 25px #FFF;-webkit-box-shadow:0 0 25px #FFF;}
-#modal #dialog{position:fixed;width:auto;min-width:300px;height:auto;min-height:300px;background-color:#FFF;}
-#dialog .close{cursor:pointer;position:absolute;top:-15px;left:-15px;z-index:999999997;margin-bottom:20px;background:transparent url(../images/alerts/critical.png) no-repeat top left;display:block;height:35px;width:auto;color:#fff;padding-left:40px;font-size:.8em;}
+/* MODAL WINDOW */
+#modal #section {/* needed to prevent scrollbars */width:auto; height:auto; margin:0; padding:0;}
+#modal .clearfix {/* needed to prevent scrollbars */display:inline;}
+#modal .clearfix:after{/* needed to prevent scrollbars */content:".";display:inline;clear:both;visibility:hidden;line-height:0;height:0;}
 /* COLORS.CSS */
 .quiet{color:#666;}
 .loud{color:#000;}

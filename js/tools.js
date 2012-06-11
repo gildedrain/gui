@@ -106,43 +106,30 @@ $(document).ready(function() {
 
 
 
-// MODAL WINDOW FUNCTION -- requires: <a class="dialog">link</a>
-(function($) {
-  $('a.dialog').live('click', function() {
+// MODAL WINDOW
+// -- requires <a href="#" class="dialog">...</a> + JQueryUI (core,position,widget)
+$(function() {
+  $('a.dialog').on('click', function(){
     $(this).loadDialog();
     return false;
   });
   $.fn.loadDialog = function() {
-    $('body').append('<div id="modal" style="display:none;">'+
-      '<div class="window" id="dialog">'+
-      '<a class="close" title="Close Window">Click to close</a>'+
-      '<span class="null" id="dialog-content">' +
-      '</span></div><div id="mask" />'+
-    '</div>');
-    // Change the link's URL to use box.aspx instead, for a plain container
-    var $inBox = $(this).attr('href').replace(/[^\/]+\.aspx/, 'box.aspx');
-    $("#dialog-content").load($inBox);
-    // Don't show the modal unless you've got something to put in it
-    if ($('#dialog-content').length>0) {
-      $('#modal').show();
-      $('#mask').css({
-        'height': $(document).height(),
-        'width':  $(window).width(),
-        'top':0,
-        'left':0
-      }).fadeTo(150, 0.8);
-      $('#dialog').css({
-        'top': $(window).height()/2 - $('#dialog').height(),
-        'left': $(window).width()/2 - $('#dialog').width()/1.5
-      }).fadeIn(100);
-    }
-    // remove everything from the HTML when you close the modal
-    $('#dialog .close').add('#mask').click(function() {
-      $('#modal').remove();
-      return this;
+    $('body').prepend('<div id="modal" style="display:none; max-width:640px; min-width:300px;"></div>');
+    var $external_content = $(this).attr('href').replace(/[^\/]+\.aspx/, 'box.aspx');
+    $("#modal").load($external_content, function () {
+//    $("#modal").load("external_file.html", function() { // keep this line for debugging purposes
+      $('#modal').dialog({
+        autoOpen: false,
+        width: 'auto',
+        modal: true,
+        draggable: true,
+        resizable: false
+      });
+      $('#modal').dialog('open');
     });
   }
-})(jQuery);
+});
+
 
 // "Verty" a vertical scrolling anchor list animation effect
 // Originally written by nathan@fixler.org, Adapted by steve@petrock.org
