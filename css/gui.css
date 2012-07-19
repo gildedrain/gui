@@ -377,8 +377,8 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 html[xmlns] .clearfix{display:block;}
 * html .clearfix{height:1%;}
 /* MODAL WINDOW */
-#modal #section {/* needed to prevent scrollbars */width:auto; height:auto; margin:0; padding:0;}
-#modal .clearfix {/* needed to prevent scrollbars */display:inline;}
+#modal #section{/* needed to prevent scrollbars */width:auto;height:auto;margin:0;padding:0;}
+#modal .clearfix{/* needed to prevent scrollbars */display:inline;}
 #modal .clearfix:after{/* needed to prevent scrollbars */content:".";display:inline;clear:both;visibility:hidden;line-height:0;height:0;}
 /* COLORS.CSS */
 .quiet{color:#666;}
@@ -581,3 +581,29 @@ td,th{color:#000 !important;}
 .alpha30{opacity:1;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);}
 .alpha10{opacity:1;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);}
 }
+/* BG-IMAGE SLIDESHOW */
+/*SLIDES */
+.bg_slideshow{width:100%;background-color:#003151;list-style:none;position:relative;padding:0;margin:48px 0 0 0;min-height:500px;}
+.bg_slideshow li{display:none;position:absolute;top:0;width:100%;background-position:top center;background-repeat:no-repeat;padding:0;margin:0;}
+.no-js .bg_slideshow li:first-child{display:block;text-align:center;}
+/* REQUIRES MODERNIZR! if no JS just display the first slide forever. Modernizr will remove no-js when js enabled. */
+/* CAPTIONS */
+.bg_slideshow a{display:inline-block;font-size:1.5em;padding:.5em;text-shadow:2px 2px 0px #000000;}
+.bg_slideshow strong{display:inline-block;font-weight:600;}
+.no-js .bg_slideshow a{margin-top:-200px;}
+/* caption positions */
+.bg_slideshow .topleft {float:left;margin-top:60px;}
+.bg_slideshow .topcenter {margin:60px 0 0 33%;min-width:33%;}
+.bg_slideshow .topright {float:right;margin-top:60px;}
+.bg_slideshow .middleleft {float:left;margin-top:150px;}
+.bg_slideshow .middlecenter {margin:150px 0 0 33%;min-width:33%;}
+.bg_slideshow .middleright {float:right;margin-top:150px; }
+.bg_slideshow .bottomleft {float:left; margin-top:265px;}
+.bg_slideshow .bottomcenter {margin:265px 0 0 33%;min-width:33%;}
+.bg_slideshow .bottomright {float:right;margin-top:265px;}
+/* CONTROLS */
+.bg_slideshow_controls{position:absolute;z-index:6;top:53px;margin-left:830px;width:135px;list-style:none;padding:0;}
+.bg_slideshow_controls li{display:inline-block;margin:0 10px 0 0;}
+.bg_slideshow_controls a{display:block;height:32px;width:32px;text-indent:100%;white-space:nowrap;overflow:hidden; background-image:url(../images/slideshow_controls.png);background-repeat:no-repeat;background-position:1px 0;}
+#next{background-position:-117px 0;}
+#playpause{background-position:-38px 0;}

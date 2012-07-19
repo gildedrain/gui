@@ -1,36 +1,31 @@
 // parseUri 1.2.2 // (c) Steven Levithan <stevenlevithan.com> // MIT License
-function parseUri (str) {
-  var o   = parseUri.options,
-    m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
-    uri = {},
-    i   = 14;
-  while (i--) uri[o.key[i]] = m[i] || "";
-  uri[o.q.name] = {};
-  uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
-    if ($1) uri[o.q.name][$1] = $2;
-  });
-  return uri;
-};
-parseUri.options = {
-  strictMode: false,
-  key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
-  q:   {
-    name:   "queryKey",
-    parser: /(?:^|&)([^&=]*)=?([^&]*)/g
-  },
-  parser: {
-    strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
-    loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
-  }
-};
+  function parseUri (str) {
+    var o   = parseUri.options,
+      m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
+      uri = {},
+      i   = 14;
+    while (i--) uri[o.key[i]] = m[i] || "";
+    uri[o.q.name] = {};
+    uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
+      if ($1) uri[o.q.name][$1] = $2;
+    });
+    return uri;
+  };
+  parseUri.options = {
+    strictMode: false,
+    key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+    q:   {
+      name:   "queryKey",
+      parser: /(?:^|&)([^&=]*)=?([^&]*)/g
+    },
+    parser: {
+      strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
+      loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
+    }
+  };
 
-/* VERY IMPORTANT!!, Several CSS Hacks rely on this script!
-CSS Browser Selector v0.3.5 (Feb 05, 2010)
-Rafael Lima (http://rafael.adm.br)
-http://rafael.adm.br/css_browser_selector
-License: http://creativecommons.org/licenses/by/2.5/
-Contributors: http://rafael.adm.br/css_browser_selector#contributors */
-function css_browser_selector(u){var ua = u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1;},g='gecko',w='webkit',s='safari',o='opera',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?'mobile':is('iphone')?'iphone':is('ipod')?'ipod':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win':is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; css_browser_selector(navigator.userAgent);
+// VERY IMPORTANT!!, Several CSS Hacks rely on this script!
+  function css_browser_selector(u){var ua = u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1;},g='gecko',w='webkit',s='safari',o='opera',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?'mobile':is('iphone')?'iphone':is('ipod')?'ipod':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win':is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; css_browser_selector(navigator.userAgent);
 
 // --------------------------------------------------------------------------------------//
 // BEGIN JQUERY TOOLS -------------------------------------------------------------------//
@@ -38,76 +33,68 @@ function css_browser_selector(u){var ua = u.toLowerCase(),is=function(t){return 
 $(document).ready(function() {
 
 // PULLQUOTE SCRIPT
-    // This script creates a javascript clone
-    // of any content wrapped in a span.pullquote,
-    // prepends the contents to the parent block,
-    // keeps any extra classes the span originally contained,
-    // and changes the "pullquote" class to "pulledquote" to absorb the positioning CSS
-    $('.pullquote').each(function() {
-        var pulled = $(this).clone()
-        .removeClass('pullquote');
-        $(this).parent('p').prepend($('<p>')
-        .addClass('pulledquote')
-        .append(pulled)
-        );
-    });
+  // This script creates a javascript clone
+  // of any content wrapped in a span.pullquote,
+  // prepends the contents to the parent block,
+  // keeps any extra classes the span originally contained,
+  // and changes the "pullquote" class to "pulledquote" to absorb the positioning CSS
+  $('.pullquote').each(function() {
+    var pulled = $(this).clone()
+    .removeClass('pullquote');
+    $(this).parent('p').prepend($('<p>')
+    .addClass('pulledquote')
+    .append(pulled)
+    );
+  });
 
 // Equal Height Columns for all instances of div.card
-    $(function(){
-      var H = 0;
-      $("div.card").each(function(){
-        var h = $(this).height();
-        if(h > H) H = h;
-      });
-      $("div.card").height(H);
+  $(function(){
+    var H = 0;
+    $("div.card").each(function(){
+      var h = $(this).height();
+      if(h > H) H = h;
     });
+    $("div.card").height(H);
+  });
 
 // Set the visible value of a text input to whatever the label contains.  on focus, remove the value.  on blur, restore it.
-    $('.labels-inside input[type="text"]').add('.labels-inside textarea').add('.labels-inside input[type="password"]').each(function() {
-        var label = $(this).prev('label[for="'+$(this)[0].id+'"]').hide().html();
-        $(this).focus(function() {
-          if ($(this).val() == label) {
-            $(this).val('').removeClass('light-grey italic');
-          }
-        });
-
-        $(this).blur(function() {
-          if ($(this).val() == '') {
-            $(this).val(label).addClass('light-grey italic');
-          }
-        });
-
-        $(this).blur();
-      });
+  $('.labels-inside input[type="text"]').add('.labels-inside textarea').add('.labels-inside input[type="password"]').each(function() {
+    var label = $(this).prev('label[for="'+$(this)[0].id+'"]').hide().html();
+    $(this).focus(function() {
+      if ($(this).val() == label) {
+        $(this).val('').removeClass('light-grey italic');
+      }
+    });
+    $(this).blur(function() {
+      if ($(this).val() == '') {
+        $(this).val(label).addClass('light-grey italic');
+      }
+    });
+    $(this).blur();
+  });
 
 // Set the visible value of a text input to whatever the input's title attribute contains.  on focus, remove the value.  on blur, restore it.
-    $('.titles-inside input[type="text"]').add('.titles-inside textarea').each(function() {
-        var title = $(this)[0].title;
-        $(this).focus(function() {
-          if ($(this).val() == title) {
-            $(this).val('').removeClass('light-grey italic');
-          }
-        });
-
-        $(this).blur(function() {
-          if ($(this).val() == '') {
-            $(this).val(title).addClass('light-grey italic');
-          }
-        });
-
-        $(this).blur();
-      });
+  $('.titles-inside input[type="text"]').add('.titles-inside textarea').each(function() {
+    var title = $(this)[0].title;
+    $(this).focus(function() {
+      if ($(this).val() == title) {
+        $(this).val('').removeClass('light-grey italic');
+      }
+    });
+    $(this).blur(function() {
+      if ($(this).val() == '') {
+        $(this).val(title).addClass('light-grey italic');
+      }
+    });
+    $(this).blur();
+  });
 
 // Make zebra stripes for IE browsers, .zebra is an IE-only CSS Rule
   $("tr:nth-child(odd)").addClass('zebrarows');
-
-//END DOCUMENT.READY
 });
 
-
-
 // MODAL WINDOW
-// -- requires <a href="#" class="dialog">...</a> + JQueryUI (core,position,widget)
+// Requires <a href="#" class="dialog">...</a> + JQueryUI (core,position,widget)
 $(function() {
   $('a.dialog').on('click', function(){
     $(this).loadDialog();
@@ -130,11 +117,9 @@ $(function() {
   }
 });
 
-
 // "Verty" a vertical scrolling anchor list animation effect
 // Originally written by nathan@fixler.org, Adapted by steve@petrock.org
 (function( $ ) {
-
   $.fn.scrollyBits = function() {
     var target, target_top, hash, scrolling_offset, bottom_padding;
 
@@ -220,12 +205,12 @@ $(function() {
   }
 })( jQuery );
 
- $(document).ready(function() {
-   if ( $(".scroll").length > 0 ) { // only activate these functions if .scroll exists on the page
-     $('.nav').copyNav()
-     $('.scroll').scrollyBits()
-    }
- })
+$(document).ready(function() {
+ if ( $(".scroll").length > 0 ) { // only activate these functions if .scroll exists on the page
+   $('.nav').copyNav()
+   $('.scroll').scrollyBits()
+  }
+})
 
 // "Horzy" a horizontal sliding door animation effect
 // Written by nathan@fixler.org
@@ -255,3 +240,86 @@ $(function() {
     return $(this).find('.slide').first().height();
   })
 })
+
+// BACKGROUND-IMAGE SLIDESHOW
+// REQUIRES: <ul class="bg_slideshow"><li><img /><a href="#">Link</a></li></ul>
+$(document).ready(function () {
+  // ADD CONTROL BUTTONS
+    $('.bg_slideshow').before(
+      '<div class="container">' +
+        '<ul class="bg_slideshow_controls">' +
+          '<li><a href="#" id="previous">Previous</a></li>' +
+          '<li><a href="#" id="playpause">Pause</a></li>' +
+          '<li><a href="#" id="next">Next</a></li>' +
+        '</ul>' +
+      '</div>'
+    );
+
+  // MAKE THE SLIDES
+    $('.bg_slideshow li').each(function () {
+      var slideImg = $(this).find('img');
+      var slideHeight = slideImg.height();
+      var slideImgSrc = $(this).find('img').attr('src');
+      $(this).css({
+       'background-image' : 'url(' + slideImgSrc + ')',
+       'height' : slideHeight + 'px'
+      });
+      $(this).find('img').remove(); // we can toss these now that we have them set as bg-images
+      $(this).find('a').wrap('<div class="container" />');
+    });
+
+  // SETTINGS
+    slides = $('.bg_slideshow li');
+    totalSlides = slides.length;
+    currentSlide = 0;
+    slideSpeed = 5000;
+    fadeSpeed = 300;
+
+  // INITIAL LOAD
+    // Load up the first slide
+    $(slides).eq(currentSlide).fadeIn(fadeSpeed);
+    // Start playing
+    interval = setInterval(function() {
+      navigate("next");
+    }, slideSpeed);
+
+  // BEHAVIORS
+    $("#next").click(function() {
+      stopAnimation();
+      navigate("next");
+    });
+    $("#previous").click(function() {
+      stopAnimation();
+      navigate("previous");
+    });
+    $("#playpause").toggle(
+      function(){ stopAnimation(); },
+      function() {
+        $('#playpause').html("Pause");
+        // change the bg-img to "pause"
+        $(this).css({ "background-position" : "-38px 0" });
+        navigate("next");
+        interval = setInterval(function() {
+          navigate("next");
+        }, slideSpeed);
+    });
+    function navigate(direction) {
+      if (direction == "next") {
+        $(slides).eq(currentSlide).fadeOut(fadeSpeed);
+        currentSlide = (currentSlide + 1) % totalSlides;
+        $(slides).eq(currentSlide).fadeIn(fadeSpeed);
+      }
+      if (direction == "previous") {
+        $(slides).eq(currentSlide).fadeOut(fadeSpeed);
+        currentSlide = (currentSlide - 1) % totalSlides;
+        $(slides).eq(currentSlide).fadeIn(fadeSpeed);
+      }
+    }
+    var stopAnimation = function() {
+      // Change the background image to "play"
+      $("#playpause").css({ "background-position" : "-78px 0" });
+      $('#playpause').html("Play");
+      clearInterval(interval);
+    };
+// END DOCUMENT.READY
+});
