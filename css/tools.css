@@ -121,17 +121,9 @@ background: transparent;
 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);/* IE6 & 7 */
 zoom:1;
 }
-/* for all versions of IE,JQuery sets .zebrarows to odd rows,and we'll just make it 100% opaque white */
-.ie .zebrarows {
-background: #FFF;
-}
 /*turn off zebra rows*/
 .nozebrarows tr:nth-child(odd) {
 background-color: transparent !important;
-}
-/*HACK!*/
-.ie .nozebrarows .zebrarows {
-background: transparent;
 }
 /*zebra columns*/
 .zebracolumns td:nth-of-type(odd),
@@ -662,35 +654,48 @@ border-radius: 20px;
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 }
-/* TYPEFACES */ /*BUG! this section is incomplete,needs integration with font-service */
-.italic {
+/* TYPEFACES */
+.font-italic, .italic {
 font-style: italic;
 }
-.sans-serif {
+.font-sans-serif, .sans-serif {
 font-family: "Century Gothic","Myriad Pro",myriad,"Gill Sans",verdana,sans-serif;
 }
-.serif {
+.font-serif, .serif {
 font-family: "Minion Pro","Times New Roman",times,serif;
 }
-.impact {
-font-family: impact,verdana,sans-serif;
-letter-spacing: 1px;
+.font-script {
+font-family: "Dancing Script", "Brush Script", serif;
 }
-.elegant {
-font-family: "Book Antiqua",Garamond,serif;
+.font-brushscript {
+font-family: "Devonshire",serif;
 }
-.script {
-font-family: "Brush Script Std",sans-serif;
+.font-brushscript2 {
+font-family: "Sarina",serif;
 }
-.typewriter {
-font-family: "Courier New",Courier,Times,serif;
+.font-handwriting {
+font-family: "Nothing You Could Do",sans-serif;
+}
+.font-typewriter {
+font-family: "PT Mono","Courier New",Courier,Times,serif;
 letter-spacing: -1px;
 }
-.grunge {
-font-family: tatu,punkassbitch,sans-serif;
+.font-grunge {
+font-family: "Rock Salt",sans-serif;
 }
-.handwriting {
-font-family: "Handwriting - Dakota","HandPrinting",sans-serif;
+.font-impact {
+font-family: impact, "Open Sans";
+letter-spacing: 1px;
+font-weight: 800;
+}
+.font-woodcut {
+font-family: "Vast Shadow", impact, sans-serif;
+}
+.font-condensed {
+font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+}
+.font-marker {
+font-family: "Permanent Marker", impact, sans-serif;
 }
 /* CLEARFIX */
 /* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as placing p.dots last in the container */
@@ -732,16 +737,18 @@ height: 0;
 /* BG-IMAGE SLIDESHOW */
 /*SLIDES */
 .bg_slideshow {
+z-index: 0;
 width: 100%;
 background-color: #003151;
 list-style: none;
 position: relative;
 padding: 0;
-margin: 48px 0 0 0;
+margin: -11px 0 0 0;
 min-height: 500px;
+top: -56px;
 }
-
 .bg_slideshow li {
+z-index: 0;
 display: none;
 position: absolute;
 top: 0;
@@ -759,15 +766,9 @@ text-align: center;
 /* CAPTIONS */
 .bg_slideshow a {
 display: inline-block;
-margin-top: 230px;
 font-size: 1.5em;
 padding: .5em;
 text-shadow: 2px 2px 0px #000000;
-}
-.bg_slideshow a.center {
-margin-left: 33%;
-min-width: 33%;
-background-color: #000;
 }
 .bg_slideshow strong {
 display: inline-block;
@@ -776,11 +777,48 @@ font-weight: 600;
 .no-js .bg_slideshow a {
 margin-top: -200px;
 }
+/* caption positions */
+.bg_slideshow .topleft {
+float: left;
+margin-top: 60px;
+}
+.bg_slideshow .topcenter {
+margin: 60px 0 0 33%;
+min-width: 33%;
+}
+.bg_slideshow .topright {
+float: right;
+margin-top: 60px;
+}
+.bg_slideshow .middleleft {
+float: left;
+margin-top: 150px;
+}
+.bg_slideshow .middlecenter {
+margin: 150px 0 0 33%;
+min-width: 33%;
+}
+.bg_slideshow .middleright {
+float: right;
+margin-top: 150px;
+}
+.bg_slideshow .bottomleft {
+float: left;
+margin-top: 265px;
+}
+.bg_slideshow .bottomcenter {
+margin: 265px 0 0 33%;
+min-width: 33%;
+}
+.bg_slideshow .bottomright {
+float: right;
+margin-top: 265px;
+}
 /* CONTROLS */
 .bg_slideshow_controls {
-position: absolute;
+position: relative;
 z-index: 6;
-top: 53px;
+top: 10px;
 margin-left: 830px;
 width: 135px;
 list-style: none;
@@ -790,24 +828,25 @@ padding: 0;
 display: inline-block;
 margin: 0 10px 0 0;
 }
+.ie7 .bg_slideshow_controls li {
+display: block;
+float: left;
+margin: 0 10px 0 0;
+}
 .bg_slideshow_controls a {
 display: block;
-height: 35px;
-width: 35px;
+height: 32px;
+width: 32px;
 text-indent: 100%;
 white-space: nowrap;
 overflow: hidden;
-background-color: white;
 background-image: url(../images/slideshow_controls.png);
 background-repeat: no-repeat;
-background-position: 0 0;
+background-position: 1px 0;
 }
 #next {
-background-position: 100 0;
-}
-#previous {
-background-position: 200 0;
+background-position: -117px 0;
 }
 #playpause {
-background-position: 0 0;
+background-position: -38px 0;
 }
