@@ -1,31 +1,14 @@
-// parseUri 1.2.2 // (c) Steven Levithan <stevenlevithan.com> // MIT License
-  function parseUri (str) {
-    var o   = parseUri.options,
-      m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
-      uri = {},
-      i   = 14;
-    while (i--) uri[o.key[i]] = m[i] || "";
-    uri[o.q.name] = {};
-    uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
-      if ($1) uri[o.q.name][$1] = $2;
-    });
-    return uri;
-  };
-  parseUri.options = {
-    strictMode: false,
-    key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
-    q:   {
-      name:   "queryKey",
-      parser: /(?:^|&)([^&=]*)=?([^&]*)/g
-    },
-    parser: {
-      strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
-      loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
-    }
-  };
-
-// VERY IMPORTANT!!, Several CSS Hacks rely on this script!
-  function css_browser_selector(u){var ua = u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1;},g='gecko',w='webkit',s='safari',o='opera',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?'mobile':is('iphone')?'iphone':is('ipod')?'ipod':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win':is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; css_browser_selector(navigator.userAgent);
+// ******** remove this function after you've added the IE if-statements to every template file that refers to tools.js *********
+// VERY IMPORTANT!! this script allows prefix browser-targeting classes .ie7, .ie8, .ie9, gecko, etc.
+// several stylesheets use these prefix classes
+  /*
+  CSS Browser Selector v0.4.0 (Nov 02, 2010)
+  Rafael Lima (http://rafael.adm.br)
+  http://rafael.adm.br/css_browser_selector
+  License: http://creativecommons.org/licenses/by/2.5/
+  Contributors: http://rafael.adm.br/css_browser_selector#contributors
+  */
+  function css_browser_selector(u){var ua=u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1},g='gecko',w='webkit',s='safari',o='opera',m='mobile',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3.6')?g+' ff3 ff3_6':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('blackberry')?m+' blackberry':is('android')?m+' android':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?m+' j2me':is('iphone')?m+' iphone':is('ipod')?m+' ipod':is('ipad')?m+' ipad':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win'+(is('windows nt 6.0')?' vista':''):is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; css_browser_selector(navigator.userAgent);
 
 // --------------------------------------------------------------------------------------//
 // BEGIN JQUERY TOOLS -------------------------------------------------------------------//
@@ -114,7 +97,7 @@ $(function() {
       });
       $('#modal').dialog('open');
     });
-  }
+  };
 });
 
 // "Verty" a vertical scrolling anchor list animation effect
@@ -142,7 +125,7 @@ $(function() {
         event.preventDefault();
       }
     });
-  }
+  };
 
   $.fn.copyNav = function(options) {
     var didScroll, settings, flatMenu, intro_height;
@@ -177,7 +160,7 @@ $(function() {
         flatMenu.setCurrentSection();
       }
     }, 250);
-  }
+  };
 
   $.fn.setCurrentSection = function() {
     var target, scrolling_offset;
@@ -194,23 +177,23 @@ $(function() {
         }
       });
     }
-  }
+  };
 
   $.fn.exists = function() {
     return (this.length > 0);
-  }
+  };
 
   var getLinkTarget = function(link) {
     return link.href.split('#')[1];
-  }
+  };
 })( jQuery );
 
 $(document).ready(function() {
  if ( $(".scroll").length > 0 ) { // only activate these functions if .scroll exists on the page
-   $('.nav').copyNav()
-   $('.scroll').scrollyBits()
+   $('.nav').copyNav();
+   $('.scroll').scrollyBits();
   }
-})
+});
 
 // "Horzy" a horizontal sliding door animation effect
 // Written by nathan@fixler.org
@@ -220,13 +203,13 @@ var getPosition = function(list, item) {
       return i;
     }
   }
-}
+};
 $(function() {
   var slideWidth = $('.slide').width();
   $('.slidernav a').live('click', function(e) {
     var clickedLink = this;
     var listPosition = getPosition($(clickedLink).closest('.slidernav').find('a'), clickedLink);
-    var currentSlide = $('#' + clickedLink.href.split('#')[1])
+    var currentSlide = $('#' + clickedLink.href.split('#')[1]);
     var slideHeight = currentSlide.height();
     currentSlide.closest('.slides').animate({
       'margin-left': '-'+(listPosition*slideWidth)+'px',
@@ -235,16 +218,16 @@ $(function() {
     $('.slidernav .current').removeClass('current');
     $(clickedLink).addClass('current');
     e.preventDefault();
-  })
+  });
   $('.slides').height(function() {
     return $(this).find('.slide').first().height();
-  })
-})
+  });
+});
 
-// BACKGROUND-IMAGE SLIDESHOW
-// REQUIRES: <ul class="bg_slideshow"><li><img /><a href="#">Link</a></li></ul>
+// Background-Image Slideshow
+// Requires: <ul class="bg_slideshow"><li><img /><a href="#">Link</a></li></ul>
 $(document).ready(function () {
-  // ADD CONTROL BUTTONS
+  // Add Control Buttons
     $('.bg_slideshow').before(
       '<div class="container">' +
         '<ul class="bg_slideshow_controls">' +
@@ -255,7 +238,7 @@ $(document).ready(function () {
       '</div>'
     );
 
-  // MAKE THE SLIDES
+  // Make the Slides
     $('.bg_slideshow li').each(function () {
       var slideImg = $(this).find('img');
       var slideHeight = slideImg.height();
@@ -268,22 +251,18 @@ $(document).ready(function () {
       $(this).find('a').wrap('<div class="container" />');
     });
 
-  // SETTINGS
+  // Settings
     slides = $('.bg_slideshow li');
     totalSlides = slides.length;
     currentSlide = 0;
     slideSpeed = 5000;
     fadeSpeed = 300;
 
-  // INITIAL LOAD
-    // Load up the first slide
+  // Start it off
     $(slides).eq(currentSlide).fadeIn(fadeSpeed);
-    // Start playing
-    interval = setInterval(function() {
-      navigate("next");
-    }, slideSpeed);
+    startAnimation();
 
-  // BEHAVIORS
+  // Behaviors
     $("#next").click(function() {
       stopAnimation();
       navigate("next");
@@ -292,17 +271,29 @@ $(document).ready(function () {
       stopAnimation();
       navigate("previous");
     });
-    $("#playpause").toggle(
-      function(){ stopAnimation(); },
-      function() {
-        $('#playpause').html("Pause");
-        // change the bg-img to "pause"
-        $(this).css({ "background-position" : "-38px 0" });
-        navigate("next");
-        interval = setInterval(function() {
-          navigate("next");
-        }, slideSpeed);
+    $("#playpause").click(function() {
+      if (animating == true) {
+        stopAnimation();
+      }
+      else {
+        startAnimation();
+      }
     });
+
+    function startAnimation() {
+      $('#playpause').removeClass('play');
+      $('#playpause').html("Pause");
+      interval = setInterval(function() {
+        navigate("next");
+      }, slideSpeed);
+      animating = true;
+    }
+    function stopAnimation() {
+      $('#playpause').addClass('play');
+      $('#playpause').html("Play");
+      animating = false;
+      clearInterval(interval);
+    }
     function navigate(direction) {
       if (direction == "next") {
         $(slides).eq(currentSlide).fadeOut(fadeSpeed);
@@ -315,11 +306,33 @@ $(document).ready(function () {
         $(slides).eq(currentSlide).fadeIn(fadeSpeed);
       }
     }
-    var stopAnimation = function() {
-      // Change the background image to "play"
-      $("#playpause").css({ "background-position" : "-78px 0" });
-      $('#playpause').html("Play");
-      clearInterval(interval);
-    };
+// END DOCUMENT.READY
+});
+
+// Background-Banners
+// Requires: <ul class="bg_banners"><li><img /><a href="#">Link</a></li></ul>
+$(document).ready(function () {
+  // Make the Banners
+    $('.bg_banners li').each(function () {
+      var slideImg = $(this).find('img');
+      var slideHeight = slideImg.height();
+      var slideWidth = slideImg.width();
+      var slideImgSrc = $(this).find('img').attr('src');
+      if (slideImg.exists()) { // use that img's unique height and width
+        $(this).css({
+         'background-image' : 'url(' + slideImgSrc + ')',
+         'height' : slideHeight + 'px',
+         'width' : slideWidth + 'px'
+        });
+//        $(this).find('img').remove(); // we can toss these now that we have them set as bg-images
+      }
+      else { // use the height & width of the first image that exists
+        slideHeight = $(this).siblings().children('img').eq(0).height();
+        $(this).css({
+         'height' : slideHeight + 'px'
+        });
+      }
+      $(this).find('a').wrapInner('<span />');
+    });
 // END DOCUMENT.READY
 });
