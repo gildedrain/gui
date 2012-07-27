@@ -594,12 +594,13 @@ td,th{color:#000 !important;}
 .bg_slideshow_controls{position:relative;float:right;z-index:6;margin:10px 0 0 0;width:135px;list-style:none;padding:0;}
 .bg_slideshow_controls li{display:inline-block;margin:0 10px 0 0;}
   .ie7 .bg_slideshow_controls li {display:block;float:left;}
-.bg_slideshow_controls a{display:block;height:25px;width:30px;text-indent:100%;white-space:nowrap;overflow:hidden;background-image:url(../images/slideshow_controls.png);background-repeat:no-repeat;background-position:2px 0;}
-#playpause /*pause*/{background-position:-113px 0;}
-#playpause.play {background-position:-55px 0;}
+.bg_slideshow_controls a{display:block;height:25px;width:30px;text-indent:100%;white-space:nowrap;overflow:hidden;background-image:url(../images/bg_slideshow_controls.png);background-repeat:no-repeat;background-position:2px 0;}
+#playpause.play {background-image:url(../images/bg_slideshow_controls.png);background-repeat:no-repeat;background-position:2px 0;background-position:-55px 0;}
+#playpause /*pause, or playing-loading.gif */{background-image:url(../images/loading.gif); background-repeat:no-repeat; background-position:0 0;}
 #next{background-position:-170px 0;}
 /* captions */
 .bg_slideshow a{display:inline-block;font-size:1.5em;padding:.5em;text-shadow:2px 2px 0px #000000;}
+.bg_slideshow a:hover {box-shadow:0 0 100px 0 rgba(255,255,255,.5);}
 .bg_slideshow strong{display:inline-block;font-weight:600;}
   .no-js .bg_slideshow a{margin-top:-200px;}
 /* caption positions */
@@ -615,11 +616,11 @@ td,th{color:#000 !important;}
 /* BG_BANNERS */
 .bg_banners {list-style:none; padding:0; margin:-150px 0 0 0; clear:both; display:block;}
   .ie7 .bg_banners {clear:right;}
-.bg_banners li {float:left; position:relative; display:inline-block; margin:0 5px 10px 5px; min-width:150px; background-repeat:no-repeat; padding:0; background-position:center center;}
+.bg_banners li {float:left; position:relative; display:inline-block; margin:0 5px 10px 5px; background-repeat:no-repeat; padding:0; background-position:center center;}
   .ie7 .bg_banners li, .ie8 .bg_banners li {display:block; float:left;}
 .bg_banners img {display:none;}
 .bg_banners a {display:block;z-index:1;height:100%;width:100%;outline:1px solid #fff;font-weight:400;text-transform:uppercase;font-size:1.5em;font-family:'open sans', verdana, sans-serif; line-height:1; letter-spacing:-.05em;}
-.bg_banners a:hover {outline:4px solid #222;}
+.bg_banners a:hover {outline:2px solid #333; box-shadow:0 0 100px 0 rgba(255,255,255,.5);outline-offset:-143px; }
 .bg_banners span {position:absolute;bottom:0px;display:block;text-shadow:0 2px 3px #000;padding:5px;width:100%;
 /* for IE9 */  background:rgba(0,0,0,.5);
 /* for real browsers */  background: -moz-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));  background: -webkit-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);  background: -o-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  }

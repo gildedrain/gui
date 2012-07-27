@@ -309,7 +309,7 @@ $(document).ready(function () {
 // END DOCUMENT.READY
 });
 
-// Background-Banners
+// Background-Banner-Links
 // Requires: <ul class="bg_banners"><li><img /><a href="#">Link</a></li></ul>
 $(document).ready(function () {
   // Make the Banners
@@ -321,10 +321,12 @@ $(document).ready(function () {
       if (slideImg.exists()) { // use that img's unique height and width
         $(this).css({
          'background-image' : 'url(' + slideImgSrc + ')',
-         'height' : slideHeight + 'px',
-         'width' : slideWidth + 'px'
+         'height' : slideHeight + 'px'
+// using grid-classes on <li> for widths
+// 'width' : slideWidth + 'px'
         });
-//        $(this).find('img').remove(); // we can toss these now that we have them set as bg-images
+// using css img {display:none;}
+// $(this).find('img').remove(); // we can toss these now that we have them set as bg-images
       }
       else { // use the height & width of the first image that exists
         slideHeight = $(this).siblings().children('img').eq(0).height();
