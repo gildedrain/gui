@@ -89,11 +89,3 @@ background-position: 100% -1050px;
 padding: 2px 18px 2px 0 !important;
 margin: 0 3px 0 0 !important;
 }
-/*HACK! this rule removes links.css icons for IE7 because it can't handle it. */
-.ie7 .col1 a,.ie7 .col1dot5 a,.ie7 .col2 a,.ie7 .col3 a,.ie7 .col4 a,.ie7 .col5 a,.ie7 .col6 a {
-background-image: none !important;
-background-repeat: no-repeat;
-background-position: 0 0;
-margin: 0 !important;
-padding: 0 !important;
-}

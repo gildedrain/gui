@@ -602,6 +602,36 @@ filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
 opacity: .1;
 filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);
 }
+.bg-black-alpha90 {
+background-color: rgba(0,0,0,.9);
+}
+.bg-black-alpha70 {
+background-color: rgba(0,0,0,.7);
+}
+.bg-black-alpha50 {
+background-color: rgba(0,0,0,.5);
+}
+.bg-black-alpha30 {
+background-color: rgba(0,0,0,.3);
+}
+.bg-black-alpha10 {
+background-color: rgba(0,0,0,.1);
+}
+.ie7 .bg-black-alpha90,.ie8 .bg-black-alpha90 {
+background-color: #000
+}
+.ie7 .bg-black-alpha70,.ie8 .bg-black-alpha70 {
+background-color: #000
+}
+.ie7 .bg-black-alpha50,.ie8 .bg-black-alpha50 {
+background-color: #000
+}
+.ie7 .bg-black-alpha30,.ie8 .bg-black-alpha30 {
+background-color: #000
+}
+.ie7 .bg-black-alpha10,.ie8 .bg-black-alpha10 {
+background-color: #000
+}
 /* TRANSFORMATIONS */
 .rotate10 {
 -webkit-transform: rotate(10deg);
@@ -655,17 +685,17 @@ border-radius: 20px;
 -moz-border-radius: 20px;
 }
 /* TYPEFACES */
-.font-italic, .italic {
+.font-italic,.italic {
 font-style: italic;
 }
-.font-sans-serif, .sans-serif {
+.font-sans-serif,.sans-serif {
 font-family: "Century Gothic","Myriad Pro",myriad,"Gill Sans",verdana,sans-serif;
 }
-.font-serif, .serif {
+.font-serif,.serif {
 font-family: "Minion Pro","Times New Roman",times,serif;
 }
 .font-script {
-font-family: "Dancing Script", "Brush Script", serif;
+font-family: "Dancing Script","Brush Script",serif;
 }
 .font-brushscript {
 font-family: "Devonshire",serif;
@@ -684,18 +714,15 @@ letter-spacing: -1px;
 font-family: "Rock Salt",sans-serif;
 }
 .font-impact {
-font-family: impact, "Open Sans";
+font-family: impact,"Open Sans";
 letter-spacing: 1px;
 font-weight: 800;
 }
-.font-woodcut {
-font-family: "Vast Shadow", impact, sans-serif;
-}
 .font-condensed {
-font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+font-family: "Open Sans Condensed","Open Sans",sans-serif;
 }
 .font-marker {
-font-family: "Permanent Marker", impact, sans-serif;
+font-family: "Permanent Marker",impact,sans-serif;
 }
 /* CLEARFIX */
 /* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as placing p.dots last in the container */
@@ -717,109 +744,63 @@ display: block;
 height: 1%;
 }
 /* MODAL WINDOW */
-#modal #section {/* needed to prevent scrollbars */
-width: auto;
+#modal #section {/* needed to prevent scrollbars */width:auto;
 height: auto;
 margin: 0;
 padding: 0;
 }
-#modal .clearfix {/* needed to prevent scrollbars */
-display: inline;
+#modal .clearfix {/* needed to prevent scrollbars */display:inline;
 }
-#modal .clearfix:after {/* needed to prevent scrollbars */
-content: ".";
+#modal .clearfix:after {/* needed to prevent scrollbars */content:".";
 display: inline;
 clear: both;
 visibility: hidden;
 line-height: 0;
 height: 0;
 }
-/* BG-IMAGE SLIDESHOW */
-/*SLIDES */
+/* BG_SLIDESHOW */
+/*slides */
 .bg_slideshow {
 z-index: 0;
 width: 100%;
-background-color: #003151;
 list-style: none;
 position: relative;
 padding: 0;
-margin: -11px 0 0 0;
+margin: 0;
 min-height: 500px;
-top: -56px;
+}
+/* .bg_slideshow {
+margin-top: 48px;
+}
+/* if #occheaderbg {
+position: absolute;
+}
+*/
+  .ie7 .bg_slideshow {
+top: -50px;
 }
 .bg_slideshow li {
 z-index: 0;
 display: none;
 position: absolute;
-top: 0;
+top: 0px;
 width: 100%;
-background-position: top center;
+background-position: bottom center;
 background-repeat: no-repeat;
 padding: 0;
 margin: 0;
 }
-.no-js .bg_slideshow li:first-child {
+  .no-js .bg_slideshow li:first-child {
 display: block;
 text-align: center;
 }
 /* REQUIRES MODERNIZR! if no JS just display the first slide forever. Modernizr will remove no-js when js enabled. */
-/* CAPTIONS */
-.bg_slideshow a {
-display: inline-block;
-font-size: 1.5em;
-padding: .5em;
-text-shadow: 2px 2px 0px #000000;
-}
-.bg_slideshow strong {
-display: inline-block;
-font-weight: 600;
-}
-.no-js .bg_slideshow a {
-margin-top: -200px;
-}
-/* caption positions */
-.bg_slideshow .topleft {
-float: left;
-margin-top: 60px;
-}
-.bg_slideshow .topcenter {
-margin: 60px 0 0 33%;
-min-width: 33%;
-}
-.bg_slideshow .topright {
-float: right;
-margin-top: 60px;
-}
-.bg_slideshow .middleleft {
-float: left;
-margin-top: 150px;
-}
-.bg_slideshow .middlecenter {
-margin: 150px 0 0 33%;
-min-width: 33%;
-}
-.bg_slideshow .middleright {
-float: right;
-margin-top: 150px;
-}
-.bg_slideshow .bottomleft {
-float: left;
-margin-top: 265px;
-}
-.bg_slideshow .bottomcenter {
-margin: 265px 0 0 33%;
-min-width: 33%;
-}
-.bg_slideshow .bottomright {
-float: right;
-margin-top: 265px;
-}
-/* CONTROLS */
+/* controls */
 .bg_slideshow_controls {
 position: relative;
+float: right;
 z-index: 6;
-top: 10px;
-margin-left: 830px;
+margin: 10px 0 0 0;
 width: 135px;
 list-style: none;
 padding: 0;
@@ -828,25 +809,129 @@ padding: 0;
 display: inline-block;
 margin: 0 10px 0 0;
 }
-.ie7 .bg_slideshow_controls li {
+  .ie7 .bg_slideshow_controls li {
 display: block;
 float: left;
-margin: 0 10px 0 0;
 }
 .bg_slideshow_controls a {
 display: block;
-height: 32px;
-width: 32px;
+height: 25px;
+width: 30px;
 text-indent: 100%;
 white-space: nowrap;
 overflow: hidden;
-background-image: url(../images/slideshow_controls.png);
+background-image: url(../images/bg_slideshow_controls.png);
 background-repeat: no-repeat;
-background-position: 1px 0;
+background-position: 2px 0;
+}
+#playpause.play {
+background-image: url(../images/bg_slideshow_controls.png);
+background-repeat: no-repeat;
+background-position: 2px 0;
+background-position: -55px 0;
+}
+#playpause /*pause, or playing-loading.gif */ {
+background-image: url(../images/loading.gif);
+background-repeat: no-repeat;
+background-position: 0 0;
 }
 #next {
-background-position: -117px 0;
+background-position: -170px 0;
 }
-#playpause {
-background-position: -38px 0;
+/* captions */
+.bg_slideshow a {
+display: inline-block;
+font-size: 1.5em;
+padding: .5em;
+text-shadow: 2px 2px 0px #000000;
+}
+.bg_slideshow a:hover {
+box-shadow: 0 0 100px 0 rgba(255,255,255,.5);
+}
+.bg_slideshow strong {
+display: inline-block;
+font-weight: 600;
+}
+  .no-js .bg_slideshow a {
+margin-top: -200px;
+}
+/* caption positions */
+.bg_slideshow .caption-top {
+margin-top: 65px;
+}
+.bg_slideshow .caption-middle {
+margin-top: 150px;
+}
+.bg_slideshow .caption-bottom {
+margin-top: 250px;
+}
+/* BG_BANNERS */
+.bg_banners {
+list-style: none;
+padding: 0;
+margin: -150px 0 0 0;
+clear: both;
+display: block;
+}
+  .ie7 .bg_banners {
+clear: right;
+}
+.bg_banners li {
+float: left;
+position: relative;
+display: inline-block;
+margin: 0 5px 10px 5px;
+background-repeat: no-repeat;
+padding: 0;
+background-position: center center;
+}
+  .ie7 .bg_banners li, .ie8 .bg_banners li {
+display: block;
+float: left;
+}
+.bg_banners img {
+display: none;
+}
+.bg_banners a {
+display: block;
+z-index: 1;
+height: 100%;
+width: 100%;
+outline: 1px solid #fff;
+font-weight: 400;
+text-transform: uppercase;
+font-size: 1.5em;
+font-family: 'open sans', verdana, sans-serif;
+line-height: 1;
+letter-spacing: -.05em;
+}
+.bg_banners a:hover {
+outline: 2px solid #333;
+box-shadow: 0 0 100px 0 rgba(255,255,255,.5);
+outline-offset: -143px;
+}
+.bg_banners span {
+position: absolute;
+bottom: 0px;
+display: block;
+text-shadow: 0 2px 3px #000;
+padding: 5px;
+width: 100%;
+/* for IE9 */  background:rgba(0,0,0,.5);
+/* for real browsers */  background: -moz-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));
+background: -webkit-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+background: -o-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+/* for IE7, IE8 */ .ie7 .bg_banners span, .ie8 .bg_banners span {
+background: transparent url(../images/bg_banners_gradient.gif) repeat bottom left;
+width: auto;
+}
+.play {
+background-image: url(../images/play.png);
+background-repeat: no-repeat;
+background-position: center center;
 }

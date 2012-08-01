@@ -173,27 +173,3 @@ background-color: #ccc !important;
 background-color: rgba(0,0,0,.5) !important;
 color: #FFF;
 }
-
-
-/*
-
-@media all and (max-width:1024px),(max-width:800px),(max-width:640px){.container{width:95%;margin:0;}
-#section,#section.hasmenu{float:none;margin:0;width:100%;padding:0;}
-#aside{position:absolute;top:-300px;left:0;}
-#aside:hover{top:0;}
-body{padding-top:100px;}
-}
-@media all and (max-width:1024px){.col1{width:20%;}
-.col1dot5{width:32%;}
-.col2{width:45%;}
-.col3{width:74%;}
-.col4{width:95%;}
-.col5{width:95%;}
-.col6{width:95%;}
-}
-@media all and (max-width:640px){.col1,.col1dot5,.col2,.col3,.col4,.col5,.col6{width:100%;float:none;clear:both;margin:0;padding:0;}
-.left,.right{float:none;}
-.polaroid{display:none;}
-}
-.menu ul ul {display: none;}
-*/

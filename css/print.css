@@ -1,13 +1,11 @@
-/*PRINT.CSS*/ 
-@media screen {
-.forprint {
+/*PRINT.CSS*/
+@media screen {.forprint {
 display: none !important;
 }
-/* USE THIS CLASS FOR ANYTHING YOU ONLY WANT TO APPEAR ON PRINTED DOCUMENTS, IT WILL BE HIDDEN FOR media="screen" */
+/* USE THIS CLASS FOR ANYTHING YOU ONLY WANT TO APPEAR ON PRINTED DOCUMENTS,IT WILL BE HIDDEN FOR media="screen" */
 }
-@media print {
-/* HIDE STUFF */
-#logo,#globalnav,#siteheader,#emergency,#announcement,#banner_spacer,.menu,.footer,#footer.container,footer.container,.anchor,a[href^="#"],.ad,.quote,.quote img,.footer br,#footer br,footer br{
+@media print {/* HIDE STUFF */
+#logo,#globalnav,#siteheader,#emergency,#announcement,#banner_spacer,.menu,.footer,#footer.container,footer.container,.anchor,a[href^="#"],.ad,.quote,.quote img,.footer br,#footer br,footer br {
 display: none !important;
 }
 /* GLOBAL RESET */
@@ -23,7 +21,7 @@ margin: 0;
 padding: 0;
 }
 /* PAGE LAYOUT */
-#section, section, .section {
+#section,section,.section {
 width: 100%;
 margin: 0;
 padding: 0;
@@ -31,32 +29,32 @@ float: none !important;
 background: none !important;
 clear: both;
 }
-#section.hasmenu, section.hasmenu, .section.hasmenu{
+#section.hasmenu,section.hasmenu,.section.hasmenu {
 float: none !important;
 width: 100%;
 background: none !important;
 }
-#footer, footer, .footer {
+#footer,footer,.footer {
 border-top: 1px solid #ccc !important;
 padding-top: 1em !important;
 }
-#aside, aside, .aside {
+#aside,aside,.aside {
 width: 100% !important;
 }
-#aside>*, aside>*, .aside>* {
+#aside>*,aside>*,.aside>* {
 max-width: 100% !important;
 }
-#footer, footer, .footer {
+#footer,footer,.footer {
 clear: both;
 display: block;
 width: 100%;
 border-top: 1px solid #000 !important;
 padding-top: .5em;
 }
-#footer .col3, footer .col3, .footer col3 {
+#footer .col3,footer .col3,.footer col3 {
 width: 100% !important;
 }
-#footer br.forprint, footer br.forprint, .footer br.forprint {
+#footer br.forprint,footer br.forprint,.footer br.forprint {
 display: block !important;
 }
 #printheader {
@@ -93,7 +91,7 @@ margin: 0 !important;
 padding: .5em 0 .5em 0;
 width: 100%;
 }
-p, ul, ol, dl {
+p,ul,ol,dl {
 line-height: 1.5;
 margin-bottom: .5em;
 }
@@ -112,7 +110,7 @@ color: #fff;
 visibility: hidden;
 }
 code {
-font: .9em "Courier New", Monaco, Courier, monospace;
+font: .9em "Courier New",Monaco,Courier,monospace;
 }
 a img {
 border: none;
@@ -138,35 +136,10 @@ display: none !important;
 .noprint {
 display: none !important;
 }
-.border-white td, .border-white th {
+.border-white td,.border-white th {
 border-color: #666;
 }
-td, th {
+td,th {
 color: #000 !important;
 }
-.alpha100 {
-opacity: 1;
-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-}
-.alpha90 {
-opacity: 1;
-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-}
-.alpha70 {
-opacity: 1;
-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-}
-.alpha50 {
-opacity: 1;
-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-}
-.alpha30 {
-opacity: 1;
-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-}
-.alpha10 {
-opacity: 1;
-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-}
-
 }
