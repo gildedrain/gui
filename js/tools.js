@@ -100,6 +100,37 @@ $(function() {
   };
 });
 
+// Background-Banner-Links
+// Requires: <ul class="bg_banners"><li><img /><a href="#">Link</a></li></ul>
+// Must appear BEFORE VERTY script
+$(document).ready(function () {
+  // Make the Banners
+    $('.bg_banners li').each(function () {
+      var slideImg = $(this).find('img');
+      var slideHeight = slideImg.height();
+      var slideWidth = slideImg.width();
+      var slideImgSrc = $(this).find('img').attr('src');
+      if (slideImg.exists()) { // use that img's unique height and width
+        $(this).css({
+         'background-image' : 'url(' + slideImgSrc + ')',
+         'height' : slideHeight + 'px'
+// using grid-classes on <li> for widths
+// 'width' : slideWidth + 'px'
+        });
+// using css img {display:none;}
+// $(this).find('img').remove(); // we can toss these now that we have them set as bg-images
+      }
+      else { // use the height & width of the first image that exists
+        slideHeight = $(this).siblings().children('img').eq(0).height();
+        $(this).css({
+         'height' : slideHeight + 'px'
+        });
+      }
+      $(this).find('a').wrapInner('<span />');
+    });
+// END DOCUMENT.READY
+});
+
 // "Verty" a vertical scrolling anchor list animation effect
 // Originally written by nathan@fixler.org, Adapted by steve@petrock.org
 (function( $ ) {
@@ -255,8 +286,8 @@ $(document).ready(function () {
     slides = $('.bg_slideshow li');
     totalSlides = slides.length;
     currentSlide = 0;
-    slideSpeed = 5000;
-    fadeSpeed = 300;
+    slideSpeed = 7000;
+    fadeSpeed = 750;
 
   // Start it off
     $(slides).eq(currentSlide).fadeIn(fadeSpeed);
@@ -309,32 +340,3 @@ $(document).ready(function () {
 // END DOCUMENT.READY
 });
 
-// Background-Banner-Links
-// Requires: <ul class="bg_banners"><li><img /><a href="#">Link</a></li></ul>
-$(document).ready(function () {
-  // Make the Banners
-    $('.bg_banners li').each(function () {
-      var slideImg = $(this).find('img');
-      var slideHeight = slideImg.height();
-      var slideWidth = slideImg.width();
-      var slideImgSrc = $(this).find('img').attr('src');
-      if (slideImg.exists()) { // use that img's unique height and width
-        $(this).css({
-         'background-image' : 'url(' + slideImgSrc + ')',
-         'height' : slideHeight + 'px'
-// using grid-classes on <li> for widths
-// 'width' : slideWidth + 'px'
-        });
-// using css img {display:none;}
-// $(this).find('img').remove(); // we can toss these now that we have them set as bg-images
-      }
-      else { // use the height & width of the first image that exists
-        slideHeight = $(this).siblings().children('img').eq(0).height();
-        $(this).css({
-         'height' : slideHeight + 'px'
-        });
-      }
-      $(this).find('a').wrapInner('<span />');
-    });
-// END DOCUMENT.READY
-});

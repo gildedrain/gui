@@ -193,27 +193,6 @@ padding-bottom: .5em !important;
 margin-bottom: .25em !important;
 margin-top: .25em !important;
 }
-.col1 .button {
-width: 110px;
-}
-.col1dot5 .button {
-width: 190px;
-}
-.col2 .button {
-width: 270px;
-}
-.col3 .button {
-width: 430px;
-}
-.col4 .button {
-width: 590px;
-}
-.col5 .button {
-width: 750px;
-}
-.col6 .button {
-width: 920px;
-}
 .button {
 line-height: 1;
 text-align: center;
@@ -601,36 +580,6 @@ filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
 .alpha10 {
 opacity: .1;
 filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);
-}
-.bg-black-alpha90 {
-background-color: rgba(0,0,0,.9);
-}
-.bg-black-alpha70 {
-background-color: rgba(0,0,0,.7);
-}
-.bg-black-alpha50 {
-background-color: rgba(0,0,0,.5);
-}
-.bg-black-alpha30 {
-background-color: rgba(0,0,0,.3);
-}
-.bg-black-alpha10 {
-background-color: rgba(0,0,0,.1);
-}
-.ie7 .bg-black-alpha90,.ie8 .bg-black-alpha90 {
-background-color: #000
-}
-.ie7 .bg-black-alpha70,.ie8 .bg-black-alpha70 {
-background-color: #000
-}
-.ie7 .bg-black-alpha50,.ie8 .bg-black-alpha50 {
-background-color: #000
-}
-.ie7 .bg-black-alpha30,.ie8 .bg-black-alpha30 {
-background-color: #000
-}
-.ie7 .bg-black-alpha10,.ie8 .bg-black-alpha10 {
-background-color: #000
 }
 /* TRANSFORMATIONS */
 .rotate10 {

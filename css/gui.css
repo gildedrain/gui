@@ -41,9 +41,9 @@ sub{vertical-align:bottom;}
 abbr,acronym{border-bottom:1px dotted #666;cursor:help}
 address{margin:0 0 0 0em;font-style:italic;display:inline;}
 del{color:#666;}
-pre{margin:0;white-space:pre;}
+/*pre{margin:0;white-space:pre;}
 pre,code{background:#000;color:#86b5e3;padding:1em;border:1px solid #ccc;display:block;font-size:.8em;}
-pre,code,tt{font-family:'andale mono','lucida console',Courier,monospace;}
+pre,code,tt{font-family:'andale mono','lucida console',Courier,monospace;}*/
 /* Lists -------------------------------------------------------------- */
 li ul,li ol{margin:0;}
 ul,ol{margin:0 1.5em 1.5em 0;padding-left:3.333em;}
@@ -252,13 +252,6 @@ zoom:1;}
 .button{background-color:#222;background-repeat:repeat-x;background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.25)),to(rgba(255,255,255,0)));background-image:-moz-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));display:inline-block;padding:5px 10px 6px 10px !important;color:#fff;text-decoration:none;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow:0 1px 3px rgba(0,0,0,.5);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);text-shadow:0 -1px 1px rgba(0,0,0,0.25);border-bottom:1px solid rgba(0,0,0,0.25);position:relative;cursor:pointer;font-size:1.5em;}
 /*HACK!*/
 .ie7 a.button{display:block !important;padding-top:.5em !important;padding-bottom:.5em !important;margin-bottom:.25em !important;margin-top:.25em !important;}
-.col1 .button{width:110px;}
-.col1dot5 .button{width:190px;}
-.col2 .button{width:270px;}
-.col3 .button{width:430px;}
-.col4 .button{width:590px;}
-.col5 .button{width:750px;}
-.col6 .button{width:920px;}
 .button{line-height:1;text-align:center;text-shadow:0 -1px 1px rgba(0,0,0,0.25);}
 .button:hover{background-color:#000;color:#fff;text-decoration:none;}
 .button:active{top:1px;}
