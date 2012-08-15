@@ -412,14 +412,13 @@ float: left;
 width: 150px;
 padding: .5em;
 margin: 10px 10px 5px 0;
-line-height: 1.6em;
-font-size: 1.5em;
+line-height: 1.6;
+font-size: 1.4em;
 font-style: italic;
 }
 /* quote */
 .quote {
 display: block;
-min-height: 328px;
 padding: .5em .5em 1.25em .5em;
 margin: -2px 0 5px 0;
 line-height: 1.3em;
@@ -706,6 +705,108 @@ clear: both;
 visibility: hidden;
 line-height: 0;
 height: 0;
+}
+
+/* HORZY slide structure & navigation */
+.slider .container {
+padding: 0;
+}
+  .slider {
+width: 960px;
+margin: 0 auto;
+background: #FFF;
+}
+    .slides_window {
+width: 960px;
+overflow: hidden;
+position: relative;
+}
+/*masks the current .slide and hides the adjacent .slide(s), width must match the .slide it covers */
+      .slides {
+width: 100000px;
+position: relative;
+overflow: hidden;
+}
+        .slide {
+float: left;
+width: 960px;
+}
+/* width must match the .slides_window width */
+    .slidernav {
+width: 100%;
+padding: 6px 0 6px 0;
+height: auto;
+position: relative;
+text-align: center; /*z-index:5;*/
+}
+    .slidernav ul {
+list-style: none;
+padding: 0;
+margin: 0 auto;
+width: 960px;
+}
+    .slidernav li {
+padding: 6px 0 6px 0;
+display: inline-block;
+}
+    .ie7 .slidernav li {
+display: block;
+float: left;
+}
+/*IE7 doesn't know inline-block, adding float requires .clearfix to .slidernav in the HTML*/
+    .slidernav a {
+display: inline-block;
+padding: 2px 10px 2px 10px;
+margin: 0;
+}
+    .slidernav a:hover {
+text-decoration: none;
+}
+    .slidernav a.current {
+outline: 1px solid #1179fe;
+}
+/* VERTY navigation */
+    .nav .top {
+display: none;
+}
+    .nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+    .nav a {
+color: #222;
+display: block;
+padding: .25em  10px .25em 10px;
+font-weight: 300;
+line-height: 1.5;
+}
+    .nav a:hover {
+}
+    .nav.flat {
+float: none;
+width: 100%;
+position: fixed;
+top: 0px;
+padding: 0 0 10px 0;
+background: #000;
+margin: 0;
+}
+    .nav.flat ul {
+width: 970px;
+padding: 10px 0 10px 0;
+margin: 0 auto;
+}
+    .nav.flat a {
+color: #888;
+background: transparent;
+}
+    .nav.flat a:hover {
+text-decoration: underline;
+}
+    .nav.flat a.current {
+color: #fff;
+background: #bb0000;
 }
 /* BG_SLIDESHOW */
 /*slides */
