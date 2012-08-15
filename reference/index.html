@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GUI Framework Reference</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <!-- GUI framework -->
+  <link type="text/css" rel="stylesheet" href="../../gui/css/gui.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="../../occ_global/css/occ_global.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="../../gui/css/jqueryui.css" media="all" />
+  <script type="text/javascript" src="../../gui/js/jquery.js"></script>
+  <script type="text/javascript" src="../../gui/js/jqueryui.js"></script>
+  <script type="text/javascript" src="../../gui/js/tools.js"></script>
+  <!-- OCC-specific code -->
+  <script type="text/javascript" src="../../occ_global/js/occ_tools.js"></script>
+  <script type="text/javascript" src="http://galleries.sunyocc.edu/m/embed.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Sarina|PT+Mono|Open+Sans+Condensed:300,700,300italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Dancing+Script:400,700|Nothing+You+Could+Do|Devonshire|Rock+Salt' rel='stylesheet' type='text/css'>
+  <link type="text/css" rel="stylesheet" href="../../gui/css/prism.css" media="all" />
+  <script type="text/javascript" src="../../gui/js/prism.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://www.sunyocc.edu/css/www.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="css/styleguide.css" media="all" />
+</head>
+<body id="index">
+  <div class="container">
+    <h2 id="menutitle">GUI Framework Reference</h2>
+  </div>
+  <div class="container">
+    <div class="intro clearfix" id="intro">
+      <hr />
+      <div class="nav clearfix">
+        <ul>
+         <li class="col1"><a href="#intro" class="scroll">Overview</a></li>
+         <li class="col1"><a href="#textcolors" class="scroll">Text Colors</a></li>
+         <li class="col1"><a href="#bgcolors" class="scroll">Background Colors</a></li>
+         <li class="col1"><a href="#links" class="scroll">Link Icons</a></li>
+         <li class="col1"><a href="#buttons" class="scroll">Buttons</a></li>
+         <li class="col1"><a href="#typography" class="scroll">Typography</a></li>
+         <li class="col1"><a href="#images" class="scroll">Images + Figures</a></li>
+         <li class="col1"><a href="#lists" class="scroll">Lists</a></li>
+         <li class="col1"><a href="#tables" class="scroll">Tables</a></li>
+         <li class="col1"><a href="#forms" class="scroll">Forms</a></li>
+         <li class="col1"><a href="#tooltips" class="scroll">Tooltips</a></li>
+         <li class="col1"><a href="#opacity" class="scroll">Opacity</a></li>
+         <li class="col1"><a href="#rotation" class="scroll">Rotation</a></li>
+         <li class="col1"><a href="#corners" class="scroll">Rounded Corners</a></li>
+         <li class="col1"><a href="#headings" class="scroll">Headings</a></li>
+         <li class="col1"><a href="#grid" class="scroll">The Grid</a></li>
+         <li class="col1"><a href="#layout" class="scroll">Page Layout</a></li>
+         <li class="col1"><a href="#clearfix" class="scroll">Clearfix</a></li>
+         <li class="col1"><a href="#modalwindow" class="scroll">Modal</a></li>
+         <li class="col1"><a href="#footnotes" class="scroll">Footnotes</a></li>
+         <li class="col1"><a href="#horzy" class="scroll">Horzy</a></li>
+         <li class="col1"><a href="#verty" class="scroll">Verty</a></li>
+         <li class="col1"><a href="#bgslideshow" class="scroll">BG_Slideshow</a></li>
+         <li class="col1"><a href="#bgbanners" class="scroll">BG_Banners</a></li>
+        </ul>
+      </div>
+      <hr />
+    </div>
+
+<p class="dots">&nbsp;</p>
+
+    <div id="textcolors" class="clearfix">
+     <h3>Text Colors</h3>
+     <table class="col6 syntax" cellspacing="0" cellpadding="0">
+       <tr><th>Syntax</th><th>Result</th></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="quiet"&gt;Hello World!&lt;/tag&gt;</code></pre><p class="error">This is pretty weak</p></td><td class="quiet">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="loud"&gt;Hello World!&lt;/tag&gt;</code></pre><p class="error">This is pretty weak</p></td><td class="loud">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="white"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="white">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="black"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="black">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="hint-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="hint-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="pale-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="pale-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="light-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="light-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="medium-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="medium-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="dark-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="dark-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="hint-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="hint-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="pale-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="pale-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="light-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="light-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="medium-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="medium-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="dark-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="dark-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="hint-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="hint-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="pale-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="pale-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="light-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="light-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="medium-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="medium-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="dark-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="dark-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="hint-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="hint-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="pale-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="pale-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="light-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="light-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="medium-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="medium-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="dark-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="dark-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="hint-green"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="hint-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="pale-green"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="pale-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="light-green"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="light-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="medium-green"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="medium-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="dark-green"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="dark-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="hint-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="hint-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="pale-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="pale-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="light-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="light-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="medium-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="medium-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="dark-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="dark-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="hint-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="hint-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="pale-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="pale-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="light-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="light-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="medium-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="medium-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="dark-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="dark-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="hint-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="hint-brown">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="pale-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="pale-brown">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="light-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="light-brown">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="medium-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="medium-brown">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="dark-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="dark-brown">Hello World!</td></tr>
+     </table>
+    </div>
+
+<p class="dots">&nbsp;</p>
+
+    <div id="bgcolors" class="clearfix">
+     <h3>Background Colors</h3>
+     <table class="col6 syntax" cellspacing="0" cellpadding="0">
+       <tr><th>Syntax</th><th>Result</th></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="no-bg"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="no-bg">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="highlight"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="highlight">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="added"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="added">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="removed"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="removed">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-white"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-white">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-black"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-black">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-black-alpha90"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-blue"><span class="bg-black-alpha90 white pad">Hello World!</span></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-black-alpha70"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-blue"><span class="bg-black-alpha70 white pad">Hello World!</span></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-black-alpha50"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-blue"><span class="bg-black-alpha50 white pad">Hello World!</span></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-black-alpha30"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-blue"><span class="bg-black-alpha30 white pad">Hello World!</span></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-black-alpha10"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-blue"><span class="bg-black-alpha10 white pad">Hello World!</span></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-hint-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-hint-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-pale-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-pale-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-light-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-light-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-medium-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-dark-grey"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-dark-grey">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-hint-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-hint-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-pale-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-pale-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-light-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-light-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-medium-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-dark-red"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-dark-red">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-hint-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-hint-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-pale-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-pale-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-light-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-light-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-medium-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-dark-orange"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-dark-orange">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-hint-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-hint-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-pale-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-pale-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-light-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-light-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-medium-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-dark-yellow"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-dark-yellow">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-hint-green"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-hint-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-pale-green"&gt;Hello World!&lt;/tag&gt;</code></pre><p class="error">This is pretty weak</p></td><td class="bg-pale-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-light-green"&gt;Hello World!&lt;/tag&gt;</code></pre><p class="error">This is pretty weak</p></td><td class="bg-light-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-medium-green"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-dark-green"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-dark-green">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-hint-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-hint-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-pale-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-pale-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-light-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-light-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-medium-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-dark-blue"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-dark-blue">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-hint-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-hint-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-pale-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-pale-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-light-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-light-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-medium-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-dark-purple"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-dark-purple">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-hint-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-hint-brown">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-pale-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-pale-brown">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-light-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-light-brown">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-medium-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-brown">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;tag class="bg-dark-brown"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-dark-brown">Hello World!</td></tr>
+     </table>
+    </div>
+
+<p class="dots">&nbsp;</p>
+
+    <div id="links" class="clearfix col6">
+     <h3>Link Icons</h3>
+     <table class="col6 syntax" cellspacing="0" cellpadding="0">
+       <tr><th>Syntax</th><th>Result</th></tr>
+       <tr><td><pre><code class="language-markup">&lt;a href="mailto:email@example.com"&gt;email@example.com&lt;/a&gt;</code></pre></td><td><a href="mailto:email@example.com">email@example.com</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="noicon" href="mailto:email@example.com"&gt;email@example.com&lt;/a&gt;</code></pre></td><td><a class="noicon" href="mailto:email@example.com">email@example.com</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="external_link" href="example.com"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="external_link" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_doc" href="example.doc"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_doc" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_txt" href="example.txt"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_txt" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_pdf" href="example.pdf"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_pdf" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_xls" href="example.xls"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_xls" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_rss" href="example.rss"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_rss" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_vcard" href="example.vcard"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_vcard" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_event" href="example.ical"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_event" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_image" href="example.jpg"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_image" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_audio" href="example.mp3"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_audio" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_video" href="example.mov"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_video" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_voice" href="skype:USERNAME"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_voice" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="file_im" href="aim:USERNAME"&gt;My Hyperlink&lt;/a&gt;</code></pre></td><td><a class="file_im" href="example.com">My Hyperlink</a></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;a class="play" href="example.com"&gt;My Hyperlink&lt;/a&gt;</code></pre><p class="notice">Best used with bg_banners</p></td><td><a class="play" style="display:block; height:50px; width:100px;" href="example.com">My Hyperlink</a></td></tr>
+     </table>
+    </div>
+
+<p class="dots">&nbsp;</p>
+
+    <div id="buttons" class="clearfix">
+      <h3>Buttons</h3>
+      <table class="col6 syntax" cellspacing="0" cellpadding="0">
+        <tr><th>Syntax</th><th>Result</th></tr>
+        <tr><td><pre><code class="language-markup">&lt;a class="small button" href="example.com"&gt;My Button&lt;/a&gt;</code></pre></td><td><a class="small button" href="example.com">My Button</a></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;a class="tall small button" href="example.com"&gt;My Button&lt;/a&gt;</code></pre></td><td><a class="tall small button" href="example.com">My Button</a></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;a class="button" href="example.com"&gt;My Button&lt;/a&gt;</code></pre></td><td><a class="button" href="example.com">My Button</a></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;a class="tall button" href="example.com"&gt;My Button&lt;/a&gt;</code></pre></td><td><a class="tall button" href="example.com">My Button</a></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;a class="large button" href="example.com"&gt;My Button&lt;/a&gt;</code></pre></td><td><a class="large button" href="example.com">My Button</a></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;a class="tall large button" href="example.com"&gt;My Button&lt;/a&gt;</code></pre></td><td><a class="tall large button" href="example.com">My Button</a></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;a class="bg-medium-blue dark-blue button" href="example.com"&gt;My Button&lt;/a&gt;</code></pre><p class="notice">You can apply a wide variety of classes to a button</p></td><td><a class="bg-medium-blue dark-blue button" href="example.com">My Button</a></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;button class="positive" href="example.com"&gt;My Button&lt;/button&gt;</code></pre></td><td><button class="positive" href="example.com">My Button</button></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;button class="negative" href="example.com"&gt;My Button&lt;/button&gt;</code></pre></td><td><button class="negative" href="example.com">My Button</button></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;button href="example.com"&gt;&lt;img src="image.jpg" /&gt;&lt;/button&gt;</code></pre><p class="error">I can't remember why I made this type of button 16px x 16px</p></td><td><button href="example.com"><img src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /></button></td></tr>
+      </table>
+    </div>
+
+<p class="dots">&nbsp;</p>
+
+    <div id="typography" class="clearfix">
+      <h3>Typography</h3>
+      <table class="col6 syntax typography" cellspacing="0" cellpadding="0">
+        <tr><th>Syntax</th><th>Result</th></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-italic"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-italic">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-sans-serif"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-sans-serif">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-serif"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-serif">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-script"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-script">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-brushscript"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-brushscript">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-brushscript2"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-brushscript2">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-handwriting"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-handwriting">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-grunge"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-grunge">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-impact"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-impact">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-condensed"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-condensed">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="font-marker"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="font-marker">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="notice"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="notice">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="error"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="error">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="success"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="success">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="textright"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="textright">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="textleft"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="textleft">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="textcenter"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="textcenter">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="dropcap"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="dropcap"><small>Brisket capicola sirloin ribeye tri-tip. Meatball salami frankfurter boudin jerky pork chop chuck biltong ribeye leberkas.</small></p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="smallcapline"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="smallcapline"><small>Brisket capicola sirloin ribeye tri-tip. Meatball salami frankfurter boudin jerky pork chop chuck biltong ribeye leberkas.</small></p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="quote"&gt;Hello World!&lt;cite&gt;by Myself&lt;/cite&gt;&lt;/p&gt;</code></pre><br /><p class="error">Need to remove the height attribute.</p></td><td><p class="quote">Hello World!<cite>by Myself</cite></p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p&gt;...&lt;pullquote&gt;...&lt;/pullquote&gt;...&lt;/p&gt;</code></pre><br /><p class="error">The width and float left probably shouldn't be hardcoded</p></td><td><p>Brisket capicola sirloin ribeye tri-tip. Meatball salami frankfurter. <span class="pullquote bg-medium-yellow">Pull this quote and put it up a the page a bit.</span> Boudin jerky pork chop chuck biltong ribeye leberkas.</p></td></tr>
+      </table>
+    </div>
+
+<p class="dots">&nbsp;</p>
+
+    <div id="images" class="clearfix">
+      <h3>Images + Figures</h3>
+      <table class="col6 syntax" cellspacing="0" cellpadding="0">
+        <tr><th>Syntax</th><th>Result</th></tr>
+        <tr><td><pre><code class="language-markup">&lt;img class="polaroid" src="file.jpg" /&gt;</code></pre></td><td><img class="polaroid" src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p&gt;...&lt;img class="right" src="file.jpg" /&gt;...&lt;/p&gt;</code></pre></td><td><p><img class="right" src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" width="50" />Once upon a time, in a land far far away, there once was a man from Nantucket, who ate fish and sat on a bucket. When evening came 'round, in his sleepy ol' town, 5 oysters he started to shuck-it</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p&gt;...&lt;img class="left" src="file.jpg" /&gt;...&lt;/p&gt;</code></pre></td><td><p><img class="left" src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" width="50" />Once upon a time, in a land far far away, there once was a man from Nantucket, who ate fish and sat on a bucket. When evening came 'round, in his sleepy ol' town, 5 oysters he started to shuck-it</p></td></tr>
+        <tr><td><pre><code class="language-markup">
+&lt;div class="figure bg-hint-grey"&gt;
+  &lt;img src="file.jpg" /&gt;
+  &lt;span class="caption"&gt;
+    &lt;strong&gt;Fig.1a&lt;strong&gt; Photo of Albert Einstein
+  &lt;/span&gt;
+&lt;/div&gt;
+        </code></pre></td><td><div class="figure bg-hint-grey"><img src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /><span class="caption"><strong>Fig.1a</strong> Photo of Albert Einstein</span></div></td></tr>
+      </table>
+    </div>
+
+<p class="dots">&nbsp;</p>
+
+    <div id="lists" class="clearfix">
+      <h3>Lists</h3>
+      <table class="col6 syntax" cellspacing="0" cellpadding="0">
+        <tr><th>Syntax</th><th>Result</th></tr>
+          <tr><td><pre><code class="language-markup">
+Normal Unordered List
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;(default)&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre></td><td>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2
+                <ul>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ul>
+              </li>
+              <li>Item 3</li>
+            </ul>
+          <tr><td><pre><code class="language-markup">
+Normal Ordered List
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;(default)&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ol&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+    </code></pre></td><td>
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2
+          <ol>
+            <li>Item a</li>
+            <li>Item b</li>
+            <li>Item c</li>
+          </ol>
+        </li>
+        <li>Item 3</li>
+      </ol>
+    </td></tr>
+    <tr><td><pre><code class="language-markup">
+Normal Definition List
+&lt;dl&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+  &lt;dd&gt;Definition&lt;/dd&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+  &lt;dd&gt;Definition&lt;/dd&gt;
+&lt;/dl&gt;
+    </code></pre></td><td><dl><dt>Term</dt><dd>Definition</dd><dt>Term</dt><dd>Definition</dd></dl></td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;ul class="inline"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+    </code></pre></td><td>
+             <ul class="inline">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+      </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;ul class="disc"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+    </code></pre></td><td>
+             <ul class="disc">
+                <li>Item 1</li>
+                <li>Item 2
+                  <ul>
+                    <li>Item a</li>
+                    <li>Item b</li>
+                    <li>Item c</li>
+                  </ul>
+                </li>
+                <li>Item 3</li>
+              </ul>
+      </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;ul class="circle"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+    </code></pre></td><td>
+             <ul class="circle">
+                <li>Item 1</li>
+                <li>Item 2
+                  <ul>
+                    <li>Item a</li>
+                    <li>Item b</li>
+                    <li>Item c</li>
+                  </ul>
+                </li>
+                <li>Item 3</li>
+              </ul>
+      </td></tr>
+<tr><td><pre><code class="language-markup">
+&lt;ul class="square"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></td><td>
+   <ul class="square">
+      <li>Item 1</li>
+      <li>Item 2
+        <ul>
+          <li>Item a</li>
+          <li>Item b</li>
+          <li>Item c</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+    </ul>
+  </td></tr>
+<tr><td><pre><code class="language-markup">
+&lt;ol class="decimal"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ol&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></td><td>
+  <ol class="decimal">
+    <li>Item 1</li>
+    <li>Item 2
+      <ol>
+        <li>Item a</li>
+        <li>Item b</li>
+        <li>Item c</li>
+      </ol>
+    </li>
+    <li>Item 3</li>
+  </ol>
+  </td></tr>
+<tr><td><pre><code class="language-markup">
+&lt;ol class="decimalzero"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ol&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></td><td>
+  <ol class="decimalzero">
+    <li>Item 1</li>
+    <li>Item 2
+      <ol>
+        <li>Item a</li>
+        <li>Item b</li>
+        <li>Item c</li>
+      </ol>
+    </li>
+    <li>Item 3</li>
+  </ol>
+  </td></tr>
+<tr><td><pre><code class="language-markup">
+&lt;ol class="upper-roman"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ol&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></td><td>
+  <ol class="upper-roman">
+    <li>Item 1</li>
+    <li>Item 2
+      <ol>
+        <li>Item a</li>
+        <li>Item b</li>
+        <li>Item c</li>
+      </ol>
+    </li>
+    <li>Item 3</li>
+  </ol>
+  </td></tr>
+<tr><td><pre><code class="language-markup">
+&lt;ol class="lower-roman"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ol&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></td><td>
+  <ol class="lower-roman">
+    <li>Item 1</li>
+    <li>Item 2
+      <ol>
+        <li>Item a</li>
+        <li>Item b</li>
+        <li>Item c</li>
+      </ol>
+    </li>
+    <li>Item 3</li>
+  </ol>
+  </td></tr>
+<tr><td><pre><code class="language-markup">
+&lt;ol class="upper-alpha"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ol&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></td><td>
+  <ol class="upper-alpha">
+    <li>Item 1</li>
+    <li>Item 2
+      <ol>
+        <li>Item a</li>
+        <li>Item b</li>
+        <li>Item c</li>
+      </ol>
+    </li>
+    <li>Item 3</li>
+  </ol>
+  </td></tr>
+<tr><td><pre><code class="language-markup">
+&lt;ol class="lower-alpha"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ol&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></td><td>
+  <ol class="lower-alpha">
+    <li>Item 1</li>
+    <li>Item 2
+      <ol>
+        <li>Item a</li>
+        <li>Item b</li>
+        <li>Item c</li>
+      </ol>
+    </li>
+    <li>Item 3</li>
+  </ol>
+  </td></tr>
+<tr><td><pre><code class="language-markup">
+&lt;ul class="style_none"&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Item a&lt;/li&gt;
+      &lt;li&gt;Item b&lt;/li&gt;
+      &lt;li&gt;Item c&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></td><td>
+  <ul class="style_none">
+    <li>Item 1</li>
+    <li>Item 2
+      <ul>
+        <li>Item a</li>
+        <li>Item b</li>
+        <li>Item c</li>
+      </ul>
+    </li>
+    <li>Item 3</li>
+  </ul>
+  </td></tr>
+      </table>
+    </div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="tables" class="clearfix">
+  <h3>Tables</h3>
+  <table class="col6 syntax" cellspacing="0" cellpadding="0">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;table class="bg-pale-blue"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;th&gt;3&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+    </code></pre></td><td>
+      <table class="bg-pale-blue">
+        <caption>Caption</caption>
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+      </table>
+    </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;table class="bg-pale-blue nozebrarows"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;th&gt;3&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+    </code></pre></td><td>
+      <table class="bg-pale-blue nozebrarows">
+        <caption>Caption</caption>
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+      </table>
+    </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;table class="bg-pale-blue nozebrarows zebracolumns"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;th&gt;3&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+    </code></pre></td><td>
+      <table class="bg-pale-blue nozebrarows zebracolumns">
+        <caption>Caption</caption>
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+      </table>
+    </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;table class="bg-pale-blue zebraheaders"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;th&gt;3&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+    </code></pre></td><td>
+      <table class="bg-pale-blue zebraheaders">
+        <caption>Caption</caption>
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+      </table>
+    </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;table class="bg-pale-blue rows"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;th&gt;3&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+    </code></pre></td><td>
+      <table class="bg-pale-blue rows">
+        <caption>Caption</caption>
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+      </table>
+    </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;table class="bg-pale-blue columns"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;th&gt;3&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+    </code></pre></td><td>
+      <table class="bg-pale-blue columns">
+        <caption>Caption</caption>
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+      </table>
+    </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;table class="bg-pale-blue nogrid"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;th&gt;3&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+    </code></pre></td><td>
+      <table class="bg-pale-blue nogrid">
+        <caption>Caption</caption>
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+      </table>
+    </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;table class="bg-dark-grey white border-white"&gt;
+  &lt;caption&gt;Caption&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;th&gt;3&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+    </code></pre></td><td>
+      <table class="bg-dark-grey white border-white">
+        <caption>Caption</caption>
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+      </table>
+    </td></tr>
+  </table>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="forms" class="clearfix">
+  <h3>Forms</h3>
+  <table class="col6 syntax" cellspacing="0" cellpadding="0">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;form (default)&lt;/legend&gt;
+    &lt;label&gt;Hospital Name:&lt;/label&gt;
+    &lt;input type="text" /&gt;&lt;br /&gt;
+    &lt;label&gt;Student ID#:&lt;/label&gt;
+    &lt;input type="text" /&gt;&lt;br /&gt;
+    &lt;label&gt;Log Notes:&lt;/label&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;&lt;br /&gt;
+    &lt;label&gt;Major:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-- choose one --&lt;/option&gt;
+      &lt;option&gt;Accounting&lt;/option&gt;
+      &lt;option&gt;Biology&lt;/option&gt;
+      &lt;option&gt;Computer Science&lt;/option&gt;
+      &lt;option&gt;Electrical Engineering&lt;/option&gt;
+      &lt;option&gt;Nursing&lt;/option&gt;
+    &lt;/select&gt;&lt;br /&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Legend&lt;/legend&gt;
+      &lt;inputtype="radio" /&gt;
+      &lt;label class="radio" &gt;AM&lt;/label&gt;
+      &lt;input type="radio" /&gt;
+      &lt;label class="radio" &gt;PM&lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;input id="submitbtn" type="submit" value="Send Message" /&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+    </code></pre></td><td>
+    <form>
+      <fieldset>
+        <legend>form (default)</legend>
+        <label for="FirstName">Hospital Name:</label><input id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><br />
+        <label for="PhoneNumber">Student ID#:</label><input id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><br />
+        <label for="QuestionComment">Log Notes:</label><textarea id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><br />
+        <label for="Major">Major:</label>
+        <select id="Major" name="Major">
+          <option>-- choose one --</option>
+          <option>Accounting</option>
+          <option>Biology</option>
+          <option>Computer Science</option>
+          <option>Electrical Engineering</option>
+          <option>Nursing</option>
+        </select><br />
+        <fieldset>
+          <legend>Best Time to Reach Me...</legend>
+          <input id="idID0ED" type="radio" value="Yes" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0ED" >AM</label>
+          <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >PM</label>
+        </fieldset>
+        <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+      </fieldset>
+    </form>
+  </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;form class="labels-left"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;form.labels-left&lt;/legend&gt;
+    &lt;label&gt;Hospital Name:&lt;/label&gt;
+    &lt;input type="text" /&gt;&lt;br /&gt;
+    &lt;label&gt;Student ID#:&lt;/label&gt;
+    &lt;input type="text" /&gt;&lt;br /&gt;
+    &lt;label&gt;Log Notes:&lt;/label&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;&lt;br /&gt;
+    &lt;label&gt;Major:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-- choose one --&lt;/option&gt;
+      &lt;option&gt;Accounting&lt;/option&gt;
+      &lt;option&gt;Biology&lt;/option&gt;
+      &lt;option&gt;Computer Science&lt;/option&gt;
+      &lt;option&gt;Electrical Engineering&lt;/option&gt;
+      &lt;option&gt;Nursing&lt;/option&gt;
+    &lt;/select&gt;&lt;br /&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Legend&lt;/legend&gt;
+      &lt;inputtype="radio" /&gt;
+      &lt;label class="radio" &gt;AM&lt;/label&gt;
+      &lt;input type="radio" /&gt;
+      &lt;label class="radio" &gt;PM&lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;input id="submitbtn" type="submit" value="Send Message" /&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+    </code></pre></td><td>
+    <form class="labels-left">
+      <fieldset>
+        <legend>form.labels-left</legend>
+        <label>Hospital Name:</label><input id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><br />
+        <label>Student ID#:</label><input id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><br />
+        <label>Log Notes:</label><textarea id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><br />
+        <label>Major:</label>
+        <select>
+          <option>-- choose one --</option>
+          <option>Accounting</option>
+          <option>Biology</option>
+          <option>Computer Science</option>
+          <option>Electrical Engineering</option>
+          <option>Nursing</option>
+        </select><br />
+        <fieldset>
+          <legend>Best Time to Reach Me...</legend>
+          <input id="idID0ED" type="radio" value="Yes" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0ED" >AM</label>
+          <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >PM</label>
+        </fieldset>
+        <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+      </fieldset>
+    </form>
+  </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;form class="labels-right"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;form.labels-right&lt;/legend&gt;
+    &lt;label&gt;Hospital Name:&lt;/label&gt;
+    &lt;input type="text" /&gt;&lt;br /&gt;
+    &lt;label&gt;Student ID#:&lt;/label&gt;
+    &lt;input type="text" /&gt;&lt;br /&gt;
+    &lt;label&gt;Log Notes:&lt;/label&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;&lt;br /&gt;
+    &lt;label&gt;Major:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-- choose one --&lt;/option&gt;
+      &lt;option&gt;Accounting&lt;/option&gt;
+      &lt;option&gt;Biology&lt;/option&gt;
+      &lt;option&gt;Computer Science&lt;/option&gt;
+      &lt;option&gt;Electrical Engineering&lt;/option&gt;
+      &lt;option&gt;Nursing&lt;/option&gt;
+    &lt;/select&gt;&lt;br /&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Legend&lt;/legend&gt;
+      &lt;inputtype="radio" /&gt;
+      &lt;label class="radio" &gt;AM&lt;/label&gt;
+      &lt;input type="radio" /&gt;
+      &lt;label class="radio" &gt;PM&lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;input id="submitbtn" type="submit" value="Send Message" /&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+    </code></pre></td><td>
+    <form class="labels-right">
+      <fieldset>
+        <legend>form.labels-right</legend>
+        <label>Hospital Name:</label><input id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><br />
+        <label>Student ID#:</label><input id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><br />
+        <label>Log Notes:</label><textarea id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><br />
+        <label>Major:</label>
+        <select>
+          <option>-- choose one --</option>
+          <option>Accounting</option>
+          <option>Biology</option>
+          <option>Computer Science</option>
+          <option>Electrical Engineering</option>
+          <option>Nursing</option>
+        </select><br />
+        <fieldset>
+          <legend>Best Time to Reach Me...</legend>
+          <input id="idID0ED" type="radio" value="Yes" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0ED" >AM</label>
+          <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >PM</label>
+        </fieldset>
+        <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+      </fieldset>
+    </form>
+  </td></tr>
+    <tr><td><pre><code class="language-markup">
+&lt;form class="labels-inside"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;form.labels-inside&lt;/legend&gt;
+    &lt;label&gt;Hospital Name:&lt;/label&gt;
+    &lt;input type="text" /&gt;&lt;br /&gt;
+    &lt;label&gt;Student ID#:&lt;/label&gt;
+    &lt;input type="text" /&gt;&lt;br /&gt;
+    &lt;label&gt;Log Notes:&lt;/label&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;&lt;br /&gt;
+    &lt;label&gt;Major:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-- choose one --&lt;/option&gt;
+      &lt;option&gt;Accounting&lt;/option&gt;
+      &lt;option&gt;Biology&lt;/option&gt;
+      &lt;option&gt;Computer Science&lt;/option&gt;
+      &lt;option&gt;Electrical Engineering&lt;/option&gt;
+      &lt;option&gt;Nursing&lt;/option&gt;
+    &lt;/select&gt;&lt;br /&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Legend&lt;/legend&gt;
+      &lt;inputtype="radio" /&gt;
+      &lt;label class="radio" &gt;AM&lt;/label&gt;
+      &lt;input type="radio" /&gt;
+      &lt;label class="radio" &gt;PM&lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;input id="submitbtn" type="submit" value="Send Message" /&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+    </code></pre></td><td>
+    <form class="labels-inside">
+      <fieldset>
+        <legend>form.labels-inside</legend>
+        <label for="FirstName">Hospital Name:</label><input id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><br />
+        <label for="PhoneNumber">Student ID#:</label><input id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><br />
+        <label for="QuestionComment">Log Notes:</label><textarea id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><br />
+        <label for="Major">Major:</label>
+        <select id="Major" name="Major">
+          <option>-- choose one --</option>
+          <option>Accounting</option>
+          <option>Biology</option>
+          <option>Computer Science</option>
+          <option>Electrical Engineering</option>
+          <option>Nursing</option>
+        </select><br />
+        <fieldset>
+          <legend>Best Time to Reach Me...</legend>
+          <input id="idID0ED" type="radio" value="Yes" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0ED" >AM</label>
+          <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >PM</label>
+        </fieldset>
+        <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+      </fieldset>
+    </form>
+  </td></tr>
+  </table>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="tooltips" class="clearfix">
+  <h3>Tooltips</h3>
+  <table class="col6 syntax" cellspacing="0" cellpadding="0">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td><pre><code class="language-markup">&lt;a class="tooltip"&gt;Default &lt;span&gt;This text goes inside the tooltip.&lt;/span&gt;&lt;/a&gt;</code></pre></td><td><a class="tooltip">Default <span>This text goes inside the tooltip.</span></a></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;a class="tooltip"&gt;Info &lt;span class="info"&gt;...&lt;/span&gt;&lt;/a&gt;</code></pre></td><td><a class="tooltip">Info <span class="info">Use this type of tooltip when you want to provide extra information, like a definition of an academic term.</span></a></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;a class="tooltip"&gt;Help &lt;span class="help"&gt;...&lt;/span&gt;&lt;/a&gt;</code></pre></td><td><a class="tooltip">Help <span class="help">Use this type of tooltip when you want to provide helpful tips, formatting advice for form controls, etc.</span></a></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;a class="tooltip"&gt;Warning &lt;span class="warning"&gt;...&lt;/span&gt;&lt;/a&gt;</code></pre></td><td><a class="tooltip">Warning <span class="warning">Use this type of tooltip when it's important that the user understand the importance of their actions within the given context.</span></a></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;a class="tooltip"&gt;Critical &lt;span class="critical"&gt;...&lt;/span&gt;&lt;/a&gt;</code></pre></td><td><a class="tooltip">Critical <span class="critical">Use this type of tooltip when an error has occurred, or when something is <strong>very important</strong> within the given context.</span></a></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;a class="tooltip icon"&gt;Icon &lt;span&gt;...&lt;/span&gt;&lt;/a&gt;</code></pre></td><td><a class="tooltip icon">&nbsp;<span>Use this when you don't want an underline type tooltip, but a ? icon instead</span></a></td></tr>
+  </table>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="opacity" class="clearfix">
+  <h3>Opacity</h3>
+  <table class="col6 syntax" cellspacing="0" cellpadding="0">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black medium-red alpha100"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black medium-red alpha100">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black medium-red alpha90"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black medium-red alpha90">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black medium-red alpha70"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black medium-red alpha70">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black medium-red alpha50"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black medium-red alpha50">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black medium-red alpha30"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black medium-red alpha30">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black medium-red alpha10"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black medium-red alpha10">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black-alpha90 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black-alpha90 medium-red">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black-alpha70 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black-alpha70 medium-red">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black-alpha50 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black-alpha50 medium-red">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black-alpha30 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black-alpha30 medium-red">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-black-alpha10 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black-alpha10 medium-red">Hello World</p></td></tr>
+  </table>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="rotation" class="clearfix">
+  <h3>Rotation</h3>
+  <p class="error">Rotation does not work in Internet Explorer.</p>
+  <table class="col6 syntax" cellspacing="0" cellpadding="0">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="rotate10"&gt;...&lt;/tag&gt;</code></pre></td><td><img class="rotate10" src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="rotate25"&gt;...&lt;/tag&gt;</code></pre></td><td><img class="rotate25" src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="rotate45"&gt;...&lt;/tag&gt;</code></pre></td><td><img class="rotate45" src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="rotate-45"&gt;...&lt;/tag&gt;</code></pre></td><td><img class="rotate-45" src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="rotate-25"&gt;...&lt;/tag&gt;</code></pre></td><td><img class="rotate-25" src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="rotate-10"&gt;...&lt;/tag&gt;</code></pre></td><td><img class="rotate-10" src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /></td></tr>
+  </table>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="corners" class="clearfix">
+  <h3>Rounded Corners</h3>
+  <table class="col6 syntax" cellspacing="0" cellpadding="0">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="radius-small"&gt;...&lt;/tag&gt;</code></pre></td><td><p class="bg-medium-blue pad white radius-small">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="radius-medium"&gt;...&lt;/tag&gt;</code></pre></td><td><p class="bg-medium-blue pad white radius-medium">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="radius-large"&gt;...&lt;/tag&gt;</code></pre></td><td><p class="bg-medium-blue pad white radius-large">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;tag class="radius-extralarge"&gt;...&lt;/tag&gt;</code></pre></td><td><p class="bg-medium-blue pad white radius-extralarge">Hello World</p></td></tr>
+  </table>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="headings" class="clearfix">
+  <h3>Headings</h3>
+  <table class="col6 syntax" cellspacing="0" cellpadding="0">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td><pre><code class="language-markup">&lt;h1&gt;Extra, Extra, Read All About It!&lt;/h1&gt;</code></pre></td><td><h1>Extra, Extra, Read All About It!</h1></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;h2&gt;Extra, Extra, Read All About It!&lt;/h2&gt;</code></pre></td><td><h2>Extra, Extra, Read All About It!</h2></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;h3&gt;Extra, Extra, Read All About It!&lt;/h3&gt;</code></pre></td><td><h3>Extra, Extra, Read All About It!</h3></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;h4&gt;Extra, Extra, Read All About It!&lt;/h4&gt;</code></pre></td><td><h4>Extra, Extra, Read All About It!</h4></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;h5&gt;Extra, Extra, Read All About It!&lt;/h5&gt;</code></pre></td><td><h5>Extra, Extra, Read All About It!</h5></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;h6&gt;Extra, Extra, Read All About It!&lt;/h6&gt;</code></pre></td><td><h6>Extra, Extra, Read All About It!</h6></td></tr>
+  </table>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="grid" class="clearfix">
+  <h3>The Grid</h3>
+  <p class="notice">This is the breakdown of the 960px wide, 6-column grid.</p>
+  <div class="col1 bg-medium-blue white textcenter"><p>col1 (150px)</p></div>
+  <div class="col1 bg-medium-blue white textcenter"><p>col1 (150px)</p></div>
+  <div class="col1 bg-medium-blue white textcenter"><p>col1 (150px)</p></div>
+  <div class="col1 bg-medium-blue white textcenter"><p>col1 (150px)</p></div>
+  <div class="col1 bg-medium-blue white textcenter"><p>col1 (150px)</p></div>
+  <div class="col1 bg-medium-blue white textcenter"><p>col1 (150px)</p></div>
+
+  <div class="first col2 bg-dark-blue white textcenter"><p>col2 (310px)</p></div>
+  <div class="col2 bg-dark-blue white textcenter"><p>col2 (310px)</p></div>
+  <div class="col2 bg-dark-blue white textcenter"><p>col2 (310px)</p></div>
+
+  <div class="first col3 bg-medium-blue white textcenter"><p>col3 (470px)</p></div>
+  <div class="col3 bg-medium-blue white textcenter"><p>col3 (470px)</p></div>
+
+  <div class="first col4 bg-dark-blue white textcenter"><p>col4 (630px)</p></div>
+  <div class="col2 bg-dark-blue white textcenter"><p>col2 (310px)</p></div>
+
+  <div class="first col5 bg-medium-blue white textcenter"><p>col5 (790px)</p></div>
+  <div class="col1 bg-medium-blue white textcenter"><p>col1 (150px)</p></div>
+
+  <div class="first col6 bg-dark-blue white textcenter"><p>col6 (950px)</p></div>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="layout" class="clearfix">
+  <h3>Page Layout</h3>
+
+  <div class="notice clearfix">
+    <p>The following classes create a variety of page layouts against a <strong>6-column grid, 960px wide, with 5px left &amp; right margins, with 10px gutters between columns.</strong></p>
+    <p>Keep in mind that each <em>row</em> can only add up to a <em>maximum of 6.</em></p>
+    <p>class="first" forces the column to wrap to the next line.  This prevents subsequent columns from filling whitespace to the right of the previous column.</p>
+    <p>class="precol<span class="medium-red">#</span>" adds left margin to the column</p>
+    <p>col<span class="medium-red">#</span> classes can be applied to almost any HTML tag</p>
+    <p><strong>Important:</strong> When laying out a page using these classes, you need to lay out the <strong>entire page</strong>.  You'll run into problems if you only try to layout one or two spots and let the rest of the text flow freely.</p>
+  </div>
+<pre><code class="language-markup">
+&lt;tag class="col1"&gt;...&lt;/tag&gt;
+&lt;tag class="col1"&gt;...&lt;/tag&gt;
+&lt;tag class="col1"&gt;...&lt;/tag&gt;
+&lt;tag class="col1"&gt;...&lt;/tag&gt;
+&lt;tag class="col1"&gt;...&lt;/tag&gt;
+&lt;tag class="col1"&gt;...&lt;/tag&gt;
+</code></pre>
+      <span class="col1 bg-black white">col1</span>
+      <span class="col1 bg-black white">col1</span>
+      <span class="col1 bg-black white">col1</span>
+      <span class="col1 bg-black white">col1</span>
+      <span class="col1 bg-black white">col1</span>
+      <span class="col1 bg-black white">col1</span>
+      <hr />
+      <p class="dots">&nbsp;</p>
+<pre><code class="language-markup">
+&lt;tag class="col1"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol1 col1"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol2 col1"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol3 col1"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol4 col1"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol5 col1"&gt;...&lt;/tag&gt;
+</code></pre>
+      <span class="first col1 bg-black white">col1</span>
+      <span class="first col1 precol1 bg-dark-grey white">precol1 + col1</span>
+      <span class="first col1 precol2 bg-medium-grey white">precol2 + col1</span>
+      <span class="first col1 precol3 bg-light-grey black">precol3 + col1</span>
+      <span class="first col1 precol4 bg-pale-grey black">precol4 + col1</span>
+      <span class="first col1 precol5 bg-hint-grey black">precol5 + col1</span>
+      <hr />
+      <p class="dots">&nbsp;</p>
+<pre><code class="language-markup">
+&lt;tag class="col1dot5"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol1dot5 col1dot5"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol3 col1dot5"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol4dot5 col1dot5"&gt;...&lt;/tag&gt;
+</code></pre>
+      <span class="first col1dot5 bg-black white">col1dot5</span>
+      <span class="first col1dot5 precol1dot5 bg-pale-blue black">precol1dot5 + col1dot5</span>
+      <span class="first col1dot5 precol3 bg-pale-blue black">precol3 + col1dot5</span>
+      <span class="first col1dot5 precol4dot5 bg-medium-grey white">precol4dot5 + col1dot5</span>
+      <hr />
+      <p class="dots">&nbsp;</p>
+<pre><code class="language-markup">
+&lt;tag class="col2"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol1 col2"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol2 col2"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol3 col2"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol4 col2"&gt;...&lt;/tag&gt;
+</code></pre>
+      <span class="first col2 bg-black white">col2</span>
+      <span class="first col2 precol1 bg-pale-blue black">precol1 + col2</span>
+      <span class="first col2 precol2 bg-medium-red white">precol2 + col2</span>
+      <span class="first col2 precol3 bg-pale-blue black">precol3 + col2</span>
+      <span class="first col2 precol4 bg-medium-grey white">precol4 + col2</span>
+      <hr />
+      <p class="dots">&nbsp;</p>
+<pre><code class="language-markup">
+&lt;tag class="col3"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol1 col3"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol1dot5 col3"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol2 col3"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol3 col3"&gt;...&lt;/tag&gt;
+</code></pre>
+      <span class="first col3 bg-black white">col3</span>
+      <span class="first col3 precol1 bg-pale-blue black">precol1 + col3</span>
+      <span class="first col3 precol1dot5 bg-medium-red white">precol1dot5 + col3</span>
+      <span class="first col3 precol2 bg-pale-blue black">precol2 + col3</span>
+      <span class="first col3 precol3 bg-medium-grey white">precol3 + col3</span>
+      <hr />
+      <p class="dots">&nbsp;</p>
+<pre><code class="language-markup">
+&lt;tag class="col4"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol1 col4"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol2 col4"&gt;...&lt;/tag&gt;
+</code></pre>
+      <span class="first col4 bg-black white">col4</span>
+      <span class="first col4 precol1 bg-medium-red white">precol1 + col4</span>
+      <span class="first col4 precol2 bg-medium-grey white"> precol2 + col4</span>
+      <hr />
+      <p class="dots">&nbsp;</p>
+<pre><code class="language-markup">
+&lt;tag class="col5"&gt;...&lt;/tag&gt;
+&lt;tag class="first precoldot5 col5"&gt;...&lt;/tag&gt;
+&lt;tag class="first precol1 col5"&gt;...&lt;/tag&gt;
+</code></pre>
+      <span class="first col5 bg-black white">col5 </span>
+      <span class="first col5 precoldot5 bg-medium-red white">precoldot5 + col5</span>
+      <span class="first col5 precol1 bg-medium-grey white">precol1 + col5</span>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="clearfix" class="clearfix">
+  <h3>Clearfix &amp; p.dots</h3>
+  <p class="notice">.col#-grid-classes are positioned using a method called <em>float</em>.  When you use CSS to position HTML elements and you invoke <em>float</em>, you effectively remove the floated element from the <em>relative</em> page flow. This becomes a problem when you have floating-children nested inside a parent-container.  When you float a child element it's as if the child has moved out of the parent's house and the house shrinks to only fit the people it knows are living there. The examples below describe this scenario more visually.  <strong>Adding class="clearfix" to the parent container will tell the parent-container to keep "containing" its floated children.</strong></p>
+  <table class="col6 syntax">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td>
+<pre><code class="language-markup">
+&lt;div class="bg-medium-red"&gt;
+  &lt;h4&gt;Without clearfix  (red = the parent-element)&lt;/h4&gt;
+  &lt;div class="col1"&gt;&lt;p&gt;Child #1&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="col1"&gt;&lt;p&gt;Child #2&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;div class="clearfix bg-medium-red"&gt;
+  &lt;h4&gt;With clearfix&lt;/h4&gt;
+  &lt;div class="col1"&gt;&lt;p&gt;Child #1&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="col1"&gt;&lt;p&gt;Child #2&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></td>
+<td>
+    <div class="bg-light-blue" style="border:1px solid black">
+      <h4 class="white">Without clearfix  (blue = the parent-element)</h4>
+      <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #1</p></div>
+      <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #2</p></div>
+    </div>
+    <hr />
+    <div class="clearfix bg-light-blue" style="border:1px solid black">
+      <h4 class="white">With clearfix</h4>
+      <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #1</p></div>
+      <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #2</p></div>
+    </div>
+</td></tr>
+</table>
+<p class="dots">&nbsp;</p>
+
+  <p class="notice">Another problem may occur when certain elements refuse to wrap to the next line.  To <em>force</em> a hard line-break after previously using floated elements, you can add a paragraph with class="dots" like so.  p.dots is 1px tall, has zero margins, zero padding, zero line-height and only contains a non-breaking-space character.  It's effectively invisible.</p>
+  <table class="col6 syntax">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td>
+<pre><code class="language-markup">
+Without p.dots
+&lt;div class="col1"&gt;Floated col1&lt;/div&gt;
+&lt;p&gt;This paragraph should start on a new line.&lt;/p&gt;
+
+With p.dots
+&lt;div class="col1"&gt;Floated col1&lt;/div&gt;
+&lt;p class="dots"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;This paragraph should start on a new line.&lt;/p&gt;
+</code></pre></td>
+<td>
+<div class="col1 bg-medium-red white">Floated col1</div>
+<p>This paragraph should start on a new line.</p>
+<div class="col1 bg-medium-red white">Floated col1</div>
+<p class="dots">&nbsp;</p>
+<p>This paragraph should start on a new line.</p>
+
+
+</td></tr></table>
+
+<p class="dots">&nbsp;</p>
+
+<div id="modalwindow" class="clearfix">
+  <h3>Modal</h3>
+  <table class="col6 syntax" cellspacing="0" cellpadding="0">
+    <tr><th>Syntax</th><th>Result</th></tr>
+    <tr><td><pre><code class="language-markup">&lt;a class="dialog" href="/template.aspx?id=1234"&gt;Click Here!&lt;/a&gt;</code></pre><p class="notice">Just add class="dialog" to any hyperlink where the URL is a relative path to an OCC template file.  JQuery will replace template.aspx with box.aspx and load the content block's HTML inside a modal window.</p><p class="error">This will only work when this reference guide is loaded into www.sunyocc.edu/index.aspx.</p></td><td><a class="dialog" href="external_file.html">Click Here!</a></td></tr>
+  </table>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="footnotes" class="clearfix">
+  <h3>Footnotes</h3>
+  <p class="error">Footnotes conflict with this reference guide due to the navigation pane at the top of the page.  It's hiding the content the browser jumps to when you click on a footnote link.</p>
+<pre><code class="language-markup">
+&lt;p&gt;...&lt;sup&gt;&lt;a href="#footnote_number_1" id="fn1" title="see footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;...&lt;/p&gt;
+&lt;p&gt;...&lt;sup&gt;&lt;a href="#footnote_number_2" id="fn2" title="see footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;...&lt;/p&gt;
+&lt;p&gt;...&lt;sup&gt;&lt;a href="#footnote_number_3" id="fn3" title="see footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;...&lt;/p&gt;
+
+...at the bottom of the page...
+
+&lt;div class="footnotes"&gt;
+  &lt;h2&gt;Notes:&lt;/h2&gt;
+  &lt;ol&gt;
+    &lt;li id="footnote_number_1"&gt;&lt;a href="#fn1" title="return to article"&gt;&#94;&lt;/a&gt;
+     This is the entry for footnote number one.&lt;/li&gt;
+    &lt;li id="footnote_number_2"&gt;&lt;a href="#fn2" title="return to article"&gt;&#94;&lt;/a&gt;
+     This is the entry for footnote number two.&lt;/li&gt;
+    &lt;li id="footnote_number_3"&gt;&lt;a href="#fn3" title="return to article"&gt;&#94;&lt;/a&gt;
+     This is the entry for footnote number three.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</code></pre>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare sodales varius. Etiam aliquet ligula vel est interdum rutrum. Curabitur porta faucibus lobortis. In odio ligula, tempor id lacinia vel, porttitor in diam. Donec ac libero non massa sollicitudin fringilla. Vestibulum ut augue ligula, a laoreet est. Etiam nec sem ut dolor aliquet pharetra id id libero.<sup><a href="#32066" id="fn1" title="see footnote">1</a></sup> Nulla a urna et purus varius suscipit. Donec euismod venenatis neque eget hendrerit. Etiam dictum laoreet dolor, quis rutrum mauris semper nec. Fusce tortor risus, sagittis sit amet placerat in, tincidunt sit amet sapien.</p>
+    <p>Etiam aliquet ligula vel est interdum rutrum.<sup><a href="#32067" id="fn2" title="see footnote">2</a></sup> Curabitur porta faucibus lobortis. Nulla a urna et purus varius suscipit. Donec euismod venenatis neque eget hendrerit. Etiam dictum laoreet dolor, quis rutrum mauris semper nec.</p>
+    <p>Curabitur porta faucibus lobortis<sup><a href="#32068" id="fn3" title="see footnote">3</a></sup> nulla a urna et purus varius suscipit. Donec euismod venenatis neque eget hendrerit. Etiam dictum laoreet dolor, quis rutrum.</p>
+    <div class="footnotes">
+      <h2>Notes:</h2>
+      <ol>
+        <li id="32066"><a href="#fn1" title="return to article">&#94;</a> This is an entry for footnote number one.</li>
+        <li id="32067"><a href="#fn2" title="return to article">&#94;</a> This is where <a href="#">the author</a> typed out his entry for the second footnote.</li>
+        <li id="32068"><a href="#fn3" title="return to article">&#94;</a> Footnote #3 goes <strong>here</strong>, but don't forget to check out <a href="#">this great article</a>. And for the sake of having a super long footnote just to see how it looks when it wraps, I'm going to type a lot of extra words here, there, and over here as well.  Sometimes you have to make sure all of these variations look nice, ya know?</li>
+      </ol>
+    </div>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="horzy" class="clearfix">
+  <h3>Horzy</h3>
+  <p class="notice">Horzy is a javascript-driven horizontal page sliding effect.  It stacks "slides" or "pages" horizontally and when you click the horzy navigation links it animates a horizontal scroll to the designated "slide/page".  <strong>You can have multiple instances of Horzy active on a single page</strong>.</p>
+<pre><code class="language-markup">
+&lt;div class="slider"&gt;
+  &lt;div class="slidernav clearfix"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a class="current" href="#slide1"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#slide2"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#slide3"&gt;Page 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#slide4"&gt;Page 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#slide5"&gt;Page 5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;&lt;!-- // END SLIDERNAV --&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="slides_window"&gt;
+      &lt;div class="slides"&gt;
+        &lt;div class="slide" id="slide1"&gt;Page 1&lt;/div&gt;
+        &lt;div class="slide" id="slide2"&gt;Page 2&lt;/div&gt;
+        &lt;div class="slide" id="slide3"&gt;Page 3&lt;/div&gt;
+        &lt;div class="slide" id="slide4"&gt;Page 4&lt;/div&gt;
+        &lt;div class="slide" id="slide5"&gt;Page 5&lt;/div&gt;
+      &lt;/div&gt;&lt;!-- // END SLIDES --&gt;
+    &lt;/div&gt;&lt;!-- // END SLIDES_WINDOW --&gt;
+  &lt;/div&gt;&lt;!-- // END CONTAINER --&gt;
+&lt;/div&gt;&lt;!-- // END SLIDER --&gt;
+</code></pre>
+  <div class="slider">
+    <div class="slidernav clearfix">
+      <ul>
+        <li><a class="current" href="#slide1">Slide 1 (Click Me!)</a></li>
+        <li><a href="#slide2">Slide 2 (Click Me!)</a></li>
+        <li><a href="#slide3">Slide 3 (Click Me!)</a></li>
+        <li><a href="#slide4">Slide 4 (Click Me!)</a></li>
+        <li><a href="#slide5">Slide 5 (Click Me!)</a></li>
+      </ul>
+    </div><!-- // END SLIDERNAV -->
+    <div class="container">
+      <div class="slides_window">
+        <div class="slides">
+          <div class="slide" id="slide1">Slide 1</div>
+          <div class="slide" id="slide2">Slide 2</div>
+          <div class="slide" id="slide3">Slide 3</div>
+          <div class="slide" id="slide4">Slide 4</div>
+          <div class="slide" id="slide5">Slide 5</div>
+        </div><!-- // END SLIDES -->
+      </div><!-- // END SLIDES_WINDOW -->
+    </div><!-- // END CONTAINER -->
+  </div><!-- // END SLIDER -->
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="verty" class="clearfix">
+  <h3>Verty</h3>
+  <p class="notice">Verty is a javascript-driven vertical page sliding effect.  When you click the verty navigation links it animates a vertical scroll to the designated anchor-link.  The vertical-navigation is cloned and given a fixed position in the browser window so that it follows you as you scroll up and down the page.</p>
+  <p class="error">Verty is currently being used to drive this reference guide.  You can still click the demo links, but the effect isn't going to work 100%.  <strong>You can only have one instance of Verty active on a single page</strong>.</p>
+  <p class="error">While possible to use Verty inside a Content Block, I believe <strong>Verty is best used in the Collgrid</strong> area of the template file, allowing you to have maximum control over page layout, transparent backgrounds, full-bleed sections, etc.</p>
+<pre><code class="language-markup">
+&lt;div class="nav clearfix"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a class="scroll top" href="#logo"&gt;Intro&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="scroll section1" href="#section1"&gt;Section 1 (Click Me!)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="scroll section2" href="#section2"&gt;Section 2 (Click Me!)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="scroll section3" href="#section3"&gt;Section 3 (Click Me!)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="scroll section4" href="#section4"&gt;Section 4 (Click Me!)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="scroll section5" href="#section5"&gt;Section 5 (Click Me!)&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id="section1" class="section clearfix"&gt;
+  &lt;div class="container"&gt;Section 1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="section2" class="section clearfix"&gt;
+  &lt;div class="container"&gt;Section 2&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="section3" class="section clearfix"&gt;
+  &lt;div class="container"&gt;Section 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="section4" class="section clearfix"&gt;
+  &lt;div class="container"&gt;Section 4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="section5" class="section clearfix"&gt;
+  &lt;div class="container"&gt;Section 5&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  <div class="nav clearfix">
+    <ul>
+      <li><a class="scroll top" href="#logo">Intro</a></li>
+      <li><a class="scroll section1" href="#section1">Section 1 (Click Me!)</a></li>
+      <li><a class="scroll section2" href="#section2">Section 2 (Click Me!)</a></li>
+      <li><a class="scroll section3" href="#section3">Section 3 (Click Me!)</a></li>
+      <li><a class="scroll section4" href="#section4">Section 4 (Click Me!)</a></li>
+      <li><a class="scroll section5" href="#section5">Section 5 (Click Me!)</a></li>
+    </ul>
+  </div>
+  <div id="section1" class="section clearfix">
+    <div class="container">Section 1</div>
+  </div>
+  <div id="section2" class="section clearfix">
+    <div class="container">Section 2</div>
+  </div>
+  <div id="section3" class="section clearfix">
+    <div class="container">Section 3</div>
+  </div>
+  <div id="section4" class="section clearfix">
+    <div class="container">Section 4</div>
+  </div>
+  <div id="section5" class="section clearfix">
+    <div class="container">Section 5</div>
+  </div>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="bgslideshow" class="clearfix">
+  <h3>BG_Slideshow</h3>
+  <p class="notice">BG_Slideshow is a JQuery script that creates a very large background-graphic slideshow.  It creates the slides for the slideshow from HTML elsewhere on the page.  By default this HTML is hidden from view and just serves as a simple data-source.</p>
+  <p class="notice">Vertical placement of captions is accomplished by using caption-top, caption-middle, and caption-bottom classes.  Horizontal placement of captions is accomplished by a combination of precol and col grid classes.</p>
+  <p class="error">The slideshow navigation doesn't work 100% correctly in this reference guide.  I honestly didn't expect it to work inside of a nested container.  Neat!</p>
+<pre><code class="language-markup">
+&lt;ul class="bg_slideshow"&gt;
+  &lt;li class="bg-x-x"&gt;
+    &lt;img src="file1.jpg" height="500" /&gt;
+    &lt;a class="caption-bottom col2" href="example.com"&gt;
+      &lt;strong&gt;Hello World&lt;/strong&gt; and Foo Bar
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-x-x"&gt;
+    &lt;img src="file2.jpg" height="500" /&gt;
+    &lt;a class="caption-middle precol2 col2" href="example.com"&gt;
+      &lt;strong&gt;Hello World&lt;/strong&gt; and Foo Bar
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-x-x"&gt;
+    &lt;img src="file3.jpg" height="500" /&gt;
+    &lt;a class="caption-top precol4 col2" href="example.com"&gt;
+      &lt;strong&gt;Hello World&lt;/strong&gt; and Foo Bar
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+  <ul class="bg_slideshow">
+    <li class="bg-dark-grey"><img src="http://gui.sunyocc.edu/gui/images/samples/shark-470.png" height="500" width="1400" /><a class="bg-black-alpha50 text-center white radius-medium caption-bottom col2" href="example.com"><strong class="dark-orange">Hello World</strong> and Foo Bar</a></li>
+    <li class="bg-dark-blue"><img src="http://gui.sunyocc.edu/gui/images/samples/elk-470.png" height="500" width="1400" /><a class="bg-black-alpha50 text-center white radius-medium caption-middle precol2 col2" href="example.com"><strong class="medium-blue">Hello World</strong> and Foo Bar</a></li>
+    <li class="bg-dark-red"><img src="http://gui.sunyocc.edu/gui/images/samples/porcupine-470.png" height="500" width="1400" /><a class="bg-black-alpha50 text-center white radius-medium caption-top precol4 col2" href="example.com"><strong class="medium-grey">Hello World</strong> and Foo Bar</a></li>
+  </ul>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<div id="bgbanners" class="clearfix">
+  <h3>BG_Banners</h3>
+  <p class="notice">BG_Banners is a JQuery script that creates a mosaic of block-level hyperlinks.  If they contain an image, the image will be applied as a background-graphic.  A variety of GUI classes can be applied to each link: col classes for width, bg-color, text-color, font-typefaces, etc.</p>
+  <p class="error">A future update will remove margin-top:-150px; as seen on www.sunyocc.edu/home.aspx.  Margin-top should be 0 universally, and exceptions should be applied in a local stylesheet.</p>
+<pre><code class="language-markup">
+&lt;ul class="bg_banners"&gt;
+  &lt;li class="col2 bg-dark-blue"&gt;
+    &lt;img src="file.jpg" height="150" /&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-dark-red col2"&gt;
+    &lt;img src="file.jpg" height="150" /&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-dark-grey col2"&gt;
+    &lt;img src="file.jpg" height="150" /&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-dark-green col3"&gt;
+    &lt;img src="file.jpg" height="250" /&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-dark-yellow col3"&gt;
+    &lt;img src="file.jpg" height="250" /&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-dark-purple col4"&gt;
+    &lt;img src="file.jpg" height="50"/&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-dark-brown col2"&gt;
+    &lt;img src="file.jpg" height="50" /&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-medium-orange col6"&gt;
+    &lt;img src="file.jpg" height="75" /&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-medium-blue col1"&gt;
+    &lt;img src="file.jpg" height="200" /&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="bg-medium-green col5"&gt;
+    &lt;img src="file.jpg" height="200"/&gt;
+    &lt;a href="example.com" class="white"&gt;...&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+  <ul class="bg_banners">
+    <li class="col2 bg-dark-blue">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/deer-310.png" height="150" />
+      <a href="example.com" class="white">Deer</a>
+    </li>
+    <li class="bg-dark-red col2">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/shark-310.png" height="150" />
+      <a href="example.com" class="white">Shark</a>
+    </li>
+    <li class="bg-dark-grey col2">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/rhino2-310.png" height="150" />
+      <a href="example.com" class="white">Rhino</a>
+    </li>
+    <li class="bg-dark-green col3">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/moose-470.png" height="250" />
+      <a href="example.com" class="white">Moose</a>
+    </li>
+    <li class="bg-dark-yellow col3">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/seahorse-470.png" height="250" />
+      <a href="example.com" class="white">Seahorse</a>
+    </li>
+    <li class="bg-dark-purple col4">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/dragonfly-310.png" height="50"/>
+      <a href="example.com" class="white">Dragonfly</a>
+    </li>
+    <li class="bg-dark-brown col2">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/elk-310.png" height="50" />
+      <a href="example.com" class="white">Elk</a>
+    </li>
+    <li class="bg-medium-orange col6">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/gecko-310.png" height="75" />
+      <a href="example.com" class="white">Gecko</a>
+    </li>
+    <li class="bg-medium-blue col1">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/ibex-310.png" height="200" />
+      <a href="example.com" class="white">Ibex</a>
+    </li>
+    <li class="bg-medium-green col5">
+      <img src="http://gui.sunyocc.edu/gui/images/samples/zebra-310.png" height="200"/>
+      <a href="example.com" class="white">Zebra</a>
+    </li>
+  </ul>
+</div>
+
+<p class="dots">&nbsp;</p>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  </div><!-- // END CONTAINER -->
+
+  <div class="content">
+    <div class="container">
+      <div id="section" class="hasmenu clearfix"> <!-- BEGIN CONTENT AREA -->
+      </div> <!-- // END CONTENT AREA -->
+    </div>
+  </div>
+</body>
+</html>

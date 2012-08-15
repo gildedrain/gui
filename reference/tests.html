@@ -1,0 +1,1082 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+<!--\\ BEGIN head INCLUDE FILE -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<!--// END head INCLUDE FILE -->
+  </head>
+  <body>
+    <div class="container">
+      <!--\\ H2 BEGINS -->
+      <!--<h2 id="menutitle"></h2>-->
+      <!--// H2 ENDS -->
+
+    </div>
+    <div class="content">
+        <form>
+      <!--\\ COLLGRID BEGINS -->
+
+      <!--// COLLGRID ENDS -->
+
+      <div class="container">
+        <!--\\ ASIDE BEGINS -->
+        <div id="aside">
+          <!--\\ MENU BEGINS -->
+          <div class="menu">
+
+          </div>
+          <!--// MENU ENDS -->
+          <!--\\ COLLSIDE BEGINS -->
+          <!--// COLLSIDE ENDS -->
+        </div>
+        <!--// ASIDE ENDS -->
+        <div id="section">
+          <!--\\ CONTENT BLOCK BEGINS -->
+          <h1>CSS Examples</h1>
+          <p class="dots">&nbsp;</p>
+          <hr />
+            <h2>.clearfix test</h2>
+            <p>Without clearfix</p>
+            <div class="container bg-medium-red">
+            <div class="col1 bg-dark-green">&nbsp;</div>
+            <div class="col1 bg-dark-purple">&nbsp;</div>
+            </div>
+          <p class="dots">&nbsp;</p>
+            <p>With clearfix</p>
+            <div class="container clearfix bg-medium-red">
+            <div class="col1 bg-dark-green">&nbsp;</div>
+            <div class="col1 bg-dark-purple">&nbsp;</div>
+            </div>
+                    <p class="dots">&nbsp;</p>
+                    <hr />
+            <h2>Forms</h2>
+              <fieldset><legend>Existing OCC Web Form (HTML Unchanged)</legend><ul class="notes">
+                <li>Intramural Flag Football on Murphy Field.</li>
+                <li>Team members must be current OCC students or employees, with IDs.</li>
+                <li><em>Note:</em> Two forfeits will result in the team being kicked out of the league.</li>
+                </ul>
+                <table class="show_design_border" style="MARGIN: 10px" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                <th>Team Name</th>
+                <td> <input id="TeamName" onblur="design_validate_re(/\S+/,this,'Please enter a team name.');" title="Team Name &#xA;Please enter a team name." type="text" size="40" name="TeamName" ektdesignns_datatype="string" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_name="TeamName" ektdesignns_caption="Team Name" ektdesignns_nodetype="element" ektdesignns_validation="string-req" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Please enter a team name." /> </td>
+                </tr>
+                </tbody>
+                </table>
+                <fieldset><legend>Team Captain</legend><p class="notes">Mandatory meeting for captains only on September 24th at 11:30 in Room H111 (If not attended by team captain, team suffers a forfeit loss.)</p>
+                <table class="show_design_border" style="MARGIN: 10px" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                <th>Captain's Name</th>
+                <th>OCC ID#</th>
+                <th>E-mail</th>
+                </tr>
+                <tr>
+                <td><input id="CaptainName" onblur="design_validate_re(/\S+/,this,'Please enter the name of the team captain.');" title="Team Captain's Name" type="text" alt="Team Captain's Name" maxlength="2000" name="CaptainName" ektdesignns_name="CaptainName" ektdesignns_caption="CaptainName" ektdesignns_nodetype="element" ektdesignns_validation="string-req" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Please enter the name of the team captain." /> </td>
+                <td><input id="CaptainID" onblur="design_validate_re(/^\d+$/,this,'Please enter the team captain\'s OCC ID number.');" title="Team Captain's ID#" type="text" alt="Team Captain's ID#" maxlength="2000" name="CaptainID" ektdesignns_name="CaptainID" ektdesignns_caption="CaptainID" ektdesignns_nodetype="element" ektdesignns_validation="nonNegInt-req" ektdesignns_basetype="number" ektdesignns_validate="re:/^\d+$/" ektdesignns_invalidmsg="Please enter the team captain's OCC ID number." /> </td>
+                <td><input id="CaptainEmail" onblur="design_validate_re(/^([A-Za-z0-9!#-\'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-\'\*\+\-\/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-\'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-\'\*\+\-\/=\?\^_`\{-~]+)*)$/,this,'Please enter the team captain\'s e-mail address.');" title="Team Captain's E-mail Address" type="text" alt="Team Captain's E-mail Address" maxlength="2000" name="CaptainEmail" ektdesignns_datatype="string" ektdesignns_schema="&lt;xs:pattern value=&quot;[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*&quot;/&gt;" ektdesignns_name="CaptainEmail" ektdesignns_caption="CaptainEmail" ektdesignns_nodetype="element" ektdesignns_validation="email-req" ektdesignns_basetype="text" ektdesignns_validate="re:/^([A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*)$/" ektdesignns_invalidmsg="Please enter the team captain's e-mail address." /> </td>
+                </tr>
+                </tbody>
+                </table>
+                </fieldset>
+                 <ol>
+                <li><fieldset><legend>Players</legend><p class="notes">Teams must have a minimum of 7 total players, but no more than 10.</p>
+                <table class="show_design_border" style="MARGIN: 10px" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                <th>Name</th>
+                <th>OCC ID#</th>
+                </tr>
+                <tr>
+                <td><input id="Player2" onblur="design_validate_re(/\S+/,this,'Please enter information for at least 7 total players.');" title="Player's Name Please enter information for at least 6 total players." type="text" alt="Player's Name" maxlength="2000" name="Player2" ektdesignns_datatype="string" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_name="Player2" ektdesignns_caption="Player2" ektdesignns_nodetype="element" ektdesignns_validation="string-req" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /> </td>
+                <td><input id="Player2-ID" title="Player's OCC ID#" type="text" alt="Player's OCC ID#" maxlength="2000" name="Player2-ID" ektdesignns_name="Player2-ID" ektdesignns_caption="Player2-ID" ektdesignns_nodetype="element" ektdesignns_validation="nonNegInt-req" ektdesignns_validate="re:/^\d+$/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /> </td>
+                </tr>
+                <tr>
+                <td><input id="Player3" onblur="design_validate_re(/\S+/,this,'Please enter information for at least 7 total players.');" title="Player's Name" type="text" alt="Player's Name" maxlength="2000" name="Player3" ektdesignns_datatype="string" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_name="Player3" ektdesignns_caption="Player3" ektdesignns_nodetype="element" ektdesignns_validation="string-req" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /></td>
+                <td><input id="Player3-ID" title="Player's OCC ID#" type="text" alt="Player's OCC ID#" maxlength="2000" name="Player3-ID" ektdesignns_name="Player3-ID" ektdesignns_caption="Player3-ID" ektdesignns_nodetype="element" ektdesignns_validation="nonNegInt-req" ektdesignns_validate="re:/^\d+$/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /></td>
+                </tr>
+                <tr>
+                <td><input id="Player4" onblur="design_validate_re(/\S+/,this,'Please enter information for at least 7 total players.');" title="Player's Name" type="text" alt="Player's Name" maxlength="2000" name="Player4" ektdesignns_datatype="string" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_name="Player4" ektdesignns_caption="Player4" ektdesignns_nodetype="element" ektdesignns_validation="string-req" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /></td>
+                <td><input id="Player4-ID" title="Player's OCC ID#" type="text" alt="Player's OCC ID#" maxlength="2000" name="Player4-ID" ektdesignns_name="Player4-ID" ektdesignns_caption="Player4-ID" ektdesignns_nodetype="element" ektdesignns_validation="nonNegInt-req" ektdesignns_validate="re:/^\d+$/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /></td>
+                </tr>
+                <tr>
+                <td><input id="Player5" onblur="design_validate_re(/\S+/,this,'Please enter information for at least 7 total players.');" title="Player's Name" type="text" alt="Player's Name" maxlength="2000" name="Player5" ektdesignns_datatype="string" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_name="Player5" ektdesignns_caption="Player5" ektdesignns_nodetype="element" ektdesignns_validation="string-req" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /></td>
+                <td><input id="Player5-ID" title="Player's OCC ID#" type="text" alt="Player's OCC ID#" maxlength="2000" name="Player5-ID" ektdesignns_name="Player5-ID" ektdesignns_caption="Player5-ID" ektdesignns_nodetype="element" ektdesignns_validation="nonNegInt-req" ektdesignns_validate="re:/^\d+$/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /></td>
+                </tr>
+                <tr>
+                <td><input id="Player6" onblur="design_validate_re(/\S+/,this,'Please enter information for at least 7 total players.');" title="Player's Name" type="text" alt="Player's Name" maxlength="2000" name="Player6" ektdesignns_datatype="string" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_name="Player6" ektdesignns_caption="Player6" ektdesignns_nodetype="element" ektdesignns_validation="string-req" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /></td>
+                <td><input id="Player6-ID" title="Player's OCC ID#" type="text" alt="Player's OCC ID#" maxlength="2000" name="Player6-ID" ektdesignns_name="Player6-ID" ektdesignns_caption="Player6-ID" ektdesignns_nodetype="element" ektdesignns_validation="nonNegInt-req" ektdesignns_validate="re:/^\d+$/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /></td>
+                </tr>
+                <tr>
+                <td><input id="Player7" onblur="design_validate_re(/\S+/,this,'Please enter information for at least 7 total players.');" title="Player's Name" type="text" alt="Player's Name" maxlength="2000" name="Player7" ektdesignns_datatype="string" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_name="Player7" ektdesignns_caption="Player7" ektdesignns_nodetype="element" ektdesignns_validation="string-req" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /> </td>
+                <td><input id="Player7-ID" onblur="design_validate_re(/\S+/,this,'Please enter information for at least 7 total players.');" title="Player's OCC ID#" type="text" alt="Player's OCC ID#" maxlength="2000" name="Player7-ID" ektdesignns_datatype="string" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_name="Player7-ID" ektdesignns_caption="Player7-ID" ektdesignns_nodetype="element" ektdesignns_validation="string-req" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Please enter information for at least 7 total players." /> </td>
+                </tr>
+                <tr>
+                <td><input id="Player8" title="Player's Name" type="text" alt="Player's Name" maxlength="2000" name="Player8" ektdesignns_name="Player8" ektdesignns_caption="Player8" ektdesignns_nodetype="element" ektdesignns_validate="re:/\S+/" /></td>
+                <td><input id="Player8-ID" title="Player's OCC ID#" type="text" alt="Player's OCC ID#" maxlength="2000" name="Player8-ID" ektdesignns_name="Player8-ID" ektdesignns_caption="Player8-ID" ektdesignns_nodetype="element" ektdesignns_validate="re:/\S+/" /></td>
+                </tr>
+                <tr>
+                <td><input id="Player9" title="Player's Name" type="text" alt="Player's Name" maxlength="2000" name="Player9" ektdesignns_name="Player9" ektdesignns_caption="Player9" ektdesignns_nodetype="element" /></td>
+                <td><input id="Player9-ID" title="Player's OCC ID#" type="text" alt="Player's OCC ID#" maxlength="2000" name="Player9-ID" ektdesignns_name="Player9-ID" ektdesignns_caption="Player9-ID" ektdesignns_nodetype="element" /></td>
+                </tr>
+                <tr>
+                <td><input id="Player10" title="Player's Name" type="text" alt="Player's Name" maxlength="2000" name="Player10" ektdesignns_name="Player10" ektdesignns_caption="Player10" ektdesignns_nodetype="element" /></td>
+                <td><input id="Player10-ID" title="Player's OCC ID#" type="text" alt="Player's OCC ID#" maxlength="2000" name="Player10-ID" ektdesignns_name="Player10-ID" ektdesignns_caption="Player10-ID" ektdesignns_nodetype="element" /></td>
+                </tr>
+                </tbody>
+                </table>
+                </fieldset>
+                 </li>
+                </ol>
+                <input type="submit" value="Submit Registration" />
+              </fieldset>
+
+
+
+
+            <div class="col2 first">
+              <fieldset class="noborder">
+                <legend>form <em>(default)</em></legend>
+                <p class="notice"><span class="tooltip">Use when you have wordy labels.
+                  <span>Ideally all labels on every form should be succinct and meaningful, but if you can't manage that, then this form is your friend.<br /><br />
+                    This form is the easiest to understand while still following the format of label+input.</span>
+                </span></p>
+                <label>First And Last And Middle Name and Title and Maiden Name</label><small class="required">Required</small><input id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><br />
+                <label>Telephone Number with Area Code, Country Code, and 5-digit Office Extension followed by the pound (#) sign.</label><input id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><small class="required">Required</small><small>Example: 12 + (111) - 555 - 1234 x 5678</small><br />
+                <label>Please type your question, comment or concern in this text area.  Unlike the labels in this form, your message is limited to 50 characters.</label><textarea id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><small class="required">Required</small><br />
+                <label>State</label>
+                <select>
+                  <option>State</option>
+                  <option>AS</option>
+                  <option>BC</option>
+                  <option>CO</option>
+                  <option>DE</option>
+                  <option>NY</option>
+                </select><br />
+                <fieldset>
+                  <legend>I prefer a response by:</legend>
+                  <input id="idID0ED" type="radio" value="E-mail" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0ED" >E-mail</label><br />
+                  <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >Phone</label><br />
+                  <label>If phone, best time to call:</label><input id="BestTimeToCall" title="The best time to contact you by phone" type="text" alt="The best time to contact you by phone" name="BestTimeToCall" />
+                </fieldset>
+                <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <div class="col4">
+              <fieldset class="noborder">
+                <legend>form <em>(default)</em></legend>
+                <p class="notice"><span class="tooltip">Use when you have wordy labels.
+                  <span>Ideally all labels on every form should be succinct and meaningful, but if you can't manage that, then this form is your friend.<br /><br />
+                    This form is the easiest to understand while still following the format of label+input.</span>
+                </span></p>
+                <label>First And Last And Middle Name and Title and Maiden Name</label><input class="required" id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><small class="redquired">Required</small><br />
+                <label>Telephone Number with Area Code, Country Code, and 5-digit Office Extension followed by the pound (#) sign.</label><input id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><small>Example: 12 + (111) - 555 - 1234 x 5678</small><br />
+                <label>Please type your question, comment or concern in this text area.  Unlike the labels in this form, your message is limited to 50 characters.</label><textarea id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><small>Example: I need help finding my keys</small><br />
+                <label>State</label>
+                <select>
+                  <option>State</option>
+                  <option>AS</option>
+                  <option>BC</option>
+                  <option>CO</option>
+                  <option>DE</option>
+                  <option>NY</option>
+                </select><br />
+                <fieldset>
+                  <legend>I prefer a response by:</legend>
+                  <input id="idID0ED" type="radio" value="E-mail" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0ED" >E-mail</label><br />
+                  <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >Phone</label><br />
+                  <label>If phone, best time to call:</label><input id="BestTimeToCall" title="The best time to contact you by phone" type="text" alt="The best time to contact you by phone" name="BestTimeToCall" />
+                </fieldset>
+                <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <div class="col2 labels-left first">
+              <fieldset class="bg-dark-blue pale-blue">
+                <legend>form.labels-left</legend>
+                <p class="error"><span class="tooltip">Use sparingly.
+                  <span class="info dark-grey">This is the slowest form type to complete.<br /><br />
+                    Only use this form type when it is important for the user to carefully consider each question before answering. Having left-aligned labels will allow them to quickly scan the column of labels and carefully position their mouse into the corresponding input.<br /><br />
+                  Examples:<br />Preferences, Advanced Settings, Forms containing unfamiliar questions.</span>
+                </span></p>
+                <label>Hospital Name:</label><input class="bg-dark-grey white" id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><br />
+                <label>Student ID#:</label><input class="bg-dark-grey white" id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><br />
+                <label>Log Notes:</label><textarea class="bg-dark-grey white" id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><br />
+                <label>Major:</label>
+                <select>
+                  <option>-- choose one --</option>
+                  <option>Accounting</option>
+                  <option>Biology</option>
+                  <option>Computer Science</option>
+                  <option>Electrical Engineering</option>
+                  <option>Nursing</option>
+                </select><br />
+                <fieldset>
+                  <legend>Best Time to Reach Me...</legend>
+                  <input id="idID0ED" type="radio" value="Yes" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0ED" >AM</label>
+                  <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >PM</label>
+                </fieldset>
+                <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <div class="col4 labels-left">
+              <fieldset class="bg-dark-blue pale-blue">
+                <legend>form.labels-left</legend>
+                <p class="error"><span class="tooltip">Use sparingly.
+                  <span class="info dark-grey">This is the slowest form type to complete.<br /><br />
+                    Only use this form type when it is important for the user to carefully consider each question before answering. Having left-aligned labels will allow them to quickly scan the column of labels and carefully position their mouse into the corresponding input.<br /><br />
+                  Examples:<br />Preferences, Advanced Settings, Forms containing unfamiliar questions.</span>
+                </span></p>
+                <label>Hospital Name:</label><input class="bg-dark-grey white" id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><br />
+                <label>Student ID#:</label><input class="bg-dark-grey white" id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><br />
+                <label>Log Notes:</label><textarea class="bg-dark-grey white" id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><br />
+                <label>Major:</label>
+                <select>
+                  <option>-- choose one --</option>
+                  <option>Accounting</option>
+                  <option>Biology</option>
+                  <option>Computer Science</option>
+                  <option>Electrical Engineering</option>
+                  <option>Nursing</option>
+                </select><br />
+                <fieldset>
+                  <legend>Best Time to Reach Me...</legend>
+                  <input id="idID0ED" type="radio" value="Yes" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0ED" >AM</label>
+                  <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >PM</label>
+                </fieldset>
+                <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <div class="col2 labels-right first">
+              <fieldset class="bg-hint-green">
+                <legend>form.labels-right</legend>
+                <p class="notice"><span class="tooltip">Use most of the time.
+                  <span>This form type requires succinct labels.  Choose your words wisely.  It looks terrible if the labels wrap to a second line and becomes hard to read. <br /><br />
+                    Typically this form type should only contain very familiar questions, like in a contact form.</span>
+                </span></p>
+                <label>Full Name</label><input id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><br />
+                <label>Password</label><input id="Password" class="required" title="Password" type="password" alt="Password" name="Password" /><br />
+                <label>Email</label><input id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><br />
+                <label>Question:</label><textarea id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><br />
+                <label>Age</label>
+                  <select>
+                    <option>--choose one--</option>
+                    <option>under 18</option>
+                    <option>18-25</option>
+                    <option>26-35</option>
+                    <option>36-50</option>
+                    <option>over 50</option>
+                  </select><br />
+                <fieldset>
+                  <legend>I'm interested in:</legend>
+                  <input id="idID0ED" type="radio" value="E-mail" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0ED" >Magazines</label><br />
+                  <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >Audio Books</label><br />
+                  <fieldset>
+                    <legend>Sub Fieldset</legend>
+                    <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >Phone</label>
+                    <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >SMS</label>
+                    <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >Email</label>
+                    <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >Facebook Poke</label>
+                  </fieldset>
+                </fieldset>
+                <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <div class="col4 labels-right">
+              <fieldset class="bg-hint-green">
+                <legend>form.labels-right</legend>
+                <p class="notice"><span class="tooltip">Use most of the time.
+                  <span>This form type requires succinct labels.  Choose your words wisely.  It looks terrible if the labels wrap to a second line and becomes hard to read. <br /><br />
+                    Typically this form type should only contain very familiar questions, like in a contact form.</span>
+                </span></p>
+                <label>Full Name</label><input id="FirstName" title="First Name" type="text" alt="First Name" name="FirstName" /><br />
+                <label>Password</label><input id="Password" class="required" title="Password" type="password" alt="Password" name="Password" /><br />
+                <label>Email</label><input id="PhoneNumber" title="Phone Number" type="text" alt="Phone Number" name="PhoneNumber" /><br />
+                <label>Question:</label><textarea id="QuestionComment" title="Question/Comment" name="QuestionComment"></textarea><br />
+                <label>Age</label>
+                  <select>
+                    <option>--choose one--</option>
+                    <option>under 18</option>
+                    <option>18-25</option>
+                    <option>26-35</option>
+                    <option>36-50</option>
+                    <option>over 50</option>
+                  </select><br />
+                <fieldset>
+                  <legend>I'm interested in:</legend>
+                  <input id="idID0ED" type="radio" value="E-mail" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0ED" >Magazines</label><br />
+                  <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >Audio Books</label><br />
+                  <fieldset>
+                    <legend>Sub Fieldset</legend>
+                    <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >Phone</label>
+                    <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >SMS</label>
+                    <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >Email</label>
+                    <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio" for="idID0EF" >Facebook Poke</label>
+                  </fieldset>
+                </fieldset>
+                <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <div class="col3 first titles-inside labels-right">
+              <fieldset class="bg-hint-blue">
+                <legend>form.titles-inside</legend>
+                <p class="notice"><span class="tooltip">Use when you want your form to be awesome!
+                  <span>This will create the most compact, fastest to use, most informative form possible.</span>
+                </span></p>
+                <label for="FirstName">Full Name</label><input id="FirstName" title="type first name here..." type="text" alt="First Name" name="FirstName" /><br />
+                <label for="PhoneNumber">Phone</label><input id="PhoneNumber" title="no punctuation please" type="text" alt="Phone Number" name="PhoneNumber" /><br />
+                <label for="QuestionComment">Question:</label><textarea id="QuestionComment" title="What's the problem?" name="QuestionComment"></textarea><br />
+                <fieldset>
+                  <legend>Location</legend>
+                  <label class="hide">State</label>
+                  <select>
+                    <option>State</option>
+                    <option>AS</option>
+                    <option>BC</option>
+                    <option>CO</option>
+                    <option>DE</option>
+                    <option>NY</option>
+                  </select>
+                  <label class="hide">County</label>
+                  <select>
+                    <option>County</option>
+                    <option>AS</option>
+                    <option>BC</option>
+                    <option>CO</option>
+                    <option>DE</option>
+                    <option>NY</option>
+                  </select>
+                  <label class="hide">Municipality</label>
+                  <select>
+                    <option>Municipality</option>
+                    <option>AS</option>
+                    <option>BC</option>
+                    <option>CO</option>
+                    <option>DE</option>
+                    <option>NY</option>
+                  </select>
+                </fieldset>
+                <fieldset>
+                  <legend>What colors do you like:</legend>
+                  <input type="checkbox" title="Select what colors you like" name="chk0" id="chk0_0" value="red"><label class="checkbox" for="chk0_0">red</label><br />
+                  <input type="checkbox" title="Select what colors you like" name="chk1" id="chk1_1" value="green"><label class="checkbox" for="chk1_1">green</label><br />
+                  <input type="checkbox" title="Select what colors you like" name="chk2" id="chk2_2" value="blue"><label class="checkbox" for="chk2_2">blue</label><br />
+                  <input type="checkbox" title="Select what colors you like" name="chk3" id="chk3_3" value="purple"><label class="checkbox" for="chk3_3">purple</label><br />
+                </fieldset>
+                <fieldset>
+                  <legend>I prefer a response by:</legend>
+                  <input id="idID0ED" type="radio" value="E-mail" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0ED" >E-mail</label><br />
+                  <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >Phone</label><br />
+                  <label for="BestTimeToCall">Best time to call?</label><input id="BestTimeToCall" title="When should we call?" type="text" alt="The best time to contact you by phone" name="BestTimeToCall" />
+                </fieldset>
+                <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <div class="col3 titles-inside">
+              <fieldset class="bg-hint-blue">
+                <legend>form.titles-inside</legend>
+                <p class="notice"><span class="tooltip">Use when you want your form to be awesome!
+                  <span>This will create the most compact, fastest to use, most informative form possible.</span>
+                </span></p>
+                <label for="FirstName">First And Last Name</label><input id="FirstName" title="As is on your ID" type="text" alt="First Name" name="FirstName" />
+                <label for="PhoneNumber">Phone</label><input id="PhoneNumber" title="(xxx) 123-1234" type="text" alt="Phone Number" name="PhoneNumber" />
+                <label for="QuestionComment">Question or Comment:</label><textarea id="QuestionComment" title="Thoughts, comments, concerns?" name="QuestionComment"></textarea>
+                <fieldset>
+                  <legend>Location</legend>
+                  <label class="hide">State</label>
+                  <select>
+                    <option>State</option>
+                    <option>AS</option>
+                    <option>BC</option>
+                    <option>CO</option>
+                    <option>DE</option>
+                    <option>NY</option>
+                  </select>
+                  <label class="hide">County</label>
+                  <select>
+                    <option>County</option>
+                    <option>AS</option>
+                    <option>BC</option>
+                    <option>CO</option>
+                    <option>DE</option>
+                    <option>NY</option>
+                  </select>
+                  <label class="hide">Municipality</label>
+                  <select>
+                    <option>Municipality</option>
+                    <option>AS</option>
+                    <option>BC</option>
+                    <option>CO</option>
+                    <option>DE</option>
+                    <option>NY</option>
+                  </select>
+                </fieldset>
+                <fieldset>
+                  <legend>What colors do you like:</legend>
+                  <input type="checkbox" title="Select what colors you like" name="chk0" id="chk0_0" value="red"><label class="checkbox" for="chk0_0">red</label><br />
+                  <input type="checkbox" title="Select what colors you like" name="chk1" id="chk1_1" value="green"><label class="checkbox" for="chk1_1">green</label><br />
+                  <input type="checkbox" title="Select what colors you like" name="chk2" id="chk2_2" value="blue"><label class="checkbox" for="chk2_2">blue</label><br />
+                  <input type="checkbox" title="Select what colors you like" name="chk3" id="chk3_3" value="purple"><label class="checkbox" for="chk3_3">purple</label><br />
+                </fieldset>
+                <fieldset>
+                  <legend>I prefer a response by:</legend>
+                  <input id="idID0ED" type="radio" value="E-mail" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0ED" >E-mail</label><br />
+                  <input id="idID0EF" type="radio" value="Phone" name="ContactPreference" ektdesignns_nodetype="item" /><label class="radio"  for="idID0EF" >Phone</label><br />
+                  <label for="BestTimeToCall">Best time to call?</label><input id="BestTimeToCall" title="How's 9:30pm?" type="text" alt="The best time to contact you by phone" name="BestTimeToCall" />
+                </fieldset>
+                <input id="submitbtn" type="submit" value="Send Message" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <div class="col3 first labels-inside">
+              <fieldset class="bg-hint-blue">
+                <legend>form.labels-inside</legend>
+                <p class="notice">
+                  <span class="tooltip">Only use for super short, simple forms.
+                    <span>Login forms, search boxes, super simple contact forms or signups.</span>
+                  </span>
+                </p>
+                <label for="Username">Username</label><input id="Username" title="Username" type="text" alt="Username" name="Username" />
+                <label for="Password">Password</label><input id="Password" title="Password" type="password" alt="Password" name="Password" />
+                <input id="submitbtn" type="submit" value="Login" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <div class="col3 labels-inside">
+              <fieldset class="bg-hint-blue">
+                <legend>form.labels-inside</legend>
+                <p class="notice">
+                  <span class="tooltip">Only use for super short, simple forms.
+                    <span>Login forms, search boxes, super simple contact forms or signups.</span>
+                  </span>
+                </p>
+                <label for="EmailAddress">Email Address</label><input id="EmailAddress" title="Email Address" type="text" alt="EmailAddress" name="EmailAddress" /><br />
+                <input id="submitbtn" type="submit" value="Signup" class="button small bg-white" />
+              </fieldset>
+            </div>
+            <hr />
+            <h2 class="first">Lists</h2>
+            <ul class="col1 bg-pale-blue">
+              <li><strong><em>(default)</em>, Disc</strong></li>
+              <li>Item 2
+                <ul>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ul>
+              </li>
+              <li>Item 3</li>
+            </ul>
+            <ul class="col1 circle bg-pale-blue">
+              <li><strong>Circle</strong></li>
+              <li>Item 2
+                <ul>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ul>
+              </li>
+              <li>Item 3</li>
+            </ul>
+            <ul class="col1 square bg-pale-blue">
+              <li><strong>Square</strong></li>
+              <li>Item 2
+                <ul>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ul>
+              </li>
+              <li>Item 3</li>
+            </ul>
+            <ol class="col1 upper-roman bg-pale-blue">
+              <li><strong>Upper Roman</strong></li>
+              <li>Item 2
+                <ol>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ol>
+              </li>
+              <li>Item 3</li>
+            </ol>
+            <ol class="col1 lower-roman bg-pale-blue">
+              <li><strong>Lower Roman</strong></li>
+              <li>Item 2
+                <ol>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ol>
+              </li>
+              <li>Item 3</li>
+            </ol>
+            <ol class="col1 upper-alpha bg-pale-blue">
+              <li><strong>Upper Alpha</strong></li>
+              <li>Item 2
+                <ol>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ol>
+              </li>
+              <li>Item 3</li>
+            </ol>
+            <ol class="col1 lower-alpha bg-pale-blue">
+              <li><strong>Lower Alpha</strong></li>
+              <li>Item 2
+                <ol>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ol>
+              </li>
+              <li>Item 3</li>
+            </ol>
+            <ol class="col1 decimal bg-pale-blue">
+              <li><strong>Decimal</strong></li>
+              <li>Item 2
+                <ol>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ol>
+              </li>
+              <li>Item 3</li>
+            </ol>
+            <ol class="col1 decimalzero bg-pale-blue">
+              <li><strong>Decimal with Leading Zero</strong></li>
+              <li>Item 2
+                <ol>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ol>
+              </li>
+              <li>Item 3</li>
+            </ol>
+            <ol class="col1 style_none bg-pale-blue">
+              <li><strong>Style_None</strong></li>
+              <li>Item 2
+                <ol>
+                  <li>Item a</li>
+                  <li>Item b</li>
+                  <li>Item c</li>
+                </ol>
+              </li>
+              <li>Item 3</li>
+            </ol>
+
+
+            <hr />
+            <h2 class="first">Tables</h2>
+
+
+            <table class="col1dot5 first">
+              <caption><em>default</em> (no class applied)</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 rows">
+              <caption>rows</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 columns">
+              <caption>columns</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 nogrid">
+              <caption>nogrid</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 nozebra bg-pale-brown first">
+              <caption>nozebra, bg-pale-brown</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 nozebra rows bg-pale-blue">
+              <caption>rows, nozebra, bg-pale-blue</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 columns nozebra bg-pale-red">
+              <caption>columns, nozebra, bg-pale-red</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 nogrid nozebra bg-pale-green">
+              <caption>nogrid, nozebra, bg-pale-green</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 bg-pale-orange first">
+              <caption>bg-pale-orange</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 rows bg-pale-grey">
+              <caption>rows, bg-pale-grey</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 columns bg-light-red">
+              <caption>columns, bg-light-red</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 nogrid bg-medium-orange">
+              <caption>nogrid, bg-medium-orange</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 bg-light-green first">
+              <caption>bg-light-green</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 rows bg-dark-yellow">
+              <caption>rows, bg-dark-yellow</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 columns bg-dark-orange">
+              <caption>columns, bg-dark-orange</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 nogrid bg-medium-blue">
+              <caption>nogrid, bg-medium-blue</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 zebracols nozebrarows bg-light-green first">
+              <caption>zebracols, nozebrarows, bg-light-green</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 rows zebracols nozebrarows bg-dark-yellow">
+              <caption>rows, zebracols, nozebrarows, bg-dark-yellow</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 columns zebracols bg-dark-orange">
+              <caption>columns, zebracols, bg-dark-orange</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col1dot5 nogrid zebracols bg-medium-blue">
+              <caption>nogrid, zebracols, bg-medium-blue</caption>
+              <tr><th>1</th><th>2</th><th>3</th></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+              <tr><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col2 bg-pale-blue first">
+              <tr><th></th><th>1</th><th>2</th><th>3</th></tr>
+              <tr><th>A</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>B</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>C</th><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col2 rows bg-pale-orange">
+              <tr><th></th><th>1</th><th>2</th><th>3</th></tr>
+              <tr><th>A</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>B</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>C</th><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col2 columns bg-pale-green">
+              <tr><th></th><th>1</th><th>2</th><th>3</th></tr>
+              <tr><th>A</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>B</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>C</th><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col2 zebraheaders rows border-white white bg-dark-blue first ">
+              <tr><td></td><th>1</th><th>2</th><th>3</th></tr>
+              <tr><th>A</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>B</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>C</th><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col2 rows bg-pale-blue border-white noborder">
+              <tr><td class="bg-white"></td><th>1</th><th>2</th><th>3</th></tr>
+              <tr><th>A</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>B</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>C</th><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <table class="col2 zebraheaders nogrid bg-black white">
+              <tr><td></td><th>1</th><th>2</th><th>3</th></tr>
+              <tr><th>A</th><td>nogrid</td><td>data</td><td>data</td></tr>
+              <tr><th>B</th><td>data</td><td>data</td><td>data</td></tr>
+              <tr><th>C</th><td>data</td><td>data</td><td>data</td></tr>
+            </table>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>Primary Color Palette</h2>
+            <h3>Syntax</h3>
+            <ul>
+              <li><strong>Text:</strong> <small>example: pale-blue</small></li>
+              <li><strong>Background:</strong> <small>example: bg-pale-blue</small></li>
+            </ul>
+            <div class="col1dot5">
+              <div class="bg-white black"><p class="pad">bg-white<a href="#" class="right button small bg-white">button</a></p></div>
+              <div class="bg-black white"><p class="pad">bg-black<a href="#" class="right button small bg-black">button</a></p></div>
+            </div>
+            <div class="col1dot5">
+              <div class="bg-hint-grey"><p class="pad">bg-hint-grey<a href="#" class="right button small bg-hint-grey">button</a></p></div>
+              <div class="bg-pale-grey"><p class="pad">bg-pale-grey<a href="#" class="right button small bg-pale-grey">button</a></p></div>
+              <div class="bg-light-grey"><p class="pad">bg-light-grey<a href="#" class="right button small bg-light-grey">button</a></p></div>
+              <div class="bg-medium-grey"><p class="pad">bg-medium-grey<a href="#" class="right button small bg-medium-grey">button</a></p></div>
+              <div class="bg-dark-grey white"><p class="pad">bg-dark-grey<a href="#" class="right button small bg-dark-grey">button</a></p></div>
+            </div>
+            <div class="col1dot5">
+              <div class="bg-hint-orange"><p class="pad">bg-hint-orange<a href="#" class="right button small bg-hint-orange">button</a></p></div>
+              <div class="bg-pale-orange"><p class="pad">bg-pale-orange<a href="#" class="right button small bg-pale-orange">button</a></p></div>
+              <div class="bg-light-orange"><p class="pad">bg-light-orange<a href="#" class="right button small bg-light-orange">button</a></p></div>
+              <div class="bg-medium-orange"><p class="pad">bg-medium-orange<a href="#" class="right button small bg-medium-orange">button</a></p></div>
+              <div class="bg-dark-orange white"><p class="pad">bg-dark-orange<a href="#" class="right button small bg-dark-orange">button</a></p></div>
+            </div>
+            <div class="col1dot5">
+              <div class="bg-hint-blue"><p class="pad">bg-hint-blue<a href="#" class="right button small bg-hint-blue">button</a></p></div>
+              <div class="bg-pale-blue"><p class="pad">bg-pale-blue<a href="#" class="right button small bg-pale-blue">button</a></p></div>
+              <div class="bg-light-blue"><p class="pad">bg-light-blue<a href="#" class="right button small bg-light-blue">button</a></p></div>
+              <div class="bg-medium-blue"><p class="pad">bg-medium-blue<a href="#" class="right button small bg-medium-blue">button</a></p></div>
+              <div class="bg-dark-blue white"><p class="pad">bg-dark-blue<a href="#" class="right button small bg-dark-blue">button</a></p></div>
+            </div>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>Secondary Color Palette</h2>
+            <div class="col1dot5">
+              <div class="bg-hint-red"><p class="pad">bg-hint-red<a href="#" class="right button small bg-hint-red">button</a></p></div>
+              <div class="bg-pale-red"><p class="pad">bg-pale-red<a href="#" class="right button small bg-pale-red">button</a></p></div>
+              <div class="bg-light-red"><p class="pad">bg-light-red<a href="#" class="right button small bg-light-red">button</a></p></div>
+              <div class="bg-medium-red"><p class="pad">bg-medium-red<a href="#" class="right button small bg-medium-red">button</a></p></div>
+              <div class="bg-dark-red white"><p class="pad">bg-dark-red<a href="#" class="right button small bg-dark-red">button</a></p></div>
+            </div>
+            <div class="col1dot5">
+              <div class="bg-hint-yellow"><p class="pad">bg-hint-yellow<a href="#" class="right button small bg-hint-yellow">button</a></p></div>
+              <div class="bg-pale-yellow"><p class="pad">bg-pale-yellow<a href="#" class="right button small bg-pale-yellow">button</a></p></div>
+              <div class="bg-light-yellow"><p class="pad">bg-light-yellow<a href="#" class="right button small bg-light-yellow">button</a></p></div>
+              <div class="bg-medium-yellow"><p class="pad">bg-medium-yellow<a href="#" class="right button small bg-medium-yellow">button</a></p></div>
+              <div class="bg-dark-yellow white"><p class="pad">bg-dark-yellow<a href="#" class="right button small bg-dark-yellow">button</a></p></div>
+            </div>
+            <div class="col1dot5">
+              <div class="bg-hint-green"><p class="pad">bg-hint-green<a href="#" class="right button small bg-hint-green">button</a></p></div>
+              <div class="bg-pale-green"><p class="pad">bg-pale-green<a href="#" class="right button small bg-pale-green">button</a></p></div>
+              <div class="bg-light-green"><p class="pad">bg-light-green<a href="#" class="right button small bg-light-green">button</a></p></div>
+              <div class="bg-medium-green"><p class="pad">bg-medium-green<a href="#" class="right button small bg-medium-green">button</a></p></div>
+              <div class="bg-dark-green white"><p class="pad">bg-dark-green<a href="#" class="right button small bg-dark-green">button</a></p></div>
+            </div>
+            <div class="col1dot5">
+              <div class="bg-hint-brown"><p class="pad">bg-hint-brown<a href="#" class="right button small bg-hint-brown">button</a></p></div>
+              <div class="bg-pale-brown"><p class="pad">bg-pale-brown<a href="#" class="right button small bg-pale-brown">button</a></p></div>
+              <div class="bg-light-brown"><p class="pad">bg-light-brown<a href="#" class="right button small bg-light-brown">button</a></p></div>
+              <div class="bg-medium-brown"><p class="pad">bg-medium-brown<a href="#" class="right button small bg-medium-brown">button</a></p></div>
+              <div class="bg-dark-brown white"><p class="pad">bg-dark-brown<a href="#" class="right button small bg-dark-brown">button</a></p></div>
+            </div>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>Tertiary Color Palette</h2>
+            <div class="col1dot5">
+              <div class="bg-hint-purple"><p class="pad">bg-hint-purple<a href="#" class="right button small bg-hint-purple">button</a></p></div>
+              <div class="bg-pale-purple"><p class="pad">bg-pale-purple<a href="#" class="right button small bg-pale-purple">button</a></p></div>
+              <div class="bg-light-purple"><p class="pad">bg-light-purple<a href="#" class="right button small bg-light-purple">button</a></p></div>
+              <div class="bg-medium-purple"><p class="pad">bg-medium-purple<a href="#" class="right button small bg-medium-purple">button</a></p></div>
+              <div class="bg-dark-purple white"><p class="pad">bg-dark-purple<a href="#" class="right button small bg-dark-purple">button</a></p></div>
+            </div>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>Buttons</h2>
+            <ul class="inline">
+              <li><a href="#" class="small button">small button</a></li>
+              <li><a href="#" class="medium button">button</a></li>
+              <li><a href="#" class="large button">large button</a></li>
+            </ul>
+            <p class="dots">&nbsp;</p>
+            <ul class="inline">
+              <li><a href="#" class="tall small button">tall small button</a></li>
+              <li><a href="#" class="tall medium button">tall button</a></li>
+              <li><a href="#" class="tall large button">tall large button</a></li>
+            </ul>
+            <p class="dots">&nbsp;</p>
+            <ul class="inline">
+              <li><button href="#">&lt;button&gt;</button></li>
+              <li><button href="#" class="positive">&lt;button class="positive"&gt;</button></li>
+              <li><button href="#" class="negative">&lt;button class="negative"&gt;</button></li>
+              <li><button href="#"><img src="http://gui.sunyocc.edu/gui/images/alerts/help.png" />with &lt;img&gt;</button></li>
+            </ul>
+            <div class="col1 first"><a href="#" class="button">col1 button</a></div>
+            <div class="col1dot5 first"><a href="#" class="button">col1.5 button</a></div>
+            <div class="col2 first"><a href="#" class="button">col2 button</a></div>
+            <div class="col3 first"><a href="#" class="button">col3 button</a></div>
+            <div class="col4 first"><a href="#" class="button">col4 button</a></div>
+            <div class="col5 first"><a href="#" class="button">col5 button</a></div>
+            <div class="col6 first"><a href="#" class="button">col6 button</a></div>
+            <p class="dots">&nbsp;</p>
+            <a href="#" class="button bg-medium-blue">bg-medium-blue</a>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>Link Icons</h2>
+            <div class="col4 first">
+              <ul>
+                <li><a href="#5" target="_blank">target="_blank" (automatically added)</a></li>
+                <li><a href="mailto:somebody@somedomain.tld">mailto: (automatically added)</a></li>
+                <li><a href="http://www.cnn.com" class="external_link">.external_link</a></li>
+                <li><a href="#noname.doc" class="file_doc">.file_doc</a></li>
+                <li><a href="#noname.txt" class="file_txt">.file_txt</a></li>
+                <li><a href="#noname.pdf" class="file_pdf">.file_pdf</a></li>
+                <li><a href="#noname.xls" class="file_xls">.file_xls</a></li>
+                <li><a href="#noname.rss"  class="file_rss">.file_rss</a></li>
+                <li><a href="#noname.vcard"  class="file_vcard">.file_vcard</a></li>
+                <li><a href="#noname.ical"  class="file_event">.file_event</a></li>
+                <li><a href="#noname.jpg" class="file_image">.file_image</a></li>
+                <li><a href="#noname.mp3"  class="file_audio">.file_audio</a></li>
+                <li><a href="#noname.mov" class="file_video">.file_video</a></li>
+                <li><a href="skype:USERNAMEHERE" class="file_voice">.file_voice</a></li>
+                <li><a href="aim:USERNAMEHERE" class="file_im">.file_im</a></li>
+              </ul>
+            </div>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>Tooltips</h2>
+            <ul>
+              <li><a class="tooltip">Default <span>This is a default tooltip.</span></a></li>
+              <li><a class="tooltip">Info <span class="info">Use this type of tooltip when you want to provide extra information, like a definition of an academic term.</span></a></li>
+              <li><a class="tooltip">Help <span class="help">Use this type of tooltip when you want to provide helpful tips, formatting advice for form controls, etc.</span></a></li>
+              <li><a class="tooltip">Warning <span class="warning">Use this type of tooltip when it's important that the user understand the importance of their actions within the given context.</span></a></li>
+              <li><a class="tooltip">Critical <span class="critical">Use this type of tooltip when an error has occurred, or when something is <strong>very important</strong> within the given context.</span></a></li>
+              <li><a class="tooltip icon">&nbsp;<span class="info">Use this when you don't want an underline type tooltip, but a ? icon instead</span></a></li>
+            </ul>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>Alpha Transparency</h2>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad alpha100 white">alpha100</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad alpha90 white">alpha90</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad alpha70 white">alpha70</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad alpha50 white">alpha50</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad alpha30 white">alpha30</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad alpha10 white">alpha10</p></div>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>Rotation</h2>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad rotate-10 white">rotate-10</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad rotate-25 white">rotate-25</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad rotate-45 white">rotate-45</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad rotate45 white">rotate45</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad rotate25 white">rotate25</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad rotate10 white">rotate10</p></div>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>Typefaces</h2>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad white sans-serif">sans-serif</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad white impact">impact</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad white serif">serif</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad white elegant">elegant</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad white typewriter">typewriter</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad white script">script</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad white grunge">grunge</p></div>
+            <div class="col1 bg-pale-blue black"><p class="bg-black pad white handwriting">handwriting</p></div>
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <div class="figure col1">
+              <img src="http://gui.sunyocc.edu/gui/images/samples/dragonfly-150.png" />
+              <span class="caption">
+                <strong>Fig. 1</strong> This figure has no background color declared.  By default it is 100% transparent.
+              </span>
+            </div>
+            <div class="figure col2 bg-pale-orange">
+              <img src="http://gui.sunyocc.edu/gui/images/samples/elk-310.png" width="310" />
+              <span class="caption">
+                <strong>Fig. 1.7b</strong> This figure has bg-pale-orange applied to it, and takes up 2 columns of space (col2).  The image itself has a 100% transparent background, so the background color of the figure shows through.
+              </span>
+            </div>
+            <div class="figure col3 bg-pale-green">
+              <img src="http://gui.sunyocc.edu/gui/images/samples/zebra-470.png" width="470" />
+              <span class="caption">
+                <strong>Fig. 3.9a</strong> This figure has bg-pale-green applied to it, and takes up 3 columns of width (col3).
+              </span>
+            </div>
+            <hr />
+            <p class="dots">&nbsp;</p>
+            <h2>Quote</h2>
+            <p><strong>This is a normal paragraph.</strong>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="quote">This is a normal quote. <cite>This is a citation, or the author of the quote</cite></p>
+            <p class="col5 first">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col1"><p class="quote bg-dark-blue white italic textright serif">This quote is styled using the tool classes. You can combine them to create a variety of styles. <cite>The Web Team</cite></p></div>
+            <hr />
+            <p class="dots">&nbsp;</p>
+            <h2>Pullquote</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="pullquote">THIS IS THE TEXT TO BE USED IN THE PULLQUOTE.</span>  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p class="dots">&nbsp;</p>
+            <hr />
+            <h2>PreCol Grid Classes</h2>
+            <span class="col1 bg-black white">Column #1</span>
+            <span class="col1 bg-black white">Column #2</span>
+            <span class="col1 bg-black white">Column #3</span>
+            <span class="col1 bg-black white">Column #4</span>
+            <span class="col1 bg-black white">Column #5</span>
+            <span class="col1 bg-black white">Column #6</span>
+            <hr />
+            <span class="first col1 bg-black white">col1</span>
+            <span class="first col1 precol1 bg-dark-grey white">col1 + precol1</span>
+            <span class="first col1 precol2 bg-medium-grey white">col1 + precol2</span>
+            <span class="first col1 precol3 bg-light-grey black">col1 + precol3</span>
+            <span class="first col1 precol4 bg-pale-grey black">col1 + precol4</span>
+            <span class="first col1 precol5 bg-hint-grey black">col1 + precol5</span>
+            <hr />
+            <span class="first col1dot5 bg-black white">col1dot5</span>
+            <span class="first col1dot5 precol1dot5 bg-pale-blue black">col1dot5 + precol1dot5</span>
+            <span class="first col1dot5 precol3 bg-pale-blue black">col1dot5 + precol3</span>
+            <span class="first col1dot5 precol4dot5 bg-medium-grey white">col1dot5 + precol4dot5</span>
+            <hr />
+            <span class="first col2 bg-black white">col2</span>
+            <span class="first col2 precol1 bg-pale-blue black">col2 + precol1</span>
+            <span class="first col2 precol2 bg-medium-red white">col2 + precol2</span>
+            <span class="first col2 precol3 bg-pale-blue black">col2 + precol3</span>
+            <span class="first col2 precol4 bg-medium-grey white">col2 + precol4</span>
+            <hr />
+            <span class="first col3 bg-black white">col3</span>
+            <span class="first col3 precol1 bg-pale-blue black">col3 + precol1</span>
+            <span class="first col3 precol1dot5 bg-medium-red white">col3 + precol1dot5</span>
+            <span class="first col3 precol2 bg-pale-blue black">col3 + precol2</span>
+            <span class="first col3 precol3 bg-medium-grey white">col3 + precol3</span>
+            <hr />
+            <span class="first col4 bg-black white">col4</span>
+            <span class="first col4 precol1 bg-medium-red white">col4 + precol1</span>
+            <span class="first col4 precol2 bg-medium-grey white">col4 + precol2</span>
+            <hr />
+            <span class="first col5 precoldot5 bg-medium-red white">col5 + precoldot5</span>
+
+
+            <hr />
+            <p class="dots">&nbsp;</p>
+
+                <h2>Footnotes</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ornare sodales varius. Etiam aliquet ligula vel est interdum rutrum. Curabitur porta faucibus lobortis. In odio ligula, tempor id lacinia vel, porttitor in diam. Donec ac libero non massa sollicitudin fringilla. Vestibulum ut augue ligula, a laoreet est. Etiam nec sem ut dolor aliquet pharetra id id libero.<sup><a href="#32066" id="fn1" title="see footnote">1</a></sup> Nulla a urna et purus varius suscipit. Donec euismod venenatis neque eget hendrerit. Etiam dictum laoreet dolor, quis rutrum mauris semper nec. Fusce tortor risus, sagittis sit amet placerat in, tincidunt sit amet sapien.</p>
+                <p>Etiam aliquet ligula vel est interdum rutrum.<sup><a href="#32067" id="fn2" title="see footnote">2</a></sup> Curabitur porta faucibus lobortis. Nulla a urna et purus varius suscipit. Donec euismod venenatis neque eget hendrerit. Etiam dictum laoreet dolor, quis rutrum mauris semper nec.</p>
+                <p>Curabitur porta faucibus lobortis<sup><a href="#32068" id="fn3" title="see footnote">3</a></sup> nulla a urna et purus varius suscipit. Donec euismod venenatis neque eget hendrerit. Etiam dictum laoreet dolor, quis rutrum.</p>
+
+                <div class="footnotes">
+                  <h2>Notes:</h2>
+                  <ol>
+                    <li id="32066"><a href="#fn1" title="return to article">&#94;</a> This is an entry for footnote number one.</li>
+                    <li id="32067"><a href="#fn2" title="return to article">&#94;</a> This is where <a href="#">the author</a> typed out his entry for the second footnote.</li>
+                    <li id="32068"><a href="#fn3" title="return to article">&#94;</a> Footnote #3 goes <strong>here</strong>, but don't forget to check out <a href="#">this great article</a>. And for the sake of having a super long footnote just to see how it looks when it wraps, I'm going to type a lot of extra words here, there, and over here as well.  Sometimes you have to make sure all of these variations look nice, ya know?</li>
+                  </ol>
+                </div>
+
+                <p class="dots">&nbsp;</p>
+                <hr />
+
+
+            <h2 id="pl">Page Layout</h2>
+            <div class="figure col2 right bg-dark-red"><img src="http://gui.sunyocc.edu/gui/images/samples/porcupine-150.png" /><span class="caption"><strong>Fig. 1a</strong> This is an image of a porcupine.</span></div>
+            <p><img src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" class="left polaroid rotate-10" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><img src="http://gui.sunyocc.edu/gui/images/samples/ibex-150.png" class="left" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="figure col3 bg-light-blue left"><img src="http://gui.sunyocc.edu/gui/images/samples/rhino1-150.png" /><span class="caption"><strong>Fig. 2b.</strong> This is an image of a rhinocerous.</span></div>
+            <p><img src="http://gui.sunyocc.edu/gui/images/samples/shark-150.png" class="right" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatioanim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col2 first">
+              <p class="pad bg-dark-blue sans-serif pale-blue">Something Wicked This Way Comes</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <table class="col2 nest first bg-pale-blue">
+                <caption>bg-light-green</caption>
+                <tr><th>1</th><th>2</th><th>3</th></tr>
+                <tr><td>data</td><td>data</td><td>data</td></tr>
+                <tr><td>data</td><td>data</td><td>data</td></tr>
+                <tr><td>data</td><td>data</td><td>data</td></tr>
+                <tr><td>data</td><td>data</td><td>data</td></tr>
+                <tr><td>data</td><td>data</td><td>data</td></tr>
+                <tr><td>data</td><td>data</td><td>data</td></tr>
+                <tr><td>data</td><td>data</td><td>data</td></tr>
+              </table>
+              <p><img src="http://gui.sunyocc.edu/gui/images/samples/seahorse-150.png" class="left" />Duis aute irure dolor in <a href="#">reprehenderit in voluptate velit esse cillum dolore</a> eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="col2">
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <a href="#">nullitation ullamco laboris nisi ut aliquip</a> ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+              <p><img src="http://gui.sunyocc.edu/gui/images/samples/kangaroo-150.png" class="right" />Voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <table class="col2 grid nest first bg-pale-green">
+                <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                <tr><th>X</th><td>data</td><td>data</td><td>data</td></tr>
+                <tr><th>Y</th><td>data</td><td>data</td><td>data</td></tr>
+                <tr><th>Z</th><td>data</td><td>data</td><td>data</td></tr>
+              </table>
+              <p><img src="http://gui.sunyocc.edu/gui/images/samples/shark-150.png" width="50" class="center" />Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="col2">
+              <div class="col1 nest first">
+                <p class="pad bg-dark-green serif medium-green">Mine's a tale that can't be told, <a class="dark-yellow" href="#">my freedom</a> I hold dear.<br /><br />How years ago in the days of old, when magic filled the air.<br /><br />T'was in the darkest depths of Mordor, I met a girl so fair.<br /><br />But <em><strong>Gollum</strong></em>, and the evil one crept up and slipped away with her, her, her... yeah.</p>
+              </div>
+              <div class="col1 nest last">
+                <p class="pad bg-dark-red italic serif light-orange"><strong>This space for rent!</strong><br />Call now and we'll include another space at no extra cost!*<br /><br />You owe it to yourself.  You owe it to your family.  You owe it to your future.<br /><br /><a href="#" class="button small bg-dark-orange sans-serif">Order Now!</a><br /><br /><small>*excludes shipping</small></p>
+              </div>
+              <p class="col2 nest first"><img src="http://gui.sunyocc.edu/gui/images/samples/moose-150.png" class="left" />Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laborirure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laborirure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laborirure dolor in reprehenderit in voluptate velit.</p>
+            </div>
+            <div class="col2 first">
+            &nbsp;
+            </div>
+            <div class="col2">
+              <p class="dropcap smallcapline">Drop-cap with first line set in small-caps.  Every <a href="#">subsequent line</a> and paragraph have normal styling. In order to invoke another drop-cap you need to create a paragraph in a new parent container. </p>
+              <p>Dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+              <p>Voluptate velit esse cillum dolore eu <a href="#">fugiat nullitation ullamco</a> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+              <p>Cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+            </div>
+            <div class="col2">
+            &nbsp;
+            </div>
+
+          <!--// CONTENT BLOCK ENDS -->
+          <p class="dots">&nbsp;</p>
+        </div>
+      </div>
+      </form>
+
+    </div>
+    <div class="footer">
+      <div class="container">
+<!--\\ FOOTER CONTENT BLOCK BEGINS -->
+<!--// FOOTER CONTENT BLOCK ENDS -->
+        <p class="dots">&nbsp;</p>
+      </div>
+    </div>
+  </body>
+</html>

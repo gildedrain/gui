@@ -1,0 +1,27 @@
+#occheaderbg2 {background:#000; height:48px;}
+#section.hasmenu {float:none; margin:0; width:auto; background:green;}
+h2#menutitle {margin-top:60px; font-weight:200;}
+
+h3, h4, h5, h6 {font-weight:200;}
+
+h3 {background:#bb0000; color:#fff; display:inline-block; padding:5px 10px; margin:1em 0 1em -25px;}
+table h3 {background:none; color:#222; padding:0; margin:0;}
+hr {margin:2em 0 2em 0;}
+
+
+
+pre, code {font-family:'PT Mono', 'andale mono', 'lucida console', courier, monospace; font-size:1em; margin:0 0 0 0;}
+.syntax pre {margin:0;}
+.syntax td p {margin:0; line-height:1;}
+.intro {margin:0 0 4em 0;}
+
+.nav .top {display:none;}
+.nav ul {list-style:none; padding:0; margin:0;}
+.nav a {color:#222; display:block; padding:.25em  10px .25em 10px; font-weight:300; line-height:1.5;}
+.ie .nav a {font-size:.8em;}
+.nav a:hover {background:#000; color:#1799FE;}
+.nav.flat {float:none; width:100%; position:fixed; top:0px; padding:0 0 10px 0; background:#000; margin:0;}
+.nav.flat ul {width:970px; padding:10px 0 10px 0; margin:0 auto;}
+.nav.flat a {color:#888; background:transparent;}
+.nav.flat a:hover {text-decoration:underline;}
+.nav.flat a.current {color:#fff; background:#bb0000;}
