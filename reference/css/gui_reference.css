@@ -8,8 +8,6 @@ h3 {background:#bb0000; color:#fff; display:inline-block; padding:5px 10px; marg
 table h3 {background:none; color:#222; padding:0; margin:0;}
 hr {margin:2em 0 2em 0;}
 
-
-
 pre, code {font-family:'PT Mono', 'andale mono', 'lucida console', courier, monospace; font-size:1em; margin:0 0 0 0;}
 .syntax pre {margin:0;}
 .syntax td p {margin:0; line-height:1;}

@@ -39,7 +39,7 @@ sup,sub{line-height:0;font-size:x-small;}
 sup{vertical-align:top;display:inline-block;margin-top:.5em;}
 sub{vertical-align:bottom;}
 abbr,acronym{border-bottom:1px dotted #666;cursor:help}
-address{margin:0 0 0 0em;font-style:italic;display:inline;}
+address{font-style:italic;display:inline;}
 del{color:#666;}
 /*pre{margin:0;white-space:pre;}
 pre,code{background:#000;color:#86b5e3;padding:1em;border:1px solid #ccc;display:block;font-size:.8em;}
@@ -73,12 +73,12 @@ fieldset fieldset{background:rgba(0,0,0,.05);padding:40px 10px 10px 10px;border-
 fieldset fieldset legend{background:transparent;color:inherit;border:0;border-radius:0 0 0 0;}
 /* only the first legend (the title of the form) gets fancy treatment */
 /* labels */
-label{margin:10px 0 3px 0;vertical-align:top;display:block;line-height:1.2em;}
+label{margin:10px 0 3px 0;display:block;line-height:1.2em;}
 .labels-left label{text-align:left;display:inline-block;width:110px;margin:0 10px 0 0;}
 .labels-right label{text-align:right;display:inline-block;width:110px;margin:0 10px 0 0;}
 /* inputs,selects,textareas,radios,checkboxes,submits */
 input[type="text"],input[type="email"],input[type="search"],input[type="tel"],input[type="url"],input[type="password"],select,textarea{display:inline-block;width:auto;border:1px solid #aaa;margin:0 0 .5em 0;padding:5px;font-size:.75em;}
-input[type=radio],input[type=checkbox]{display:inline-block;width:auto;margin:0px 5px 0px 0;}
+input[type=radio],input[type=checkbox]{display:inline-block;width:auto;margin:0 5px 0 0;}
 input[type="radio"]+label,input[type="checkbox"]+label{display:inline-block;width:auto;margin:0 25px 0 0;}
 select{width:auto;padding:0;}
 /* easier to let them be width:auto to allow for situations like DOB (month) (day) (year) */
@@ -86,7 +86,7 @@ textarea{font-family:inherit;font-size:88%;letter-spacing:inherit;}
 input[type=submit]{display:inline-block;margin:10px 10px 0 0;}
 /* must appear last due to inheritance */
 /* messages */
-.error,.notice,.success{padding:.5em;border:3px solid #ddd;border-radius:6px;-webkit-border:radius:6px;-moz-border-radius:6px;box-shadow:0 1px 2px #aaa;-webkit-box-shadow:0 1px 2px #aaa;-moz-box-shadow:0 1px 2px #aaa;}
+.error,.notice,.success{padding:.5em;border:3px solid #ddd;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;box-shadow:0 1px 2px #aaa;-webkit-box-shadow:0 1px 2px #aaa;-moz-box-shadow:0 1px 2px #aaa;}
 .error{background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
 .notice{background:#FFF6BF;color:#514721;border-color:#FFD324;}
 .success{background:#E6EFC2;color:#264409;border-color:#C6D880;}
@@ -149,7 +149,7 @@ Depending on the situation,you may need to apply some combination of:- .first to
 /* BUG! not sure we even need .last anymore */
 .nest.first{margin-left:0;clear:left;}
 .nest.last{margin-right:0;clear:right;}
-.dots{clear:both;margin:0;height:0px;line-height:0;font-size:0px;}
+.dots{clear:both;margin:0;height:0;line-height:0;font-size:0;}
 /* MENU
 - size (width+padding = .col2 = 310) must define MENU size separate from .col2 due to unique visual styling */
 .menu{padding:0;margin:0;}
@@ -276,7 +276,7 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .tooltip span{display:none;}
 /*hide tooltip when not hovered on*/
 .tooltip:hover{position:relative;z-index:25;}
-.tooltip:hover span{display:block;position:absolute;left:0px;top:1.5em;z-index:999;text-decoration:none;margin-left:0;width:310px;padding:.5em;background:#fffaaa;border:1px solid #fda;border-radius:2px 2px;-moz-border-radius:2px;-webkit-border-radius:2px;box-shadow:2px 2px 2px rgba(0,0,0,0.1);-webkit-box-shadow:2px 2px rgba(0,0,0,0.1);-moz-box-shadow:2px 2px rgba(0,0,0,0.1);color:#222;}
+.tooltip:hover span{display:block;position:absolute;left:0;top:1.5em;z-index:999;text-decoration:none;margin-left:0;width:310px;padding:.5em;background:#fffaaa;border:1px solid #fda;border-radius:2px 2px;-moz-border-radius:2px;-webkit-border-radius:2px;box-shadow:2px 2px 2px rgba(0,0,0,0.1);-webkit-box-shadow:2px 2px rgba(0,0,0,0.1);-moz-box-shadow:2px 2px rgba(0,0,0,0.1);color:#222;}
 .tooltip:hover img{border:0;margin:-10px 0 0 -55px;float:left;position:absolute;}
 .tooltip:hover em{font-size:1.2em;font-weight:bold;display:block;padding:0.2em 0 0.6em 0;}
 .tooltip:hover .classic{padding:0.8em 1em;color:#222;}
@@ -304,6 +304,10 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 /* dropcap,smallcaps first line */
 .dropcap:first-child:first-letter{float:left;line-height:30px;padding:5px 5px 5px 0;margin:.07em 0 -.2em -.1em;color:#333;font-weight:bold;font-size:2.8em;font-family:garamond,"minion pro",times,"times new roman",serif;}
 .smallcapline:first-child:first-line{font-variant:small-caps;}
+/* casing */
+.uppercase {text-transform:uppercase;}
+.lowercase {text-transform:lowercase;}
+.small-caps{font-variant:small-caps;}
 /* footnotes */
 .footnotes{border-top:1px solid #aaa;padding-top:1em;}
 .footnotes h4{font-size:1.25em;}
@@ -380,7 +384,7 @@ html[xmlns] .clearfix{display:block;}
 /* MODAL WINDOW */
 #modal #section{/* needed to prevent scrollbars */width:auto;height:auto;margin:0;padding:0;}
 #modal .clearfix{/* needed to prevent scrollbars */display:inline;}
-#modal .clearfix:after{/* needed to prevent scrollbars */content:".";display:inline;clear:both;visibility:hidden;line-height:0;height:0;}
+#modal .clearfix:after{/* needed to prevent scrollbars */content:".";display:inline;clear:both;visibility:hidden;line-height:0;}
 /* HORZY slide structure & navigation */
 .slider .container {padding:0;}
   .slider {width:960px; margin:0 auto; background:#FFF;}
@@ -399,7 +403,7 @@ html[xmlns] .clearfix{display:block;}
     .nav ul {list-style:none; padding:0; margin:0;}
     .nav a {color:#222; display:block; padding:.25em  10px .25em 10px; font-weight:300; line-height:1.5;}
     .nav a:hover {}
-    .nav.flat {float:none; width:100%; position:fixed; top:0px; padding:0 0 10px 0; background:#000; margin:0;}
+    .nav.flat {float:none; width:100%; position:fixed; top:0; padding:0 0 10px 0; background:#000; margin:0;}
     .nav.flat ul {width:970px; padding:10px 0 10px 0; margin:0 auto;}
     .nav.flat a {color:#888; background:transparent;}
     .nav.flat a:hover {text-decoration:underline;}
@@ -409,7 +413,7 @@ html[xmlns] .clearfix{display:block;}
 .bg_slideshow{z-index:0;width:100%;list-style:none;position:relative;padding:0;margin:0;min-height:500px;}
 /* .bg_slideshow{margin-top:48px;} /* if #occheaderbg {position:absolute;} */
   .ie7 .bg_slideshow {top:-50px;}
-.bg_slideshow li{z-index:0;display:none;position:absolute;top:0px;width:100%;background-position:bottom center;background-repeat:no-repeat;padding:0;margin:0;}
+.bg_slideshow li{z-index:0;display:none;position:absolute;top:0;width:100%;background-position:center bottom;background-repeat:no-repeat;padding:0;margin:0;}
   .no-js .bg_slideshow li:first-child{display:block;text-align:center;} /* REQUIRES MODERNIZR! if no JS just display the first slide forever. Modernizr will remove no-js when js enabled. */
 /* controls */
 .bg_slideshow_controls{position:relative;float:right;z-index:6;margin:10px 0 0 0;width:135px;list-style:none;padding:0;}
@@ -436,11 +440,13 @@ html[xmlns] .clearfix{display:block;}
 .bg_banners img {display:none;}
 .bg_banners a {display:block;z-index:1;height:100%;width:100%;outline:1px solid #fff;font-weight:400;text-transform:uppercase;font-size:1.5em;font-family:'open sans', verdana, sans-serif; line-height:1; letter-spacing:-.05em;}
 .bg_banners a:hover {outline:2px solid #333; box-shadow:0 0 100px 0 rgba(255,255,255,.5);outline-offset:-143px; }
-.bg_banners span {position:absolute;bottom:0px;display:block;text-shadow:0 2px 3px #000;padding:5px;width:100%;
+.bg_banners span {position:absolute;bottom:0;display:block;text-shadow:0 2px 3px #000;padding:5px;width:100%;
 /* for IE9 */  background:rgba(0,0,0,.5);
 /* for real browsers */  background: -moz-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));  background: -webkit-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);  background: -o-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  }
 /* for IE7, IE8 */ .ie7 .bg_banners span, .ie8 .bg_banners span {background:transparent url(../images/bg_banners_gradient.gif) repeat bottom left;width:auto;}
 .play {background-image:url(../images/play.png); background-repeat:no-repeat; background-position:center center;}
+.back-to-top {position:fixed; bottom:15%; right:0; display:block; background:#000 url(../images/back-to-top.png) no-repeat 5px center; border-radius:5px 0 0 5px; color:#fff; padding:.5em .5em .5em 1.5em; text-transform:lowercase; letter-spacing:.1em;}
+.back-to-top:hover {background-color:#666;}
 /* COLORS.CSS */
 .quiet{color:#666;}
 .loud{color:#000;}

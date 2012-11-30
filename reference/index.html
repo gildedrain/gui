@@ -47,7 +47,7 @@
          <li class="col1"><a href="#headings" class="scroll">Headings</a></li>
          <li class="col1"><a href="#grid" class="scroll">The Grid</a></li>
          <li class="col1"><a href="#layout" class="scroll">Page Layout</a></li>
-         <li class="col1"><a href="#clearfix" class="scroll">Clearfix</a></li>
+         <li class="col1"><a href="#clearfixing" class="scroll">Clearfix</a></li>
          <li class="col1"><a href="#modalwindow" class="scroll">Modal</a></li>
          <li class="col1"><a href="#footnotes" class="scroll">Footnotes</a></li>
          <li class="col1"><a href="#horzy" class="scroll">Horzy</a></li>
@@ -1182,13 +1182,13 @@ Normal Definition List
 
 <p class="dots">&nbsp;</p>
 
-<div id="clearfix" class="clearfix">
+<div id="clearfixing" class="clearfix">
   <h3>Clearfix &amp; p.dots</h3>
   <p class="notice">.col#-grid-classes are positioned using a method called <em>float</em>.  When you use CSS to position HTML elements and you invoke <em>float</em>, you effectively remove the floated element from the <em>relative</em> page flow. This becomes a problem when you have floating-children nested inside a parent-container.  When you float a child element it's as if the child has moved out of the parent's house and the house shrinks to only fit the people it knows are living there. The examples below describe this scenario more visually.  <strong>Adding class="clearfix" to the parent container will tell the parent-container to keep "containing" its floated children.</strong></p>
   <table class="col6 syntax">
     <tr><th>Syntax</th><th>Result</th></tr>
     <tr><td>
-<pre><code class="language-markup">
+      <pre><code class="language-markup">
 &lt;div class="bg-medium-red"&gt;
   &lt;h4&gt;Without clearfix  (red = the parent-element)&lt;/h4&gt;
   &lt;div class="col1"&gt;&lt;p&gt;Child #1&lt;/p&gt;&lt;/div&gt;
@@ -1200,28 +1200,29 @@ Normal Definition List
   &lt;div class="col1"&gt;&lt;p&gt;Child #1&lt;/p&gt;&lt;/div&gt;
   &lt;div class="col1"&gt;&lt;p&gt;Child #2&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
-</code></pre></td>
-<td>
-    <div class="bg-light-blue" style="border:1px solid black">
-      <h4 class="white">Without clearfix  (blue = the parent-element)</h4>
-      <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #1</p></div>
-      <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #2</p></div>
-    </div>
-    <hr />
-    <div class="clearfix bg-light-blue" style="border:1px solid black">
-      <h4 class="white">With clearfix</h4>
-      <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #1</p></div>
-      <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #2</p></div>
-    </div>
-</td></tr>
-</table>
-<p class="dots">&nbsp;</p>
+  </code></pre></td>
+    <td>
+      <div class="bg-light-blue" style="border:1px solid black">
+        <h4 class="white">Without clearfix  (blue = the parent-element)</h4>
+        <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #1</p></div>
+        <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #2</p></div>
+      </div>
+      <hr />
+      <div class="clearfix bg-light-blue" style="border:1px solid black">
+        <h4 class="white">With clearfix</h4>
+        <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #1</p></div>
+        <div class="col1 bg-white textcenter" style="border:1px solid black"><p>Child #2</p></div>
+      </div>
+    </td></tr>
+  </table>
+
+  <p class="dots">&nbsp;</p>
 
   <p class="notice">Another problem may occur when certain elements refuse to wrap to the next line.  To <em>force</em> a hard line-break after previously using floated elements, you can add a paragraph with class="dots" like so.  p.dots is 1px tall, has zero margins, zero padding, zero line-height and only contains a non-breaking-space character.  It's effectively invisible.</p>
   <table class="col6 syntax">
     <tr><th>Syntax</th><th>Result</th></tr>
     <tr><td>
-<pre><code class="language-markup">
+      <pre><code class="language-markup">
 Without p.dots
 &lt;div class="col1"&gt;Floated col1&lt;/div&gt;
 &lt;p&gt;This paragraph should start on a new line.&lt;/p&gt;
@@ -1230,16 +1231,15 @@ With p.dots
 &lt;div class="col1"&gt;Floated col1&lt;/div&gt;
 &lt;p class="dots"&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;This paragraph should start on a new line.&lt;/p&gt;
-</code></pre></td>
-<td>
-<div class="col1 bg-medium-red white">Floated col1</div>
-<p>This paragraph should start on a new line.</p>
-<div class="col1 bg-medium-red white">Floated col1</div>
-<p class="dots">&nbsp;</p>
-<p>This paragraph should start on a new line.</p>
-
-
-</td></tr></table>
+      </code></pre></td>
+    <td>
+      <div class="col1 bg-medium-red white">Floated col1</div>
+      <p>This paragraph should start on a new line.</p>
+      <div class="col1 bg-medium-red white">Floated col1</div>
+      <p class="dots">&nbsp;</p>
+      <p>This paragraph should start on a new line.</p>
+    </td></tr></table>
+</div>
 
 <p class="dots">&nbsp;</p>
 
@@ -1297,21 +1297,21 @@ With p.dots
 &lt;div class="slider"&gt;
   &lt;div class="slidernav clearfix"&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a class="current" href="#slide1"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#slide2"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#slide3"&gt;Page 3&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#slide4"&gt;Page 4&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#slide5"&gt;Page 5&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="current" href="#slide1"&gt;Slide 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#slide2"&gt;Slide 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#slide3"&gt;Slide 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#slide4"&gt;Slide 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#slide5"&gt;Slide 5&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;&lt;!-- // END SLIDERNAV --&gt;
   &lt;div class="container"&gt;
     &lt;div class="slides_window"&gt;
       &lt;div class="slides"&gt;
-        &lt;div class="slide" id="slide1"&gt;Page 1&lt;/div&gt;
-        &lt;div class="slide" id="slide2"&gt;Page 2&lt;/div&gt;
-        &lt;div class="slide" id="slide3"&gt;Page 3&lt;/div&gt;
-        &lt;div class="slide" id="slide4"&gt;Page 4&lt;/div&gt;
-        &lt;div class="slide" id="slide5"&gt;Page 5&lt;/div&gt;
+        &lt;div class="slide" id="slide1"&gt;Slide 1&lt;/div&gt;
+        &lt;div class="slide" id="slide2"&gt;Slide 2&lt;/div&gt;
+        &lt;div class="slide" id="slide3"&gt;Slide 3&lt;/div&gt;
+        &lt;div class="slide" id="slide4"&gt;Slide 4&lt;/div&gt;
+        &lt;div class="slide" id="slide5"&gt;Slide 5&lt;/div&gt;
       &lt;/div&gt;&lt;!-- // END SLIDES --&gt;
     &lt;/div&gt;&lt;!-- // END SLIDES_WINDOW --&gt;
   &lt;/div&gt;&lt;!-- // END CONTAINER --&gt;
@@ -1330,11 +1330,11 @@ With p.dots
     <div class="container">
       <div class="slides_window">
         <div class="slides">
-          <div class="slide" id="slide1">Slide 1</div>
-          <div class="slide" id="slide2">Slide 2</div>
-          <div class="slide" id="slide3">Slide 3</div>
-          <div class="slide" id="slide4">Slide 4</div>
-          <div class="slide" id="slide5">Slide 5</div>
+          <div class="slide white bg-dark-red" id="slide1"><p>Slide 1<br /><br /><br /><br /></p></div>
+          <div class="slide white bg-medium-blue" id="slide2"><p>Slide 2<br /><br /><br /><br /></p></div>
+          <div class="slide white bg-medium-orange" id="slide3"><p>Slide 3<br /><br /><br /><br /></p></div>
+          <div class="slide white bg-medium-green" id="slide4"><p>Slide 4<br /><br /><br /><br /></p></div>
+          <div class="slide white bg-medium-grey" id="slide5"><p>Slide 5<br /><br /><br /><br /></p></div>
         </div><!-- // END SLIDES -->
       </div><!-- // END SLIDES_WINDOW -->
     </div><!-- // END CONTAINER -->

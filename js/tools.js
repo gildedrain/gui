@@ -77,27 +77,25 @@ $(document).ready(function() {
 });
 
 // MODAL WINDOW
-// Requires <a href="#" class="dialog">...</a> + JQueryUI (core,position,widget)
+// Requires <a href="#" class="dialog">...</a> + JQuery + JQueryUI (core,position,widget)
 $(function() {
-  $('a.dialog').on('click', function(){
-    $(this).loadDialog();
-    return false;
-  });
-  $.fn.loadDialog = function() {
-    $('body').prepend('<div id="modal" style="display:none; max-width:640px; min-width:300px;"></div>');
-    var $external_content = $(this).attr('href').replace(/[^\/]+\.aspx/, 'box.aspx');
-    $("#modal").load($external_content, function () {
-//    $("#modal").load("external_file.html", function() { // keep this line for debugging purposes
-      $('#modal').dialog({
-        autoOpen: false,
-        width: 'auto',
-        modal: true,
-        draggable: true,
-        resizable: false
-      });
-      $('#modal').dialog('open');
+  $('a.dialog').on('click', function(e) {
+    var $link = $(this),
+        $modal = $('<div id="modal" style="display:none"></div>'),
+        href = $link.attr('href').replace(/[^\/]+\.aspx/, 'box.aspx');
+
+    $modal.dialog({
+      autoOpen: false,
+      width: 'auto',
+      modal: true,
+      draggable: true,
+      resizable: false,
+      close: function(event, ui) { $(this).remove(); }
     });
-  };
+
+    $modal.load(href, function() { $modal.dialog('open') });
+    e.preventDefault();
+  });
 });
 
 // Background-Banner-Links

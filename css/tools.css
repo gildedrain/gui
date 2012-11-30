@@ -453,6 +453,16 @@ font-family: garamond,"minion pro",times,"times new roman",serif;
 .smallcapline:first-child:first-line {
 font-variant: small-caps;
 }
+/* casing */
+.uppercase {
+text-transform:uppercase;
+}
+.lowercase {
+text-transform:lowercase;
+}
+.small-caps{
+font-variant:small-caps;
+}
 /* footnotes */
 .footnotes {
 border-top: 1px solid #aaa;
@@ -983,4 +993,19 @@ width: auto;
 background-image: url(../images/play.png);
 background-repeat: no-repeat;
 background-position: center center;
+}
+.back-to-top {
+position: fixed;
+bottom: 15%;
+right: 0;
+display: block;
+background: #000 url(../images/back-to-top.png) no-repeat 5px center;
+border-radius: 5px 0 0 5px;
+color: #fff;
+padding: .5em .5em .5em 1.5em;
+text-transform: lowercase;
+letter-spacing: .1em;
+}
+.back-to-top:hover {
+background-color: #666;
 }
