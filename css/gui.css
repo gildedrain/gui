@@ -210,7 +210,6 @@ a[href^="mailto:"]{background-position:100% -450px;padding:2px 18px 2px 0 !impor
 /* LISTS */
 ul.inline{padding:0;margin:0;}
 .inline li{display:inline;float:left;margin:1em 5px 1em 5px;}
-.content li{line-height:1.75em;}
 .disc{list-style-type:disc;}
 .circle{list-style-type:circle;}
 .square{list-style-type:square;}

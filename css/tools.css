@@ -67,9 +67,6 @@ display: inline;
 float: left;
 margin: 1em 5px 1em 5px;
 }
-.content li {
-line-height: 1.75em;
-}
 .disc {
 list-style-type: disc;
 }
