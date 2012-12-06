@@ -249,7 +249,7 @@ zoom:1;}
 /*sometimes you might want to swap the border color*/
 .border-white td,.border-white th{border-color:#fff;}
 /* ZURB SUPER AWESOME BUTTON */ /*BUG! i need to recode this to not use the element,so the class can be independent */
-.button{background-color:#222;background-repeat:repeat-x;background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.25)),to(rgba(255,255,255,0)));background-image:-moz-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));display:inline-block;padding:5px 10px 6px 10px !important;color:#fff;text-decoration:none;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow:0 1px 3px rgba(0,0,0,.5);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);text-shadow:0 -1px 1px rgba(0,0,0,0.25);border-bottom:1px solid rgba(0,0,0,0.25);position:relative;cursor:pointer;font-size:1.5em;}
+.button{background-color:#222;background-repeat:repeat-x;background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.25)),to(rgba(255,255,255,0)));background-image:-moz-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));display:inline-block;padding:5px 10px 6px 10px;color:#fff;text-decoration:none;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow:0 1px 3px rgba(0,0,0,.5);-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);text-shadow:0 -1px 1px rgba(0,0,0,0.25);border-bottom:1px solid rgba(0,0,0,0.25);position:relative;cursor:pointer;font-size:1.5em;}
 /*HACK!*/
 .ie7 a.button{display:block !important;padding-top:.5em !important;padding-bottom:.5em !important;margin-bottom:.25em !important;margin-top:.25em !important;}
 .button{line-height:1;text-align:center;text-shadow:0 -1px 1px rgba(0,0,0,0.25);}
@@ -377,10 +377,9 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .font-marker{font-family:"Permanent Marker",impact,sans-serif;}
 /* CLEARFIX */
 /* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as placing p.dots last in the container */
-.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
-.clearfix{display:inline-block;}
-html[xmlns] .clearfix{display:block;}
-* html .clearfix{height:1%;}
+.clearfix {*zoom: 1;}
+.clearfix:before,.clearfix:after {display: table;line-height: 0;content: "";}
+.clearfix:after {clear: both;}
 /* MODAL WINDOW */
 #modal #section{/* needed to prevent scrollbars */width:auto;height:auto;margin:0;padding:0;}
 #modal .clearfix{/* needed to prevent scrollbars */display:inline;}

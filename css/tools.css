@@ -170,7 +170,7 @@ background-repeat: repeat-x;
 background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.25)),to(rgba(255,255,255,0)));
 background-image: -moz-linear-gradient(top,rgba(255,255,255,.5),rgba(255,255,255,0));
 display: inline-block;
-padding: 5px 10px 6px 10px !important;
+padding: 5px 10px 6px 10px;
 color: #fff;
 text-decoration: none;
 border-radius: 5px;
@@ -684,24 +684,17 @@ font-family: "Permanent Marker",impact,sans-serif;
 }
 /* CLEARFIX */
 /* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as placing p.dots last in the container */
-.clearfix:after {
-content: ".";
-display: block;
-clear: both;
-visibility: hidden;
-line-height: 0;
-height: 0;
-}
 .clearfix {
-display: inline-block;
+  *zoom: 1;
 }
-html[xmlns] .clearfix {
-display: block;
+.clearfix:before,.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
 }
-* html .clearfix {
-height: 1%;
-}
-/* MODAL WINDOW */
+.clearfix:after {
+  clear: both;
+}/* MODAL WINDOW */
 #modal #section {/* needed to prevent scrollbars */width:auto;
 height: auto;
 margin: 0;
