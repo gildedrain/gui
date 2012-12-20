@@ -10,18 +10,18 @@ blockquote:before,blockquote:after,q:before,q:after{content:"";}
 blockquote,q{quotes:"" "";}
 /* TYPOGRAPHY.CSS - The font-size percentage is of 16px. (0.75 * 16px = 12px) */
 html{font-size:100.01%;}
-body{font-size:100%;color:#222;background:#fff;font-family:"Gill Sans",Verdana,Arial,Helvetica,sans-serif;}
+body{font-size:100%;color:#222;background:#fff;font-family:"Gill Sans",Verdana,Arial,Helvetica,sans-serif;font-weight:200;}
 /* Headings -------------------------------------------------------------- */
-h1,h2,h3,h4,h5,h6{font-weight:normal;}
+h1,h2,h3,h4,h5,h6{font-family:"Open Sans","Gill Sans",Verdana,Arial,Helvetica,sans-serif;font-weight:200;}
 h1{font-size:3em;line-height:1;margin-bottom:0.5em;}
 /* 16pt*3.0em = 49 px */
 h2{font-size:2em;margin-bottom:0.75em;}
 /* 16pt*2.0em = 32 px */
 h3{font-size:1.5em;line-height:1;margin-bottom:1em;}
 /* 16pt*1.5em = 24 px */
-h4{font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
+h4{font-size:1.2em;line-height:1.25;margin-bottom:1.25em;font-weight:400;}
 /* 16pt*1.2em = 19.2px */
-h5{font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h5{font-size:1em;font-weight:400;margin-bottom:1.5em;}
 /* 16pt*1.0em = 16 px */
 h6{font-size:.8em;font-weight:bold;}
 /* 16pt*0.8em = 12.8px */
@@ -443,7 +443,14 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 /* for real browsers */  background: -moz-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));  background: -webkit-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);  background: -o-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  }
 /* for IE7, IE8 */ .ie7 .bg_banners span, .ie8 .bg_banners span {background:transparent url(../images/bg_banners_gradient.gif) repeat bottom left;width:auto;}
 .play {background-image:url(../images/play.png); background-repeat:no-repeat; background-position:center center;}
-.back-to-top {position:fixed; bottom:15%; right:0; display:block; background:#000 url(../images/back-to-top.png) no-repeat 5px center; border-radius:5px 0 0 5px; color:#fff; padding:.5em .5em .5em 1.5em; text-transform:lowercase; letter-spacing:.1em;}
+.follow-me {position:fixed;display:block;padding:1em;background:#000;color:#fff;}
+.follow-me.bottom-right {bottom:15%;right:0;}
+.follow-me.bottom-left {bottom:15%;left:0;}
+.follow-me.middle-right {top:45%;right:0;}
+.follow-me.middle-left {top:45%;left:0;}
+.follow-me.top-right {top:15%;right:0;}
+.follow-me.top-left {top:15%;left:0;}
+.back-to-top {background: #000 url(../images/back-to-top.png) no-repeat 5px center;border-radius: 5px 0 0 5px;padding: .5em .5em .5em 1.5em;text-transform: lowercase;letter-spacing: .1em;}
 .back-to-top:hover {background-color:#666;}
 /* COLORS.CSS */
 .quiet{color:#666;}

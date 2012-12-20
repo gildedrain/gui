@@ -6,11 +6,12 @@ body {
 font-size: 100%;
 color: #222;
 background: #fff;
-font-family: "Gill Sans",Verdana,Arial,Helvetica,sans-serif;
+font-family: "Open Sans","Gill Sans",Verdana,Arial,Helvetica,sans-serif;
+font-weight:200;
 }
 /* Headings -------------------------------------------------------------- */
 h1,h2,h3,h4,h5,h6 {
-font-weight: normal;
+font-weight: 200;
 }
 h1 {
 font-size: 3em;

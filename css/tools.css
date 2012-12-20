@@ -452,13 +452,13 @@ font-variant: small-caps;
 }
 /* casing */
 .uppercase {
-text-transform:uppercase;
+text-transform: uppercase;
 }
 .lowercase {
-text-transform:lowercase;
+text-transform: lowercase;
 }
-.small-caps{
-font-variant:small-caps;
+.small-caps {
+font-variant: small-caps;
 }
 /* footnotes */
 .footnotes {
@@ -681,17 +681,17 @@ font-family: "Permanent Marker",impact,sans-serif;
 }
 /* CLEARFIX */
 /* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as placing p.dots last in the container */
-.clearfix {
-  *zoom: 1;
+.clearfix {*zoom:1;
 }
 .clearfix:before,.clearfix:after {
-  display: table;
-  line-height: 0;
-  content: "";
+display: table;
+line-height: 0;
+content: "";
 }
 .clearfix:after {
-  clear: both;
-}/* MODAL WINDOW */
+clear: both;
+}
+/* MODAL WINDOW */
 #modal #section {/* needed to prevent scrollbars */width:auto;
 height: auto;
 margin: 0;
@@ -706,84 +706,83 @@ visibility: hidden;
 line-height: 0;
 height: 0;
 }
-
 /* HORZY slide structure & navigation */
 .slider .container {
 padding: 0;
 }
-  .slider {
+.slider {
 width: 960px;
 margin: 0 auto;
 background: #FFF;
 }
-    .slides_window {
+.slides_window {
 width: 960px;
 overflow: hidden;
 position: relative;
 }
-/*masks the current .slide and hides the adjacent .slide(s), width must match the .slide it covers */
-      .slides {
+/*masks the current .slide and hides the adjacent .slide(s),width must match the .slide it covers */
+.slides {
 width: 100000px;
 position: relative;
 overflow: hidden;
 }
-        .slide {
+.slide {
 float: left;
 width: 960px;
 }
 /* width must match the .slides_window width */
-    .slidernav {
+.slidernav {
 width: 100%;
 padding: 6px 0 6px 0;
 height: auto;
 position: relative;
-text-align: center; /*z-index:5;*/
+text-align: center;/*z-index:5;*/
 }
-    .slidernav ul {
+.slidernav ul {
 list-style: none;
 padding: 0;
 margin: 0 auto;
 width: 960px;
 }
-    .slidernav li {
+.slidernav li {
 padding: 6px 0 6px 0;
 display: inline-block;
 }
-    .ie7 .slidernav li {
+.ie7 .slidernav li {
 display: block;
 float: left;
 }
-/*IE7 doesn't know inline-block, adding float requires .clearfix to .slidernav in the HTML*/
-    .slidernav a {
+/*IE7 doesn't know inline-block,adding float requires .clearfix to .slidernav in the HTML*/
+.slidernav a {
 display: inline-block;
 padding: 2px 10px 2px 10px;
 margin: 0;
 }
-    .slidernav a:hover {
+.slidernav a:hover {
 text-decoration: none;
 }
-    .slidernav a.current {
+.slidernav a.current {
 outline: 1px solid #1179fe;
 }
 /* VERTY navigation */
-    .nav .top {
+.nav .top {
 display: none;
 }
-    .nav ul {
+.nav ul {
 list-style: none;
 padding: 0;
 margin: 0;
 }
-    .nav a {
+.nav a {
 color: #222;
 display: block;
-padding: .25em  10px .25em 10px;
+padding: .25em 10px .25em 10px;
 font-weight: 300;
 line-height: 1.5;
 }
-    .nav a:hover {
+.nav a:hover {
 }
-    .nav.flat {
+.nav.flat {
 float: none;
 width: 100%;
 position: fixed;
@@ -792,19 +791,19 @@ padding: 0 0 10px 0;
 background: #000;
 margin: 0;
 }
-    .nav.flat ul {
+.nav.flat ul {
 width: 970px;
 padding: 10px 0 10px 0;
 margin: 0 auto;
 }
-    .nav.flat a {
+.nav.flat a {
 color: #888;
 background: transparent;
 }
-    .nav.flat a:hover {
+.nav.flat a:hover {
 text-decoration: underline;
 }
-    .nav.flat a.current {
+.nav.flat a.current {
 color: #fff;
 background: #bb0000;
 }
@@ -826,7 +825,7 @@ margin-top: 48px;
 position: absolute;
 }
 */
-  .ie7 .bg_slideshow {
+.ie7 .bg_slideshow {
 top: -50px;
 }
 .bg_slideshow li {
@@ -840,7 +839,7 @@ background-repeat: no-repeat;
 padding: 0;
 margin: 0;
 }
-  .no-js .bg_slideshow li:first-child {
+.no-js .bg_slideshow li:first-child {
 display: block;
 text-align: center;
 }
@@ -859,7 +858,7 @@ padding: 0;
 display: inline-block;
 margin: 0 10px 0 0;
 }
-  .ie7 .bg_slideshow_controls li {
+.ie7 .bg_slideshow_controls li {
 display: block;
 float: left;
 }
@@ -880,7 +879,7 @@ background-repeat: no-repeat;
 background-position: 2px 0;
 background-position: -55px 0;
 }
-#playpause /*pause, or playing-loading.gif */ {
+#playpause /*pause,or playing-loading.gif */ {
 background-image: url(../images/loading.gif);
 background-repeat: no-repeat;
 background-position: 0 0;
@@ -901,7 +900,7 @@ box-shadow: 0 0 100px 0 rgba(255,255,255,.5);
 .bg_slideshow strong {
 font-weight: 600;
 }
-  .no-js .bg_slideshow a {
+.no-js .bg_slideshow a {
 margin-top: -200px;
 }
 /* caption positions */
@@ -922,7 +921,7 @@ margin: -150px 0 0 0;
 clear: both;
 display: block;
 }
-  .ie7 .bg_banners {
+.ie7 .bg_banners {
 clear: right;
 }
 .bg_banners li {
@@ -934,7 +933,7 @@ background-repeat: no-repeat;
 padding: 0;
 background-position: center center;
 }
-  .ie7 .bg_banners li, .ie8 .bg_banners li {
+.ie7 .bg_banners li,.ie8 .bg_banners li {
 display: block;
 float: left;
 }
@@ -950,7 +949,7 @@ outline: 1px solid #fff;
 font-weight: 400;
 text-transform: uppercase;
 font-size: 1.5em;
-font-family: 'open sans', verdana, sans-serif;
+font-family: 'open sans',verdana,sans-serif;
 line-height: 1;
 letter-spacing: -.05em;
 }
@@ -965,17 +964,15 @@ bottom: 0px;
 display: block;
 text-shadow: 0 2px 3px #000;
 padding: 5px;
-width: 100%;
-/* for IE9 */  background:rgba(0,0,0,.5);
-/* for real browsers */  background: -moz-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
-background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));
-background: -webkit-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
-background: -o-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+width: 100%;/* for IE9 */ background:rgba(0,0,0,.5);/* for real browsers */ background:-moz-linear-gradient(bottom,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+background: -webkit-gradient(linear,left bottom,left top,color-stop(0%,rgba(0,0,0,0.65)),color-stop(100%,rgba(0,0,0,0)));
+background: -webkit-linear-gradient(bottom,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+background: -o-linear-gradient(bottom,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
 -moz-box-sizing: border-box;
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
 }
-/* for IE7, IE8 */ .ie7 .bg_banners span, .ie8 .bg_banners span {
+/* for IE7,IE8 */ .ie7 .bg_banners span,.ie8 .bg_banners span {
 background: transparent url(../images/bg_banners_gradient.gif) repeat bottom left;
 width: auto;
 }
@@ -984,14 +981,40 @@ background-image: url(../images/play.png);
 background-repeat: no-repeat;
 background-position: center center;
 }
-.back-to-top {
+.follow-me {
 position: fixed;
+display: block;
+padding: 1em;
+background: #000;
+color: #fff;
+}
+.follow-me.bottom-right {
 bottom: 15%;
 right: 0;
-display: block;
+}
+.follow-me.bottom-left {
+bottom: 15%;
+left: 0;
+}
+.follow-me.middle-right {
+top: 45%;
+right: 0;
+}
+.follow-me.middle-left {
+top: 45%;
+left: 0;
+}
+.follow-me.top-right {
+top: 15%;
+right: 0;
+}
+.follow-me.top-left {
+top: 15%;
+left: 0;
+}
+.back-to-top {
 background: #000 url(../images/back-to-top.png) no-repeat 5px center;
 border-radius: 5px 0 0 5px;
-color: #fff;
 padding: .5em .5em .5em 1.5em;
 text-transform: lowercase;
 letter-spacing: .1em;
