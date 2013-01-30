@@ -66,11 +66,6 @@ margin-left: 805px !important;
 float: right;
 width: 640px;
 }
-#section>*,section>*,.section>* {
-margin-left: 5px;
-margin-right: 5px;
-}
-/* offsets everything to line up with the grid */
 #aside,aside,.aside {
 float: left;
 margin-left: 5px;
@@ -108,9 +103,9 @@ clear: right;
 .dots {
 clear: both;
 margin: 0;
-height: 0px;
+height: 0;
 line-height: 0;
-font-size: 0px;
+font-size: 0;
 }
 /* MENU
 - size (width+padding = .col2 = 310) must define MENU size separate from .col2 due to unique visual styling */
@@ -156,20 +151,20 @@ background-color: #cbe9ff;
 }
 .menu a {
 color: #222;
-background-color: #cbe9ff !important;
+background-color: #cbe9ff;
 }
 .menu a:hover,.menu .current {
-color: #FFF !important;
-background-color: #1799fe !important;
+color: #FFF;
+background-color: #1799fe;
 }
 .menu ul ul a {
-background-color: rgba(0,0,0,.1) !important;
+background-color: rgba(0,0,0,.1);
 }
 /* HACK! IE7 and IE8 mess up the menu styles,mostly b/c they don't understand rgba */
 .ie .menu ul ul a {
-background-color: #ccc !important;
+background-color: #ccc;
 }
 .menu ul ul a:hover,.menu ul ul .current {
-background-color: rgba(0,0,0,.5) !important;
+background-color: rgba(0,0,0,.5);
 color: #FFF;
 }

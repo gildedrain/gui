@@ -28,7 +28,7 @@ h6{font-size:.8em;font-weight:bold;}
 h1 img,h2 img,h3 img,
 h4 img,h5 img,h6 img{margin:0;}
 /* Text elements -------------------------------------------------------------- */
-p{margin:0 0 1.5em 0;line-height:1.3em;}
+p{margin:0 0 1.5em 0;line-height:1.5;}
 a:focus,a:hover{text-decoration:underline;}
 a{color:blue;text-decoration:none;}
 blockquote{margin:1.5em;color:#666;font-style:italic;}
@@ -51,7 +51,7 @@ ul{list-style-type:disc;}
 ol{list-style-type:decimal;}
 dl{margin:0 0 1.5em 0;}
 dl dt{font-weight:bold;font-style:italic;margin-top:1.3em;}
-dd{margin-top:.25em;line-height:1.3em;}
+dd{margin-top:.25em;line-height:1.3;}
 /* Tables -------------------------------------------------------------- */
 table{margin:0 0 .5em 0;background:#FFF;color:#333;border:1px solid #666;border-collapse:collapse;}
 th{background:#003151;background:rgba(0,0,0,.85);color:#FFF;text-align:left;}
@@ -59,8 +59,8 @@ th,td,caption{padding:4px 5px 4px 5px;border:1px solid #666;border-width:0 1px 1
 tfoot{font-style:italic;}
 caption{background:#ffffe1;color:#333;border:1px solid #666;border-width:1px 1px 0 1px;}
 /* Misc classes -------------------------------------------------------------- */
-small{font-size:.8em;margin-bottom:1.875em;line-height:1.875em;}
-big{font-size:1.2em;line-height:2.5em;margin-bottom:1.25em;}
+small{font-size:.8em;margin-bottom:1.875em;line-height:1.875;}
+big{font-size:1.2em;line-height:2.5;margin-bottom:1.25em;}
 hr{float:left;display:block;clear:both;border-top:1px solid #000;margin:.5em 0 .5em 0;width:100%;padding:0;}
 /* FORMS.CSS*/
 /* fieldsets & legends */
@@ -73,7 +73,7 @@ fieldset fieldset{background:rgba(0,0,0,.05);padding:40px 10px 10px 10px;border-
 fieldset fieldset legend{background:transparent;color:inherit;border:0;border-radius:0 0 0 0;}
 /* only the first legend (the title of the form) gets fancy treatment */
 /* labels */
-label{margin:10px 0 3px 0;display:block;line-height:1.2em;}
+label{margin:10px 0 3px 0;display:block;line-height:1.2;}
 .labels-left label{text-align:left;display:inline-block;width:110px;margin:0 10px 0 0;}
 .labels-right label{text-align:right;display:inline-block;width:110px;margin:0 10px 0 0;}
 /* inputs,selects,textareas,radios,checkboxes,submits */
@@ -133,8 +133,6 @@ section,#section,.section,.content{xbackground:transparent !important;}
 - .hasmenu is added dynamically if the "menu" URL parameter exists
 - section area width = (col4) + 10 */
 #section.hasmenu,section.hasmenu,.section.hasmenu{float:right;width:640px;}
-#section>*,section>*,.section>*{margin-left:5px;margin-right:5px;}
-/* offsets everything to line up with the grid */
 #aside,aside,.aside{float:left;margin-left:5px;margin-right:5px;}
 #aside>*,aside>*,.aside>*{max-width:310px;}
 /* CONTAINER CLASS
@@ -163,12 +161,12 @@ Depending on the situation,you may need to apply some combination of:- .first to
 .ie7 .menu li{border-top:1px solid #cbe9ff;}
 /* default color scheme */
 .menu{color:#222;background-color:#cbe9ff;}
-.menu a{color:#222;background-color:#cbe9ff !important;}
-.menu a:hover,.menu .current{color:#FFF !important;background-color:#1799fe !important;}
-.menu ul ul a{background-color:rgba(0,0,0,.1) !important;}
+.menu a{color:#222;background-color:#cbe9ff;}
+.menu a:hover,.menu .current{color:#FFF;background-color:#1799fe;}
+.menu ul ul a{background-color:rgba(0,0,0,.1);}
 /* HACK! IE7 and IE8 mess up the menu styles,mostly b/c they don't understand rgba */
-.ie .menu ul ul a{background-color:#ccc !important;}
-.menu ul ul a:hover,.menu ul ul .current{background-color:rgba(0,0,0,.5) !important;color:#FFF;}
+.ie .menu ul ul a{background-color:#ccc;}
+.menu ul ul a:hover,.menu ul ul .current{background-color:rgba(0,0,0,.5);color:#FFF;}
 /* LINKS.CSS */
 .anchor{position:absolute;margin-top:-50px;margin-left:-9999em;text-decoration:none;text-shadow:none;}
 a.noicon{background:transparent none !important;padding:0;margin:0;}
@@ -286,7 +284,7 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .tooltip:hover .critical{border:3px double #fff;color:#fff;background:#f00 url(../images/alerts/critical.png) no-repeat 5px 5px;padding:15px 15px 15px 50px;}
 /* OBJECTS */
 /* ad */
-.ad{display:block;margin:0 0 10px 0;font-size:1.15em;font-weight:normal;text-decoration:none;padding:20px 10px 10px 10px;line-height:1.5em;}
+.ad{display:block;margin:0 0 10px 0;font-size:1.15em;font-weight:normal;text-decoration:none;padding:20px 10px 10px 10px;line-height:1.5;}
 #aside .ad,aside .ad{max-width:310px !important;}
 .ad.img{padding:0 0 20px 0;font-size:1em;}
 .ad.img span{display:block;padding:0 10px 0 10px;}
@@ -295,11 +293,11 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .ad strong{font-weight:normal;font-size:1.5em;}
 .ad:hover{background:#000 !important;color:#FFF !important;text-decoration:none;}
 /* pullquote */
-.pulledquote{display:block;float:left;width:150px;padding:.5em;margin:10px 10px 5px 0;line-height:1.6em;font-size:1.5em;font-style:italic;}
+.pulledquote{display:block;float:left;width:150px;padding:.5em;margin:10px 10px 5px 0;line-height:1.6;font-size:1.5em;font-style:italic;}
 /* quote */
-.quote{display:block;min-height:328px;padding:.5em .5em 1.25em .5em;margin:-2px 0 5px 0;line-height:1.3em;font-size:1.15em;font-style:italic;}
+.quote{display:block;min-height:328px;padding:.5em .5em 1.25em .5em;margin:-2px 0 5px 0;line-height:1.3;font-size:1.15em;font-style:italic;}
 .quote img{margin-left:-.5em;margin-top:-.5em;margin-bottom:.5em;float:left;clear:right;}
-.quote cite{font-size:.65em;display:block;clear:left;line-height:1.25em;padding:1em 0 1em 0;}
+.quote cite{font-size:.65em;display:block;clear:left;line-height:1.25;padding:1em 0 1em 0;}
 /* dropcap,smallcaps first line */
 .dropcap:first-child:first-letter{float:left;line-height:30px;padding:5px 5px 5px 0;margin:.07em 0 -.2em -.1em;color:#333;font-weight:bold;font-size:2.8em;font-family:garamond,"minion pro",times,"times new roman",serif;}
 .smallcapline:first-child:first-line{font-variant:small-caps;}
@@ -311,7 +309,7 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .footnotes{border-top:1px solid #aaa;padding-top:1em;}
 .footnotes h4{font-size:1.25em;}
 .footnotes ol{list-style:decimal;padding-left:1.5em;}
-.footnotes li{line-height:1.3em;margin-bottom:.5em;}
+.footnotes li{line-height:1.3;margin-bottom:.5em;}
 /* polaroid */
 .polaroid{width:150px;padding:10px 10px 50px 10px;margin:5px;border:1px solid #BFBFBF;background-color:#FFF;-webkit-box-shadow:2px 2px 3px rgba(135,139,144,0.4);-moz-box-shadow:2px 2px 3px rgba(135,139,144,0.4);box-shadow:2px 2px 3px rgba(135,139,144,0.4);}
 .polaroid.left.rotate-10{margin-right:30px;margin-bottom:10px;}

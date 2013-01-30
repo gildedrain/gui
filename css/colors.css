@@ -31,36 +31,6 @@ background-color: #000;
 a.bg-black:hover,.bg-black.button:hover {
 background-color: #333;
 }
-.bg-black-alpha90 {
-background-color: rgba(0,0,0,.9);
-}
-.bg-black-alpha70 {
-background-color: rgba(0,0,0,.7);
-}
-.bg-black-alpha50 {
-background-color: rgba(0,0,0,.5);
-}
-.bg-black-alpha30 {
-background-color: rgba(0,0,0,.3);
-}
-.bg-black-alpha10 {
-background-color: rgba(0,0,0,.1);
-}
-.ie7 .bg-black-alpha90,.ie8 .bg-black-alpha90 {
-background-color: #000
-}
-.ie7 .bg-black-alpha70,.ie8 .bg-black-alpha70 {
-background-color: #000
-}
-.ie7 .bg-black-alpha50,.ie8 .bg-black-alpha50 {
-background-color: #000
-}
-.ie7 .bg-black-alpha30,.ie8 .bg-black-alpha30 {
-background-color: #000
-}
-.ie7 .bg-black-alpha10,.ie8 .bg-black-alpha10 {
-background-color: #000
-}
 .white {
 color: #fff;
 }

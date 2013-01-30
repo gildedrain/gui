@@ -45,9 +45,8 @@ border-radius: 0 0 0 0;
 /* labels */
 label {
 margin: 10px 0 3px 0;
-vertical-align: top;
 display: block;
-line-height: 1.2em;
+line-height: 1.2;
 }
 .labels-left label {
 text-align: left;
@@ -73,7 +72,7 @@ font-size: .75em;
 input[type=radio],input[type=checkbox] {
 display: inline-block;
 width: auto;
-margin: 0px 5px 0px 0;
+margin: 0 5px 0 0;
 }
 input[type="radio"]+label,input[type="checkbox"]+label {
 display: inline-block;
@@ -100,7 +99,7 @@ margin: 10px 10px 0 0;
 padding: .5em;
 border: 3px solid #ddd;
 border-radius: 6px;
--webkit-border: radius:6px;
+-webkit-border-radius: 6px;
 -moz-border-radius: 6px;
 box-shadow: 0 1px 2px #aaa;
 -webkit-box-shadow: 0 1px 2px #aaa;
