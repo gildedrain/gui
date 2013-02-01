@@ -62,7 +62,7 @@ a:focus,a:hover {
 text-decoration: underline;
 }
 a {
-color: blue;
+color: #2A5DB0;
 text-decoration: none;
 }
 blockquote {
@@ -121,6 +121,10 @@ font-family: 'andale mono','lucida console',Courier,monospace;
 /* Lists -------------------------------------------------------------- */
 li ul,li ol {
 margin: 0;
+}
+.main li {
+margin-bottom: .5em;
+line-height: 1.3;
 }
 ul,ol {
 margin: 0 1.5em 1.5em 0;

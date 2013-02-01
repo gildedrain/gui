@@ -778,6 +778,8 @@ width: 960px;
     .slidernav li {
 padding: 6px 0 6px 0;
 display: inline-block;
+line-height: auto;
+margin-bottom: 0;
 }
     .ie7 .slidernav li {
 display: block;
