@@ -67,7 +67,7 @@ hr{float:left;display:block;clear:both;border-top:1px solid #000;margin:.5em 0 .
 /* fieldsets & legends */
 form{min-width:310px;}
 /* a form will not fit in a single column width of 150px */
-fieldset{position:relative;border:1px solid rgba(0,0,0,0.35);background:transparent;padding:40px 10px 10px 10px;margin:10px 0 10px 0;border-radius:10px 0 0 0;-webkit-border-radius:10px 0 0 0;-moz-border-radius:10px 0 0 0;}
+fieldset{position:relative;border:1px solid rgba(0,0,0,0.35);background:transparent;padding:40px 10px 10px 10px;margin:0 0 10px 0;border-radius:10px 0 0 0;-webkit-border-radius:10px 0 0 0;-moz-border-radius:10px 0 0 0;}
 legend{font-size:1.2em;border:1px solid #333;background:rgba(0,0,0,.8);color:#FFF;float:left;margin:-40px 0 0 -10px;clear:both;padding:3px 20px 3px 10px;border-radius:10px 0 10px 0;-webkit-border-radius:10px 0 10px 0;-moz-border-radius:10px 0 10px 0;}
 fieldset fieldset{background:rgba(0,0,0,.05);padding:40px 10px 10px 10px;border-radius:0 0 0 0;-webkit-border-radius:0 0 0 0;-moz-border-radius:0 0 0 0;}
 /* this removes the fancy treatment of subsequent fieldsets */
