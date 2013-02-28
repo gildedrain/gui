@@ -107,7 +107,7 @@ margin-bottom: .25em;
 }
 /* TABLES */
 /*zebra rows is on by default*/
-tr:nth-child(odd) {
+.zebrarows li:nth-child(odd), tr:nth-child(odd) {
 background-color: #FFF;
 background-color: rgba(255,255,255,.5);
 }
@@ -987,9 +987,8 @@ line-height: 1;
 letter-spacing: -.05em;
 }
 .bg_banners a:hover {
-outline: 2px solid #333;
+outline: 1px solid #333;
 box-shadow: 0 0 100px 0 rgba(255,255,255,.5);
-outline-offset: -143px;
 }
 .bg_banners span {
 position: absolute;
