@@ -33,11 +33,11 @@ $(document).ready(function() {
 // Equal Height Columns for all instances of div.card
   $(function(){
     var H = 0;
-    $("div.card").each(function(){
+    $(".equal-height").each(function(){
       var h = $(this).height();
       if(h > H) H = h;
     });
-    $("div.card").height(H);
+    $(".equal-height").height(H);
   });
 
 // Set the visible value of a text input to whatever the label contains.  on focus, remove the value.  on blur, restore it.
