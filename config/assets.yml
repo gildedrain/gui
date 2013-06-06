@@ -1,0 +1,19 @@
+package_assets: on
+embed_assets: off
+compress_assets: on
+gzip_assets: off
+
+javascripts:
+  all:
+    - js/*.js
+
+stylesheets:
+  all:
+    - css/reset.css
+    - css/typography.css
+    - css/colors.css
+    - css/forms.css
+    - css/tools.css
+  print:
+    - css/reset.css
+    - css/print.css
