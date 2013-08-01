@@ -31,13 +31,14 @@ $(document).ready(function() {
   });
 
 // Equal Height Columns for all instances of div.card
+// change to .equal-height later
   $(function(){
     var H = 0;
-    $(".equal-height").each(function(){
+    $(".card").each(function(){
       var h = $(this).height();
       if(h > H) H = h;
     });
-    $(".equal-height").height(H);
+    $(".card").height(H);
   });
 
 // Set the visible value of a text input to whatever the label contains.  on focus, remove the value.  on blur, restore it.
