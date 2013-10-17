@@ -31,6 +31,36 @@ background-color: #000;
 a.bg-black:hover,.bg-black.button:hover {
 background-color: #333;
 }
+.bg-black-alpha90 {
+background-color: rgba(0,0,0,.9);
+}
+.bg-black-alpha70 {
+background-color: rgba(0,0,0,.7);
+}
+.bg-black-alpha50 {
+background-color: rgba(0,0,0,.5);
+}
+.bg-black-alpha30 {
+background-color: rgba(0,0,0,.3);
+}
+.bg-black-alpha10 {
+background-color: rgba(0,0,0,.1);
+}
+.ie7 .bg-black-alpha90,.ie8 .bg-black-alpha90 {
+background-color: #000
+}
+.ie7 .bg-black-alpha70,.ie8 .bg-black-alpha70 {
+background-color: #000
+}
+.ie7 .bg-black-alpha50,.ie8 .bg-black-alpha50 {
+background-color: #000
+}
+.ie7 .bg-black-alpha30,.ie8 .bg-black-alpha30 {
+background-color: #000
+}
+.ie7 .bg-black-alpha10,.ie8 .bg-black-alpha10 {
+background-color: #000
+}
 .white {
 color: #fff;
 }
@@ -45,6 +75,36 @@ background-image: -moz-linear-gradient(bottom,rgba(0,0,0,.1),rgba(0,0,0,0)) !imp
 }
 a.bg-white:hover,.bg-white.button:hover {
 background-color: #eee;
+}
+.bg-white-alpha90 {
+background-color: rgba(255,255,255,.9);
+}
+.bg-white-alpha70 {
+background-color: rgba(255,255,255,.7);
+}
+.bg-white-alpha50 {
+background-color: rgba(255,255,255,.5);
+}
+.bg-white-alpha30 {
+background-color: rgba(255,255,255,.3);
+}
+.bg-white-alpha10 {
+background-color: rgba(255,255,255,.1);
+}
+.ie7 .bg-white-alpha90 {
+background-color: #fff;
+}
+.ie7 .bg-white-alpha70 {
+background-color: #fff;
+}
+.ie7 .bg-white-alpha50 {
+background-color: #fff;
+}
+.ie7 .bg-white-alpha30 {
+background-color: #fff;
+}
+.ie7 .bg-white-alpha10 {
+background-color: #fff;
 }
 .hint-grey {
 color: #eee;
