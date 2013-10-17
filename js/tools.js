@@ -236,7 +236,7 @@ var getPosition = function(list, item) {
 };
 $(function() {
   var slideWidth = $('.slide').width();
-  $('.slidernav a').live('click', function(e) {
+  $('.slidernav a').on('click', function(e) {
     var clickedLink = this;
     var listPosition = getPosition($(clickedLink).closest('.slidernav').find('a'), clickedLink);
     var currentSlide = $('#' + clickedLink.href.split('#')[1]);
@@ -285,12 +285,15 @@ $(document).ready(function () {
     slides = $('.bg_slideshow li');
     totalSlides = slides.length;
     currentSlide = 0;
-    slideSpeed = 7000;
     fadeSpeed = 750;
-
+    // Slide Speed
+    slideSpeed = $(this).data('duration');
+    if (slideSpeed == undefined) {
+      slideSpeed = 7000;
+    }
   // Start it off
     $(slides).eq(currentSlide).fadeIn(fadeSpeed);
-    startAnimation();
+    startAnimation(slideSpeed);
 
   // Behaviors
     $("#next").click(function() {
@@ -306,11 +309,11 @@ $(document).ready(function () {
         stopAnimation();
       }
       else {
-        startAnimation();
+        startAnimation(slideSpeed);
       }
     });
 
-    function startAnimation() {
+    function startAnimation(slideSpeed) {
       $('#playpause').removeClass('play');
       $('#playpause').html("Pause");
       interval = setInterval(function() {

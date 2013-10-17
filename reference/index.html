@@ -117,6 +117,11 @@
        <tr><td><pre><code class="language-markup">&lt;tag class="added"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="added">Hello World!</td></tr>
        <tr><td><pre><code class="language-markup">&lt;tag class="removed"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="removed">Hello World!</td></tr>
        <tr><td><pre><code class="language-markup">&lt;tag class="bg-white"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-white">Hello World!</td></tr>
+       <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha90 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td class="bg-medium-blue"><p class="bg-white-alpha90">Hello World</p></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha70 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td class="bg-medium-blue"><p class="bg-white-alpha70">Hello World</p></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha50 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td class="bg-medium-blue"><p class="bg-white-alpha50">Hello World</p></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha30 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td class="bg-medium-blue"><p class="bg-white-alpha30">Hello World</p></td></tr>
+       <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha10 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td class="bg-medium-blue"><p class="bg-white-alpha10">Hello World</p></td></tr>
        <tr><td><pre><code class="language-markup">&lt;tag class="bg-black"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-black">Hello World!</td></tr>
        <tr><td><pre><code class="language-markup">&lt;tag class="bg-black-alpha90"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-blue"><span class="bg-black-alpha90 white pad">Hello World!</span></td></tr>
        <tr><td><pre><code class="language-markup">&lt;tag class="bg-black-alpha70"&gt;Hello World!&lt;/tag&gt;</code></pre></td><td class="bg-medium-blue"><span class="bg-black-alpha70 white pad">Hello World!</span></td></tr>
@@ -233,6 +238,9 @@
         <tr><td><pre><code class="language-markup">&lt;p class="textright"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="textright">Hello World!</p></td></tr>
         <tr><td><pre><code class="language-markup">&lt;p class="textleft"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="textleft">Hello World!</p></td></tr>
         <tr><td><pre><code class="language-markup">&lt;p class="textcenter"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="textcenter">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="valign-top"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="valign-top">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="valign-middle"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="valign-middle">Hello World!</p></td></tr>
+        <tr><td><pre><code class="language-markup">&lt;p class="valign-bottom"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="valign-top">Hello World!</p></td></tr>                        
         <tr><td><pre><code class="language-markup">&lt;p class="dropcap"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="dropcap"><small>Brisket capicola sirloin ribeye tri-tip. Meatball salami frankfurter boudin jerky pork chop chuck biltong ribeye leberkas.</small></p></td></tr>
         <tr><td><pre><code class="language-markup">&lt;p class="smallcapline"&gt;Hello World!&lt;/p&gt;</code></pre></td><td><p class="smallcapline"><small>Brisket capicola sirloin ribeye tri-tip. Meatball salami frankfurter boudin jerky pork chop chuck biltong ribeye leberkas.</small></p></td></tr>
         <tr><td><pre><code class="language-markup">&lt;p class="quote"&gt;Hello World!&lt;cite&gt;by Myself&lt;/cite&gt;&lt;/p&gt;</code></pre><br /><p class="error">Need to remove the height attribute.</p></td><td><p class="quote">Hello World!<cite>by Myself</cite></p></td></tr>
@@ -257,6 +265,15 @@
   &lt;/span&gt;
 &lt;/div&gt;
         </code></pre></td><td><div class="figure bg-hint-grey"><img src="http://gui.sunyocc.edu/gui/images/samples/einstein-150.jpg" /><span class="caption"><strong>Fig.1a</strong> Photo of Albert Einstein</span></div></td></tr>
+        <tr><td><pre><code class="language-markup">
+&lt;div class="figure-v2 bg-hint-grey"&gt;
+  &lt;img src="file.jpg" /&gt;
+  &lt;span class="caption"&gt;
+    &lt;strong&gt;Fig.1a&lt;strong&gt; Photo of Albert Einstein
+  &lt;/span&gt;
+&lt;/div&gt;
+        </code></pre></td><td><div class="figure-v2 bg-medium-blue"><img src="http://gui.sunyocc.edu/gui/images/samples/moose-470.png" /><span class="bg-white-alpha70 caption"><strong>Fig.1a</strong> Photo of Albert Einstein</span></div></td></tr>
+
       </table>
     </div>
 
@@ -994,6 +1011,11 @@ Normal Definition List
     <tr><td><pre><code class="language-markup">&lt;p class="bg-black-alpha50 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black-alpha50 medium-red">Hello World</p></td></tr>
     <tr><td><pre><code class="language-markup">&lt;p class="bg-black-alpha30 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black-alpha30 medium-red">Hello World</p></td></tr>
     <tr><td><pre><code class="language-markup">&lt;p class="bg-black-alpha10 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-black-alpha10 medium-red">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha90 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-white-alpha90 medium-red">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha70 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-white-alpha70 medium-red">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha50 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-white-alpha50 medium-red">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha30 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-white-alpha30 medium-red">Hello World</p></td></tr>
+    <tr><td><pre><code class="language-markup">&lt;p class="bg-white-alpha10 medium-red"&gt;Hello World&lt;/p&gt;</code></pre></td><td><p class="bg-white-alpha10 medium-red">Hello World</p></td></tr>
   </table>
 </div>
 
@@ -1426,8 +1448,8 @@ With p.dots
 &lt;/ul&gt;
 </code></pre>
   <ul class="bg_slideshow">
-    <li class="bg-dark-grey"><img src="http://gui.sunyocc.edu/gui/images/samples/shark-470.png" height="500" width="1400" /><a class="bg-black-alpha50 text-center white radius-medium caption-bottom col2" href="example.com"><strong class="dark-orange">Hello World</strong> and Foo Bar</a></li>
-    <li class="bg-dark-blue"><img src="http://gui.sunyocc.edu/gui/images/samples/elk-470.png" height="500" width="1400" /><a class="bg-black-alpha50 text-center white radius-medium caption-middle precol2 col2" href="example.com"><strong class="medium-blue">Hello World</strong> and Foo Bar</a></li>
+    <li data-duration="1000" class="bg-dark-grey"><img src="http://gui.sunyocc.edu/gui/images/samples/shark-470.png" height="500" width="1400" /><a class="bg-black-alpha50 text-center white radius-medium caption-bottom col2" href="example.com"><strong class="dark-orange">Hello World</strong> and Foo Bar</a></li>
+    <li class="bg-dark-yellow"><img src="http://gui.sunyocc.edu/gui/images/samples/elk-470.png" height="500" width="1400" /><a class="bg-black-alpha50 text-center white radius-medium caption-middle precol2 col2" href="example.com"><strong class="medium-blue">Hello World</strong> and Foo Bar</a></li>
     <li class="bg-dark-red"><img src="http://gui.sunyocc.edu/gui/images/samples/porcupine-470.png" height="500" width="1400" /><a class="bg-black-alpha50 text-center white radius-medium caption-top precol4 col2" href="example.com"><strong class="medium-grey">Hello World</strong> and Foo Bar</a></li>
   </ul>
 </div>

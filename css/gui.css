@@ -43,10 +43,11 @@ address{font-style:italic;display:inline;}
 del{color:#666;}
 /*pre{margin:0;white-space:pre;}
 pre,code{background:#000;color:#86b5e3;padding:1em;border:1px solid #ccc;display:block;font-size:.8em;}
-pre,code,tt{font-family:'andale mono','lucida console',Courier,monospace;}*/
+pre,code,tt{font-family:'andale mono','lucida console',Courier,monospace;}
+*/
 /* Lists -------------------------------------------------------------- */
 li ul,li ol{margin:0;}
-.main li {margin-bottom:.5em; line-height:1.3;}
+.main li{margin-bottom:.5em;line-height:1.3;}
 ul,ol{margin:0 1.5em 1.5em 0;padding-left:3.333em;}
 ul{list-style-type:disc;}
 ol{list-style-type:decimal;}
@@ -200,6 +201,9 @@ a[href^="mailto:"]{background-position:100% -450px;padding:2px 18px 2px 0 !impor
 .box{margin:10px 5px 10px 5px;}
 .hangright{margin-right:-1em;}
 .hangleft{margin-left:-1em;}
+.valign-middle{display:inline-block;vertical-align:middle;}
+.valign-bottom{display:inline-block;vertical-align:bottom;}
+.valign-top{display:inline-block;vertical-align:top;;}
 /* DISPLAY */
 .hide{display:none !important;}
 .inline{display:inline;}
@@ -223,7 +227,8 @@ ul.inline{padding:0;margin:0;}
 .dividers p{margin-bottom:.25em;}
 /* TABLES */
 /*zebra rows is on by default*/
-.zebrarows li:nth-child(odd), tr:nth-child(odd) {background-color: #FFF;background-color: rgba(255,255,255,.5);}/* HACK! IE doesn't know RGBA */
+.zebrarows li:nth-child(odd),tr:nth-child(odd){background-color:#FFF;background-color:rgba(255,255,255,.5);}
+/* HACK! IE doesn't know RGBA */
 .ie7 tr:nth-child(odd){background:transparent;-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000)";/* IE8 */
 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);/* IE6 & 7 */
 zoom:1;}
@@ -302,8 +307,8 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .dropcap:first-child:first-letter{float:left;line-height:30px;padding:5px 5px 5px 0;margin:.07em 0 -.2em -.1em;color:#333;font-weight:bold;font-size:2.8em;font-family:garamond,"minion pro",times,"times new roman",serif;}
 .smallcapline:first-child:first-line{font-variant:small-caps;}
 /* casing */
-.uppercase {text-transform:uppercase;}
-.lowercase {text-transform:lowercase;}
+.uppercase{text-transform:uppercase;}
+.lowercase{text-transform:lowercase;}
 .small-caps{font-variant:small-caps;}
 /* footnotes */
 .footnotes{border-top:1px solid #aaa;padding-top:1em;}
@@ -329,6 +334,9 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .figure .caption{display:block;clear:both;margin-top:-2px;padding:.5em 10px .5em 10px;background:#fff7e1;border-top:1px solid #aaa;font-style:italic;text-align:left;color:#333;}
 .figure .caption strong{font-style:normal;font-size:small;}
 .figure .caption strong:after{content:" - ";font-weight:normal;}
+.figure-v2{position:relative;margin-bottom:2em;}
+.figure-v2 img{position:static;}
+.figure-v2 span{display:inline-block;position:absolute;bottom:5%;left:8%;width:80%;padding:1em;}
 /* TRANSPARENCY */
 .alpha100{opacity:1;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);}
 .alpha90{opacity:.9;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);}
@@ -346,7 +354,16 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .ie7 .bg-black-alpha50,.ie8 .bg-black-alpha50{background-color:#000}
 .ie7 .bg-black-alpha30,.ie8 .bg-black-alpha30{background-color:#000}
 .ie7 .bg-black-alpha10,.ie8 .bg-black-alpha10{background-color:#000}
-
+.bg-white-alpha90{background-color:rgba(255,255,255,.9);}
+.bg-white-alpha70{background-color:rgba(255,255,255,.7);}
+.bg-white-alpha50{background-color:rgba(255,255,255,.5);}
+.bg-white-alpha30{background-color:rgba(255,255,255,.3);}
+.bg-white-alpha10{background-color:rgba(255,255,255,.1);}
+.ie7 .bg-white-alpha90{background-color:#fff;}
+.ie7 .bg-white-alpha70{background-color:#fff;}
+.ie7 .bg-white-alpha50{background-color:#fff;}
+.ie7 .bg-white-alpha30{background-color:#fff;}
+.ie7 .bg-white-alpha10{background-color:#fff;}
 /* TRANSFORMATIONS */
 .rotate10{-webkit-transform:rotate(10deg);-moz-transform:rotate(10deg);rotation:10deg;}
 .rotate25{-webkit-transform:rotate(25deg);-moz-transform:rotate(25deg);rotation:25deg;}
@@ -374,82 +391,86 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .font-marker{font-family:"Permanent Marker",impact,sans-serif;}
 /* CLEARFIX */
 /* add .clearfix to any container that contains floated elements if you want the container to expand to "contain" its children,same effect as placing p.dots last in the container */
-.clearfix {*zoom: 1;}
-.clearfix:before,.clearfix:after {display: table;line-height: 0;content: "";}
-.clearfix:after {clear: both;}
+.clearfix{*zoom:1;}
+.clearfix:before,.clearfix:after{display:table;line-height:0;content:"";}
+.clearfix:after{clear:both;}
 /* MODAL WINDOW */
 #modal #section{/* needed to prevent scrollbars */width:auto;height:auto;margin:0;padding:0;}
 #modal .clearfix{/* needed to prevent scrollbars */display:inline;}
 #modal .clearfix:after{/* needed to prevent scrollbars */content:".";display:inline;clear:both;visibility:hidden;line-height:0;}
 /* HORZY slide structure & navigation */
-.slider .container {padding:0;}
-  .slider {width:960px; margin:0 auto; background:#FFF;}
-    .slides_window {width:960px; overflow:hidden; position:relative;} /*masks the current .slide and hides the adjacent .slide(s), width must match the .slide it covers */
-      .slides {width:100000px; position:relative; overflow:hidden;}
-        .slide {float:left; width:960px;} /* width must match the .slides_window width */
-    .slidernav {width:100%; padding:6px 0 6px 0;height:auto; position:relative; text-align:center; /*z-index:5;*/}
-    .slidernav ul {list-style:none; padding:0; margin:0 auto; width:960px; }
-    .slidernav li {padding:6px 0 6px 0; display:inline-block; line-height:auto;margin-bottom:0;}
-    .ie7 .slidernav li {display:block; float:left;} /*IE7 doesn't know inline-block, adding float requires .clearfix to .slidernav in the HTML*/
-    .slidernav a {display:inline-block; padding:2px 10px 2px 10px; margin:0;}
-    .slidernav a:hover {text-decoration:none;}
-    .slidernav a.current {outline:1px solid #1179fe;}
+.slider .container{padding:0;}
+.slider{width:960px;margin:0 auto;background:#FFF;}
+.slides_window{width:960px;overflow:hidden;position:relative;}
+/*masks the current .slide and hides the adjacent .slide(s),width must match the .slide it covers */
+.slides{width:100000px;position:relative;overflow:hidden;}
+.slide{float:left;width:960px;}
+/* width must match the .slides_window width */
+.slidernav{width:100%;padding:6px 0 6px 0;height:auto;position:relative;text-align:center;/*z-index:5;*/}
+.slidernav ul{list-style:none;padding:0;margin:0 auto;width:960px;}
+.slidernav li{padding:6px 0 6px 0;display:inline-block;line-height:auto;margin-bottom:0;}
+.ie7 .slidernav li{display:block;float:left;}
+/*IE7 doesn't know inline-block,adding float requires .clearfix to .slidernav in the HTML*/
+.slidernav a{display:inline-block;padding:2px 10px 2px 10px;margin:0;}
+.slidernav a:hover{text-decoration:none;}
+.slidernav a.current{outline:1px solid #1179fe;}
 /* VERTY navigation */
-    .nav .top {display:none;}
-    .nav ul {list-style:none; padding:0; margin:0;}
-    .nav a {color:#222; display:block; padding:.25em  10px .25em 10px; font-weight:300; line-height:1.5;}
-    .nav a:hover {}
-    .nav.flat {float:none; width:100%; position:fixed; top:0; padding:0 0 10px 0; background:#000; margin:0;}
-    .nav.flat ul {width:970px; padding:10px 0 10px 0; margin:0 auto;}
-    .nav.flat a {color:#888; background:transparent;}
-    .nav.flat a:hover {text-decoration:underline;}
-    .nav.flat a.current {color:#fff; background:#bb0000;}
+.nav .top{display:none;}
+.nav ul{list-style:none;padding:0;margin:0;}
+.nav a{color:#222;display:block;padding:.25em 10px .25em 10px;font-weight:300;line-height:1.5;}
+.nav a:hover{}
+.nav.flat{float:none;width:100%;position:fixed;top:0;padding:0 0 10px 0;background:#000;margin:0;}
+.nav.flat ul{width:970px;padding:10px 0 10px 0;margin:0 auto;}
+.nav.flat a{color:#888;background:transparent;}
+.nav.flat a:hover{text-decoration:underline;}
+.nav.flat a.current{color:#fff;background:#bb0000;}
 /* BG_SLIDESHOW */
 /*slides */
 .bg_slideshow{z-index:0;width:100%;list-style:none;position:relative;padding:0;margin:0;min-height:500px;}
-/* .bg_slideshow{margin-top:48px;} /* if #occheaderbg {position:absolute;} */
-  .ie7 .bg_slideshow {top:-50px;}
+/* .bg_slideshow{margin-top:48px;}
+/* if #occheaderbg{position:absolute;}
+*/
+.ie7 .bg_slideshow{top:-50px;}
 .bg_slideshow li{z-index:0;display:none;position:absolute;top:0;width:100%;background-position:center bottom;background-repeat:no-repeat;padding:0;margin:0;}
-  .no-js .bg_slideshow li:first-child{display:block;text-align:center;} /* REQUIRES MODERNIZR! if no JS just display the first slide forever. Modernizr will remove no-js when js enabled. */
+.no-js .bg_slideshow li:first-child{display:block;text-align:center;}
+/* REQUIRES MODERNIZR! if no JS just display the first slide forever. Modernizr will remove no-js when js enabled. */
 /* controls */
 .bg_slideshow_controls{position:relative;float:right;z-index:6;margin:10px 0 0 0;width:135px;list-style:none;padding:0;}
 .bg_slideshow_controls li{display:inline-block;margin:0 10px 0 0;}
-  .ie7 .bg_slideshow_controls li {display:block;float:left;}
+.ie7 .bg_slideshow_controls li{display:block;float:left;}
 .bg_slideshow_controls a{display:block;height:25px;width:30px;text-indent:100%;white-space:nowrap;overflow:hidden;background-image:url(../images/bg_slideshow_controls.png);background-repeat:no-repeat;background-position:2px 0;}
-#playpause.play {background-image:url(../images/bg_slideshow_controls.png);background-repeat:no-repeat;background-position:2px 0;background-position:-55px 0;}
-#playpause /*pause, or playing-loading.gif */{background-image:url(../images/loading.gif); background-repeat:no-repeat; background-position:0 0;}
+#playpause.play{background-image:url(../images/bg_slideshow_controls.png);background-repeat:no-repeat;background-position:2px 0;background-position:-55px 0;}
+#playpause /*pause,or playing-loading.gif */{background-image:url(../images/loading.gif);background-repeat:no-repeat;background-position:0 0;}
 #next{background-position:-170px 0;}
 /* captions */
 .bg_slideshow a{display:inline-block;font-size:1.5em;padding:.5em;text-shadow:2px 2px 0px #000000;}
-.bg_slideshow a:hover {box-shadow:0 0 100px 0 rgba(255,255,255,.5);}
+.bg_slideshow a:hover{box-shadow:0 0 100px 0 rgba(255,255,255,.5);}
 .bg_slideshow strong{font-weight:600;}
-  .no-js .bg_slideshow a{margin-top:-200px;}
+.no-js .bg_slideshow a{margin-top:-200px;}
 /* caption positions */
 .bg_slideshow .caption-top{margin-top:65px;}
 .bg_slideshow .caption-middle{margin-top:150px;}
 .bg_slideshow .caption-bottom{margin-top:250px;}
 /* BG_BANNERS */
-.bg_banners {list-style:none; padding:0; margin:0 0 0 0; clear:both; display:block;}
-  .ie7 .bg_banners {clear:right;}
-.bg_banners li {float:left; position:relative; display:inline-block; margin:0 5px 10px 5px; background-repeat:no-repeat; padding:0; background-position:center center;}
-  .ie7 .bg_banners li, .ie8 .bg_banners li {display:block; float:left;}
-.bg_banners img {display:none;}
-.bg_banners a {display:block;z-index:1;height:100%;width:100%;outline:1px solid #fff;font-weight:400;text-transform:uppercase;font-size:1.5em;font-family:'open sans', verdana, sans-serif; line-height:1; letter-spacing:-.05em;}
-.bg_banners a:hover {outline:1px solid #333; box-shadow:0 0 100px 0 rgba(255,255,255,.5);}
-.bg_banners span {position:absolute;bottom:0;display:block;text-shadow:0 2px 3px #000;padding:5px;width:100%;
-/* for IE9 */  background:rgba(0,0,0,.5);
-/* for real browsers */  background: -moz-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));  background: -webkit-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);  background: -o-linear-gradient(bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  }
-/* for IE7, IE8 */ .ie7 .bg_banners span, .ie8 .bg_banners span {background:transparent url(../images/bg_banners_gradient.gif) repeat bottom left;width:auto;}
-.play {background-image:url(../images/play.png); background-repeat:no-repeat; background-position:center center;}
-.follow-me {position:fixed;display:block;padding:1em;background:#000;color:#fff;}
-.follow-me.bottom-right {bottom:15%;right:0;}
-.follow-me.bottom-left {bottom:15%;left:0;}
-.follow-me.middle-right {top:45%;right:0;}
-.follow-me.middle-left {top:45%;left:0;}
-.follow-me.top-right {top:15%;right:0;}
-.follow-me.top-left {top:15%;left:0;}
-.back-to-top {background: #000 url(../images/back-to-top.png) no-repeat 5px center;border-radius: 5px 0 0 5px;padding: .5em .5em .5em 1.5em;text-transform: lowercase;letter-spacing: .1em;}
-.back-to-top:hover {background-color:#666;}
+.bg_banners{list-style:none;padding:0;margin:0 0 0 0;clear:both;display:block;}
+.ie7 .bg_banners{clear:right;}
+.bg_banners li{float:left;position:relative;display:inline-block;margin:0 5px 10px 5px;background-repeat:no-repeat;padding:0;background-position:center center;}
+.ie7 .bg_banners li,.ie8 .bg_banners li{display:block;float:left;}
+.bg_banners img{display:none;}
+.bg_banners a{display:block;z-index:1;height:100%;width:100%;outline:1px solid #fff;font-weight:400;text-transform:uppercase;font-size:1.5em;font-family:'open sans',verdana,sans-serif;line-height:1;letter-spacing:-.05em;}
+.bg_banners a:hover{outline:1px solid #333;box-shadow:0 0 100px 0 rgba(255,255,255,.5);}
+.bg_banners span{position:absolute;bottom:0;display:block;text-shadow:0 2px 3px #000;padding:5px;width:100%;/* for IE9 */ background:rgba(0,0,0,.5);/* for real browsers */ background:-moz-linear-gradient(bottom,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);background:-webkit-gradient(linear,left bottom,left top,color-stop(0%,rgba(0,0,0,0.65)),color-stop(100%,rgba(0,0,0,0)));background:-webkit-linear-gradient(bottom,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);background:-o-linear-gradient(bottom,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+/* for IE7,IE8 */ .ie7 .bg_banners span,.ie8 .bg_banners span{background:transparent url(../images/bg_banners_gradient.gif) repeat bottom left;width:auto;}
+.play{background-image:url(../images/play.png);background-repeat:no-repeat;background-position:center center;}
+.follow-me{position:fixed;display:block;padding:1em;background:#000;color:#fff;}
+.follow-me.bottom-right{bottom:15%;right:0;}
+.follow-me.bottom-left{bottom:15%;left:0;}
+.follow-me.middle-right{top:45%;right:0;}
+.follow-me.middle-left{top:45%;left:0;}
+.follow-me.top-right{top:15%;right:0;}
+.follow-me.top-left{top:15%;left:0;}
+.back-to-top{background:#000 url(../images/back-to-top.png) no-repeat 2px center;border-radius:5px 0 0 5px;padding:.5em .5em .5em 1.5em;text-transform:lowercase;letter-spacing:.1em;}
+.back-to-top:hover{background-color:#666;}
 /* COLORS.CSS */
 .quiet{color:#666;}
 .loud{color:#000;}
