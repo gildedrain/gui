@@ -30,6 +30,13 @@ $(document).ready(function() {
     );
   });
 
+// JQuery UI Accordion Widget activation
+	$(function() {
+		$( "#accordion" ).accordion({
+		      collapsible: true, active: false, heightStyle: "content"
+	    });  
+	});
+
 // Equal Height Columns for all instances of div.card
 // change to .equal-height later
   $(function(){
@@ -285,15 +292,12 @@ $(document).ready(function () {
     slides = $('.bg_slideshow li');
     totalSlides = slides.length;
     currentSlide = 0;
+    slideSpeed = 7000;
     fadeSpeed = 750;
-    // Slide Speed
-    slideSpeed = $(this).data('duration');
-    if (slideSpeed == undefined) {
-      slideSpeed = 7000;
-    }
+
   // Start it off
     $(slides).eq(currentSlide).fadeIn(fadeSpeed);
-    startAnimation(slideSpeed);
+    startAnimation();
 
   // Behaviors
     $("#next").click(function() {
@@ -309,11 +313,11 @@ $(document).ready(function () {
         stopAnimation();
       }
       else {
-        startAnimation(slideSpeed);
+        startAnimation();
       }
     });
 
-    function startAnimation(slideSpeed) {
+    function startAnimation() {
       $('#playpause').removeClass('play');
       $('#playpause').html("Pause");
       interval = setInterval(function() {

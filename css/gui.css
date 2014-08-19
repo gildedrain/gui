@@ -157,17 +157,19 @@ Depending on the situation,you may need to apply some combination of:- .first to
 .menu ul ul{margin-bottom:0;}
 .menu li a{display:block;width:290px;padding:.25em 10px .25em 10px;margin:0;text-decoration:none;}
 .menu ul ul a{width:280px;padding-left:20px;}
-.menu ul ul a:before{content:"- ";color:#aaa;}
+.menu ul ul a:before{content:"- ";color:inherit;}
 .menu li{margin:0;padding:0;}
 /*HACK! adding a top border to menu li's seems to force IE7 into the box model */
-.ie7 .menu li{border-top:1px solid #cbe9ff;}
+/*.ie7 .menu li{border-top:1px solid #cbe9ff;}
+*/
 /* default color scheme */
 .menu{color:#222;background-color:#cbe9ff;}
 .menu a{color:#222;background-color:#cbe9ff;}
 .menu a:hover,.menu .current{color:#FFF;background-color:#1799fe;}
 .menu ul ul a{background-color:rgba(0,0,0,.1);}
 /* HACK! IE7 and IE8 mess up the menu styles,mostly b/c they don't understand rgba */
-.ie .menu ul ul a{background-color:#ccc;}
+/*.ie .menu ul ul a{background-color:#ccc;}
+*/
 .menu ul ul a:hover,.menu ul ul .current{background-color:rgba(0,0,0,.5);color:#FFF;}
 /* LINKS.CSS */
 .anchor{position:absolute;margin-top:-50px;margin-left:-9999em;text-decoration:none;text-shadow:none;}
@@ -334,9 +336,6 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .figure .caption{display:block;clear:both;margin-top:-2px;padding:.5em 10px .5em 10px;background:#fff7e1;border-top:1px solid #aaa;font-style:italic;text-align:left;color:#333;}
 .figure .caption strong{font-style:normal;font-size:small;}
 .figure .caption strong:after{content:" - ";font-weight:normal;}
-.figure-v2{position:relative;margin-bottom:2em;}
-.figure-v2 img{position:static;}
-.figure-v2 span{display:inline-block;position:absolute;bottom:5%;left:8%;width:80%;padding:1em;}
 /* TRANSPARENCY */
 .alpha100{opacity:1;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);}
 .alpha90{opacity:.9;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);}
@@ -481,11 +480,11 @@ a.bg-white:hover,.bg-white.button:hover{background-color:#eee;}
 .bg-white-alpha50{background-color:rgba(255,255,255,.5);}
 .bg-white-alpha30{background-color:rgba(255,255,255,.3);}
 .bg-white-alpha10{background-color:rgba(255,255,255,.1);}
-.ie7 .bg-white-alpha90{background-color:#fff;}
-.ie7 .bg-white-alpha70{background-color:#fff;}
-.ie7 .bg-white-alpha50{background-color:#fff;}
-.ie7 .bg-white-alpha30{background-color:#fff;}
-.ie7 .bg-white-alpha10{background-color:#fff;}
+.ie7 .bg-white-alpha90,.ie8 .bg-white-alpha90{background-color:#fff;}
+.ie7 .bg-white-alpha70,.ie8 .bg-white-alpha70{background-color:#fff;}
+.ie7 .bg-white-alpha50,.ie8 .bg-white-alpha50{background-color:#fff;}
+.ie7 .bg-white-alpha30,.ie8 .bg-white-alpha30{background-color:#fff;}
+.ie7 .bg-white-alpha10,.ie8 .bg-white-alpha10{background-color:#fff;}
 .hint-grey{color:#eee;}
 .bg-hint-grey{background-color:#eee;}
 .bg-hint-grey.button{background-color:#eee;color:#333;}
@@ -631,18 +630,24 @@ a.bg-dark-brown:hover,
 @media screen{.forprint{display:none !important;}
 /* USE THIS CLASS FOR ANYTHING YOU ONLY WANT TO APPEAR ON PRINTED DOCUMENTS,IT WILL BE HIDDEN FOR media="screen" */}
 @media print{/* HIDE STUFF */
-#logo,#globalnav,#siteheader,#emergency,#announcement,#banner_spacer,.menu,.footer,#footer.container,footer.container,.anchor,a[href^="#"],.ad,.quote,.quote img,.footer br,#footer br,footer br{display:none !important;}
+/*PRINT.CSS*/
+@media screen{.forprint{display:none !important;}
+/* USE THIS CLASS FOR ANYTHING YOU ONLY WANT TO APPEAR ON PRINTED DOCUMENTS,IT WILL BE HIDDEN FOR media="screen" */}
+@media print{/* HIDE STUFF */
+#top,#logo,#globalnav,#siteheader,.occheaderbg,#emergency,#announcement,#banner_spacer,.menu,.footer,#occfooter,#footer.container,footer.container,.anchor,a[href^="#"],.ad,.quote,.quote img,.footer br,#footer br,footer br{display:none !important;}
 /* GLOBAL RESET */
 *{background:none !important;}
 body{line-height:1.5;background:none !important;color:#000 !important;font-size:115%;margin:0;padding:0;}
 /* PAGE LAYOUT */
+.col1,.col1dot5,.col2,.col3,.col4,.col5,.col6{width:100% !important;}
+.precoldot5,.precol1,.precol1dot5,.precol2,.precol3,.precol4,.precol4dot5,.precol5,.precol6{margin-left:0px !important;}
 #section,section,.section{width:100%;margin:0;padding:0;float:none !important;background:none !important;clear:both;}
 #section.hasmenu,section.hasmenu,.section.hasmenu{float:none !important;width:100%;background:none !important;}
 #footer,footer,.footer{border-top:1px solid #ccc !important;padding-top:1em !important;}
 #aside,aside,.aside{width:100% !important;}
 #aside>*,aside>*,.aside>*{max-width:100% !important;}
 #footer,footer,.footer{clear:both;display:block;width:100%;border-top:1px solid #000 !important;padding-top:.5em;}
-#footer .col3,footer .col3,.footer col3{width:100% !important;}
+#footer .col3,footer .col3,.footer .col3{width:100% !important;}
 #footer br.forprint,footer br.forprint,.footer br.forprint{display:block !important;}
 #printheader{display:block;width:100%;}
 #printheader img{float:left;display:block;margin-right:2em;}
