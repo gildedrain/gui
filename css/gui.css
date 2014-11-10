@@ -10,9 +10,9 @@ blockquote:before,blockquote:after,q:before,q:after{content:"";}
 blockquote,q{quotes:"" "";}
 /* TYPOGRAPHY.CSS - The font-size percentage is of 16px. (0.75 * 16px = 12px) */
 html{font-size:100.01%;}
-body{font-size:100%;color:#222;background:#fff;font-family:"Gill Sans",Verdana,Arial,Helvetica,sans-serif;font-weight:200;}
+body{font-size:100%;color:#222;background:#fff;font-family:"open sans",Verdana,Arial,Helvetica,sans-serif;font-weight:200;}
 /* Headings -------------------------------------------------------------- */
-h1,h2,h3,h4,h5,h6{font-family:"Open Sans","Gill Sans",Verdana,Arial,Helvetica,sans-serif;font-weight:200;}
+h1,h2,h3,h4,h5,h6{font-family:"Open Sans",Verdana,Arial,Helvetica,sans-serif;font-weight:200;}
 h1{font-size:3em;line-height:1;margin-bottom:0.5em;}
 /* 16pt*3.0em = 49 px */
 h2{font-size:2em;margin-bottom:0.75em;}
@@ -107,7 +107,7 @@ fieldset ol{list-style:none;margin:0;padding:0;}
 .ie legend{background:#000;color:#FFF;}
 .ie fieldset fieldset{background:#FFF;}
 .ie fieldset fieldset legend{background:transparent;color:#333;}
-.ie textarea{font-family:"gill sans",verdana,sans-serif;font-size:75%;}
+.ie textarea{font-family:"open sans",verdana,sans-serif;font-size:75%;}
 /* 960_6col_grid.css */
 /* FOR DEBUGGING ONLY */
 body{xbackground:url(../images/grid/grid.jpg) repeat-y top center !important;}
@@ -357,7 +357,7 @@ button.negative:hover{background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d
 .radius-extralarge{border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;}
 /* TYPEFACES */
 .font-italic,.italic{font-style:italic;}
-.font-sans-serif,.sans-serif{font-family:"Century Gothic","Myriad Pro",myriad,"Gill Sans",verdana,sans-serif;}
+.font-sans-serif,.sans-serif{font-family:"Century Gothic","Myriad Pro",myriad,"open sans",verdana,sans-serif;}
 .font-serif,.serif{font-family:"Minion Pro","Times New Roman",times,serif;}
 .font-script{font-family:"Dancing Script","Brush Script",serif;}
 .font-brushscript{font-family:"Devonshire",serif;}

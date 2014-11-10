@@ -15,7 +15,7 @@ pre, code {font-family:'PT Mono', 'andale mono', 'lucida console', courier, mono
 
 .nav .top {display:none;}
 .nav ul {list-style:none; padding:0; margin:0;}
-.nav a {color:#222; display:block; padding:.25em  10px .25em 10px; font-weight:300; line-height:1.5;}
+.nav a {color:#222; display:block; padding:.25em  5px .25em 5px; font-weight:300; line-height:1.5;}
 .ie .nav a {font-size:.8em;}
 .nav a:hover {background:#000; color:#1799FE;}
 .nav.flat {float:none; width:100%; position:fixed; top:0px; padding:0 0 10px 0; background:#000; margin:0;}
