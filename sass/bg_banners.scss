@@ -1,4 +1,4 @@
-
+@import "compass";
 /* BG_BANNERS */
 .bg_banners {
 list-style: none;
@@ -60,4 +60,10 @@ box-sizing: border-box;
 /* for IE7,IE8 */ .ie7 .bg_banners span,.ie8 .bg_banners span {
 background: transparent url(../images/bg_banners_gradient.gif) repeat bottom left;
 width: auto;
+}
+@media all and (max-width:595px) {
+.bg_banners li {
+  height: 7em !important;
+}
+
 }

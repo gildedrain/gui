@@ -1,3 +1,4 @@
+@import "compass";
 /* 960_6col_grid.css */
 /* FOR DEBUGGING ONLY */
 body {
@@ -106,4 +107,57 @@ Depending on the situation,you may need to apply some combination of:- .first to
   height: 0;
   line-height: 0;
   font-size: 0;
+}
+
+@media all and (max-width:970px),(max-width:595px) {
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#section,#section.hasmenu {
+  float: none;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+}
+
+@media all and (max-width:970px) {
+  .precoldot5, .precol1, .precol2, .precol3, .precol4, .precol5, .precol6 {
+  margin-left: 5px !important;
+}
+.col1 {
+  width: 14.75%;
+}
+.col1dot5 {
+  width: 23%;
+}
+.col2 {
+  width: 31.3%;
+}
+.col3 {
+  width: 48%;
+}
+.col4 {
+  width: 66%;
+}
+.col5 {
+  width: 82%;
+}
+.col6 {
+  width: 95%;
+}
+.nest {
+  width: 100%;
+}
+}
+@media all and (max-width:595px) {
+.col1,.col1dot5,.col2,.col3,.col4,.col5,.col6 {
+  width: 97%;
+  float: none;
+  clear: both;
+  margin: 0 0 0 5px;
+  padding: 0;
+}
 }

@@ -1,3 +1,4 @@
+@import "compass";
 /* polaroid */
 .polaroid {
   width: 150px;
@@ -124,4 +125,10 @@ background-position: center center;
   background: #000 !important;
   color: #FFF !important;
   text-decoration: none;
+}
+@media all and (max-width:595px) {
+.polaroid {
+  display: none;
+}
+
 }

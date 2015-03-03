@@ -1,3 +1,4 @@
+@import "compass";
 /* MENU
 - size (width+padding = .col2 = 310) must define MENU size separate from .col2 due to unique visual styling */
 .menu {
@@ -27,7 +28,7 @@
   content: "- ";
   color: inherit;
 }
-.menu li {
+.main .menu li, .menu li {
   margin: 0;
   padding: 0;
 }

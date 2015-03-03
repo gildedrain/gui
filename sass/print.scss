@@ -1,10 +1,4 @@
-/*PRINT.CSS*/
-@media screen {.forprint {
-  display: none !important;
-}
-/* USE THIS CLASS FOR ANYTHING YOU ONLY WANT TO APPEAR ON PRINTED DOCUMENTS,IT WILL BE HIDDEN FOR media="screen" */
-}
-@media print {/* HIDE STUFF */
+@import "compass";
 /*PRINT.CSS*/
 @media screen {.forprint {
   display: none !important;

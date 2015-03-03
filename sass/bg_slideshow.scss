@@ -1,4 +1,4 @@
-
+@import "compass";
 /* BG_SLIDESHOW */
 /*slides */
 .bg_slideshow {
@@ -104,4 +104,21 @@ margin-top: 150px;
 }
 .bg_slideshow .caption-bottom {
 margin-top: 250px;
+}
+
+@media all and (max-width:595px) {
+.bg_slideshow {
+  margin-top: 0px;
+}
+.bg_slideshow_controls {
+  position: relative;
+  float: right;
+  z-index: 6;
+  top: 10px;
+  margin: 0;
+  width: 135px;
+  list-style: none;
+  padding: 0;
+}
+
 }
