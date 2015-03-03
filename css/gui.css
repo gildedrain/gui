@@ -190,6 +190,7 @@ a[href^="mailto:"]{background-position:100% -450px;padding:2px 18px 2px 0 !impor
 .file_video{background-position:100% -800px;padding:2px 18px 2px 0 !important;margin:0 3px 0 0 !important;}
 .file_audio{background-position:100% -850px;padding:2px 18px 2px 0 !important;margin:0 3px 0 0 !important;}
 .file_voice{background-position:100% -1050px;padding:2px 18px 2px 0 !important;margin:0 3px 0 0 !important;}
+.bug_report{background-image:url(../images/16px_icons.png); background-repeat: no-repeat; background-position:0 -1705px; padding-left:25px; color:#FFF;}
 /* TOOLS.CSS ---------------------------------------------------------------*/
 /* ALIGNMENTS & POSITIONS */
 .left{float:left;margin:10px 10px 5px 0;}

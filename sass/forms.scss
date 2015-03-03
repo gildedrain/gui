@@ -1,0 +1,172 @@
+/* FORMS.CSS*/
+/* fieldsets & legends */
+form {
+  min-width: 310px;
+}
+/* a form will not fit in a single column width of 150px */
+fieldset {
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.35);
+  background: transparent;
+  padding: 40px 10px 10px 10px;
+  margin: 0 0 10px 0;
+  border-radius: 10px 0 0 0;
+  -webkit-border-radius: 10px 0 0 0;
+  -moz-border-radius: 10px 0 0 0;
+}
+legend {
+  font-size: 1.2em;
+  border: 1px solid #333;
+  background: rgba(0,0,0,.8);
+  color: #FFF;
+  float: left;
+  margin: -40px 0 0 -10px;
+  clear: both;
+  padding: 3px 20px 3px 10px;
+  border-radius: 10px 0 10px 0;
+  -webkit-border-radius: 10px 0 10px 0;
+  -moz-border-radius: 10px 0 10px 0;
+}
+fieldset fieldset {
+  background: rgba(0,0,0,.05);
+  padding: 40px 10px 10px 10px;
+  border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -moz-border-radius: 0 0 0 0;
+}
+/* this removes the fancy treatment of subsequent fieldsets */
+fieldset fieldset legend {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  border-radius: 0 0 0 0;
+}
+/* only the first legend (the title of the form) gets fancy treatment */
+/* labels */
+label {
+  margin: 10px 0 3px 0;
+  display: block;
+  line-height: 1.2;
+}
+.labels-left label {
+  text-align: left;
+  display: inline-block;
+  width: 110px;
+  margin: 0 10px 0 0;
+}
+.labels-right label {
+  text-align: right;
+  display: inline-block;
+  width: 110px;
+  margin: 0 10px 0 0;
+}
+/* inputs,selects,textareas,radios,checkboxes,submits */
+input[type="text"],input[type="email"],input[type="search"],input[type="tel"],input[type="url"],input[type="password"],select,textarea {
+  display: inline-block;
+  width: auto;
+  border: 1px solid #aaa;
+  margin: 0 0 .5em 0;
+  padding: 5px;
+  font-size: .75em;
+}
+input[type=radio],input[type=checkbox] {
+  display: inline-block;
+  width: auto;
+  margin: 0 5px 0 0;
+}
+input[type="radio"]+label,input[type="checkbox"]+label {
+  display: inline-block;
+  width: auto;
+  margin: 0 25px 0 0;
+}
+select {
+  width: auto;
+  padding: 0;
+}
+/* easier to let them be width:auto to allow for situations like DOB (month) (day) (year) */
+textarea {
+  font-family: inherit;
+  font-size: 88%;
+  letter-spacing: inherit;
+}
+input[type=submit] {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+}
+/* must appear last due to inheritance */
+/* messages */
+.error,.notice,.success {
+  padding: .5em;
+  border: 3px solid #ddd;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  box-shadow: 0 1px 2px #aaa;
+  -webkit-box-shadow: 0 1px 2px #aaa;
+  -moz-box-shadow: 0 1px 2px #aaa;
+}
+.error {
+  background: #FBE3E4;
+  color: #8a1f11;
+  border-color: #FBC2C4;
+}
+.notice {
+  background: #FFF6BF;
+  color: #514721;
+  border-color: #FFD324;
+}
+.success {
+  background: #E6EFC2;
+  color: #264409;
+  border-color: #C6D880;
+}
+.error a {
+  color: #8a1f11;
+}
+.notice a {
+  color: #514721;
+}
+.success a {
+  color: #264409;
+}
+fieldset small {
+  font-style: italic;
+  color: #aaa;
+  display: inline-block;
+  margin: 0 10px 5px 10px;
+  vertical-align: top;
+}
+.required {
+  color: red;
+}
+/* HACKS ---------------------------------------- */
+/* Firefox 3.5 needs some help,JQuery detects the userAgent and adds body.ff3_5 so I can target that browser. */
+.ff3_5 fieldset {
+  padding-top: 1em;
+}
+.ff3_5 legend {
+  margin: 26px 0 0 -10px;
+  border: 0;
+}
+/* Temporary Band-aid until we can clean up the existing forms by removing the OLs and LIs */
+fieldset ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*HACKS!*/
+.ie legend {
+  background: #000;
+  color: #FFF;
+}
+.ie fieldset fieldset {
+  background: #FFF;
+}
+.ie fieldset fieldset legend {
+  background: transparent;
+  color: #333;
+}
+.ie textarea {
+  font-family: "gill sans",verdana,sans-serif;
+  font-size: 75%;
+}

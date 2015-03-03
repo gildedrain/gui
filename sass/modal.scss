@@ -1,0 +1,14 @@
+/* MODAL WINDOW */
+#modal #section {/* needed to prevent scrollbars */width:auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+#modal .clearfix {/* needed to prevent scrollbars */display:inline;
+}
+#modal .clearfix:after {/* needed to prevent scrollbars */content:".";
+display: inline;
+clear: both;
+visibility: hidden;
+line-height: 0;
+}

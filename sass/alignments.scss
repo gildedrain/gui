@@ -1,0 +1,48 @@
+/* ALIGNMENTS & POSITIONS */
+.left {
+  float: left;
+  margin: 10px 10px 5px 0;
+}
+.right {
+  float: right;
+  margin: 10px 0 5px 10px;
+}
+.top {
+  margin-top: 0;
+  padding-top: 0;
+}
+.bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.pad {
+  padding: 10px;
+}
+.box {
+  margin: 10px 5px 10px 5px;
+}
+.hangright {
+  margin-right: -1em;
+}
+.hangleft {
+  margin-left: -1em;
+}
+.valign-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+.valign-bottom {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.valign-top {
+  display: inline-block;
+  vertical-align: top;;
+}
+.noselect {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}

@@ -1,0 +1,109 @@
+/* 960_6col_grid.css */
+/* FOR DEBUGGING ONLY */
+body {
+  xbackground: url(../images/grid/grid.jpg) repeat-y top center !important;
+}
+section,#section,.section,.main {
+  xbackground: transparent !important;
+}
+/* GRID DIMENSIONS - column widths = 150px with 10px gutters */
+.col1,.col1dot5,.col2,.col3,.col4,.col5,.col6 {
+  float: left;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.col1 {
+  width: 150px;
+}
+.col1dot5 {
+  width: 230px;
+}
+.col2 {
+  width: 310px;
+}
+.col3 {
+  width: 470px;
+}
+.col4 {
+  width: 630px;
+}
+.col5 {
+  width: 790px;
+}
+.col6 {
+  width: 950px;
+}
+/* not necessary if you just want the content to free-flow */
+.precoldot5 {
+  margin-left: 85px !important;
+}
+.precol1 {
+  margin-left: 165px !important;
+}
+.precol1dot5 {
+  margin-left: 245px !important;
+}
+.precol2 {
+  margin-left: 325px !important;
+}
+.precol3 {
+  margin-left: 485px !important;
+}
+.precol4 {
+  margin-left: 645px !important;
+}
+.precol4dot5 {
+  margin-left: 725px !important;
+}
+.precol5 {
+  margin-left: 805px !important;
+}
+/* PAGE LAYOUT
+- automatically reacts to ASIDE float position,no changes needed here
+- .hasmenu is added dynamically if the "menu" URL parameter exists
+- section area width = (col4) + 10 */
+#section.hasmenu,section.hasmenu,.section.hasmenu {
+  float: right;
+  width: 640px;
+}
+#aside,aside,.aside {
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#aside>*,aside>*,.aside>* {
+  max-width: 310px;
+}
+/* CONTAINER CLASS
+- centered,with overall site width = (usable space) + (padding) */
+.container {
+  width: 960px;
+  padding: 0 5px 0 5px;
+  margin: 0 auto;
+}
+/* CLEARING HELPERS
+Depending on the situation,you may need to apply some combination of:- .first to the first block and/or .last to the last block.
+- .first.nest to the first NESTED-block and .last.nest to the last NESTED-block.
+- .dots is a solid break to make all the dumb browsers do wrap where they're supposed to. */
+.first {
+  clear: left;
+}
+.last {
+  clear: right;
+}
+/* BUG! not sure we even need .last anymore */
+.nest.first {
+  margin-left: 0;
+  clear: left;
+}
+.nest.last {
+  margin-right: 0;
+  clear: right;
+}
+.dots {
+  clear: both;
+  margin: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}

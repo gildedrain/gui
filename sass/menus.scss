@@ -1,0 +1,63 @@
+/* MENU
+- size (width+padding = .col2 = 310) must define MENU size separate from .col2 due to unique visual styling */
+.menu {
+  padding: 0;
+  margin: 0;
+}
+.menu ul {
+  margin: 0 0 10px 0;
+  list-style: none;
+  padding: 0;
+}
+.menu ul ul {
+  margin-bottom: 0;
+}
+.menu li a {
+  display: block;
+  width: 290px;
+  padding: .25em 10px .25em 10px;
+  margin: 0;
+  text-decoration: none;
+}
+.menu ul ul a {
+  width: 280px;
+  padding-left: 20px;
+}
+.menu ul ul a:before {
+  content: "- ";
+  color: inherit;
+}
+.menu li {
+  margin: 0;
+  padding: 0;
+}
+/*HACK! adding a top border to menu li's seems to force IE7 into the box model */
+/*.ie7 .menu li {
+border-top: 1px solid #cbe9ff;
+}
+*/
+/* default color scheme */
+.menu {
+  color: #222;
+  background-color: #cbe9ff;
+}
+.menu a {
+  color: #222;
+  background-color: #cbe9ff;
+}
+.menu a:hover,.menu .current {
+  color: #FFF;
+  background-color: #1799fe;
+}
+.menu ul ul a {
+  background-color: rgba(0,0,0,.1);
+}
+/* HACK! IE7 and IE8 mess up the menu styles,mostly b/c they don't understand rgba */
+/*.ie .menu ul ul a {
+background-color: #ccc;
+}
+*/
+.menu ul ul a:hover,.menu ul ul .current {
+  background-color: rgba(0,0,0,.5);
+  color: #FFF;
+}

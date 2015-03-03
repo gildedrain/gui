@@ -1,0 +1,87 @@
+/* Tables -------------------------------------------------------------- */
+table {
+  margin: 0 0 .5em 0;
+  background: #FFF;
+  color: #333;
+  border: 1px solid #666;
+  border-collapse: collapse;
+}
+th {
+  background: #003151;
+  background: rgba(0,0,0,.85);
+  color: #FFF;
+  text-align: left;
+}
+th,td,caption {
+  padding: 4px 5px 4px 5px;
+  border: 1px solid #666;
+  border-width: 0 1px 1px 0;
+}
+tfoot {
+  font-style: italic;
+}
+caption {
+  background: #ffffe1;
+  color: #333;
+  border: 1px solid #666;
+  border-width: 1px 1px 0 1px;
+}
+
+/* TABLES */
+/*zebra rows is on by default*/
+.zebrarows li:nth-child(odd),tr:nth-child(odd) {
+  background-color: #FFF;
+  background-color: rgba(255,255,255,.5);
+}
+/* HACK! IE doesn't know RGBA */
+.ie7 tr:nth-child(odd) {
+  background: transparent;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000)";/* IE8 */
+  ￿filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);/* IE6 & 7 */
+  ￿zoom:1;
+}
+/*turn off zebra rows*/
+.nozebrarows tr:nth-child(odd) {
+  background-color: transparent !important;
+}
+/*zebra columns*/
+.zebracolumns td:nth-of-type(odd),
+.zebracolumns tr:nth-of-type(odd) {
+  background: rgba(255,255,255,.5);
+}
+.zebracolumns th:nth-of-type(odd) {
+  background: rgba(0,0,0,.65);
+}
+/*zebra headers,looks terrible,not sure when I'd use it*/
+.zebraheaders th:nth-of-type(odd) {
+  background: rgba(0,0,0,.6);
+}
+.zebraheaders th:nth-of-type(even) {
+  background: rgba(0,0,0,.85);
+}
+/*these classes set the borders on a table*/
+.rows td,.rows th {
+  border: 1px solid #666;
+  border-width: 0 0 1px 0;
+}
+.rows {
+  border-width: 1px 1px 0 1px;
+}
+.columns td,.columns th {
+  border: 1px solid #666;
+  border-width: 0 1px 0 0;
+}
+.columns {
+  border-width: 1px 0 1px 1px;
+}
+.nogrid td,.nogrid th,.nogrid {
+  border-width: 0;
+}
+/*tables have a grid turned on by default */
+/*sometimes you might want to swap the border color*/
+.border-white td,.border-white th {
+  border-color: #fff;
+}
+.noborder {
+  border: none !important;
+}

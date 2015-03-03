@@ -1,0 +1,25 @@
+/* TRANSPARENCY */
+.alpha100 {
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+.alpha90 {
+  opacity: .9;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+}
+.alpha70 {
+  opacity: .7;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+.alpha50 {
+  opacity: .5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+.alpha30 {
+  opacity: .3;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+}
+.alpha10 {
+  opacity: .1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);
+}

@@ -1,0 +1,31 @@
+/* TRANSFORMATIONS */
+.rotate10 {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  rotation: 10deg;
+}
+.rotate25 {
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  rotation: 25deg;
+}
+.rotate45 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  rotation: 45deg;
+}
+.rotate-10 {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  rotation: -10deg;
+}
+.rotate-25 {
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  rotation: -25deg;
+}
+.rotate-45 {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  rotation: -45deg;
+}

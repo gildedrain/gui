@@ -1,22 +1,33 @@
 @import 'reset';
+
 @import 'forms';
 @import 'grid';
 @import 'menus';
+
 @import 'links';
-@import 'tables';
-@import 'lists';
 @import 'buttons';
+@import 'follow-me';
+
+@import 'images';
+@import 'lists';
+@import 'tables';
 @import 'tooltips';
 @import 'typography';
-@import 'images';
+
 @import 'opacity';
 @import 'rotation';
+
+@import 'alignments';
 @import 'border-radius';
-@import 'modal';
 @import 'horzy';
+@import 'modal';
 @import 'verty';
-@import 'bg_slideshow';
 @import 'bg_banners';
-@import 'follow-me';
+@import 'bg_slideshow';
+
 @import 'colors';
+
+@import 'display';
+@import 'clearfix';
+
 @import 'print';
