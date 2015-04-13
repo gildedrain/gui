@@ -43,3 +43,15 @@
 .button:active {
   top: 1px;
 }
+.medium.button {
+  width: auto;
+  font-size: 1.5em;
+}
+.large.button {
+  font-size: 2.5em;
+  padding: 8px 14px 9px 14px !important;
+}
+.tall.button {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
