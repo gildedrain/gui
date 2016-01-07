@@ -1,0 +1,67 @@
+@import "compass";
+.ribbon {
+  font-size: 1.2em;
+  width: 87%;
+  position: relative;
+  text-align: center;
+  padding: 1em 2em; /* Adjust to suit */
+  margin: 0 0 0 -1em;
+  background-color: #9e0b0f; // Old browsers
+  @include filter-gradient(#9e0b0f, #cc0000, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  #9e0b0f 0%,#cc0000 100%));
+}
+.ribbon:hover {
+  @include filter-gradient(#9e0b0f, #ff0000, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  #9e0b0f 0%,#ff0000 100%));
+}
+.ribbon:before, .ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 1.5em solid #6e0101;
+  z-index: -1;
+}
+.ribbon:before {
+  left: -1.9em;
+  border-right-width: 1.5em;
+  border-left-color: transparent;
+}
+.ribbon:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #4c0000 transparent transparent transparent;
+  bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+  left: .1em;
+  border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0;
+}
+.ribbon span {
+  margin-right: 1em;
+}
+.ribbon a {
+  color: #FFF;
+  text-decoration: underline;
+  display:inline-block;
+}
+
+@media all and (max-width:595px) {
+  .ribbon {
+    width:100%;
+  }
+  .ribbon:before, .ribbon:after, .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    display:none;
+  }
+}
