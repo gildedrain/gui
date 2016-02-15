@@ -64,14 +64,14 @@ a:focus,a:hover {
 }
 a {
   color: #2A5DB0;
-  text-decoration: none;
+  text-decoration: underline;
 }
 blockquote {
   margin: 1.5em;
   color: #666;
   font-style: italic;
 }
-strong {
+strong, b {
   font-weight: bold;
 }
 em,dfn {
